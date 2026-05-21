@@ -20,11 +20,11 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "voices",
-    number: "00",
+    number: "01",
     title: "Familiar Voice",
-    subtitle: "AI voice cloning for hearing rehabilitation",
+    subtitle: "AI Voice Cloning Initiative",
     summary:
-      "Designing a voice-cloning experience that helps people with hearing loss retrain their ears using the voices they love.",
+      "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace AI Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/voices/hero.svg",
     year: "2025",
@@ -32,11 +32,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "evolution",
-    number: "01",
+    number: "02",
     title: "Evolution",
-    subtitle: "Legacy LACE → Lace AI Pro",
+    subtitle: "0→1 — Legacy LACE to Lace AI Pro",
     summary:
-      "Rebuilding a clinically proven auditory training platform from the ground up — modern stack, modern interaction, same clinical backbone.",
+      "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace AI Pro, from strategy to clinical validation, in under a year.",
     tags: ["Platform", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/evolution/hero.svg",
     year: "2024",
@@ -44,11 +44,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "retention",
-    number: "02",
-    title: "Retention",
-    subtitle: "Gamified training map + streak system",
+    number: "03",
+    title: "Gamified Retention",
+    subtitle: "Training Map & Streak System",
     summary:
-      "A behavioral design system that turns daily auditory training into a habit through map progression, streaks, and gentle nudges.",
+      "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
     hero: "/images/work/retention/hero.svg",
     year: "2024",
@@ -56,11 +56,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "tinnitus-pro",
-    number: "03",
+    number: "04",
     title: "Tinnitus Pro",
-    subtitle: "From zero — a tinnitus management platform",
+    subtitle: "From Zero — a tinnitus management platform",
     summary:
-      "Zero-to-one product design for an evidence-based tinnitus management program, from research synthesis to launch-ready UI.",
+      "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch, shaping everything from how patients first describe their symptoms to how the app earns their daily habit. And shipped it in under six months.",
     tags: ["0→1", "Regulated/Healthcare"],
     hero: "/images/work/tinnitus-pro/hero.svg",
     year: "2023",

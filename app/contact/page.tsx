@@ -15,15 +15,14 @@ export default function ContactPage() {
         Let&apos;s talk.
       </h1>
       <p className="mt-6 text-lg text-[color:var(--color-muted)] max-w-xl leading-relaxed">
-        The best way to reach me is by email. I&apos;m open to senior and lead
-        product design roles in healthcare, regulated industries, and AI-native
-        products.
+        The best way to reach me is by email or phone.
       </p>
 
       <dl className="mt-12 grid sm:grid-cols-2 gap-8 text-sm">
         <ContactItem label="Email" value="drumartin@me.com" href="mailto:drumartin@me.com" />
-        <ContactItem label="Location" value="Gainesville, FL · USA" />
-        <ContactItem label="LinkedIn" value="linkedin.com/in/drumartin" href="https://www.linkedin.com/in/drumartin/" />
+        <ContactItem label="Phone" value="(352) 283-2887" href="tel:+13522832887" />
+        <ContactItem label="Address" value={"2105 NW 9th Ave.\nGainesville, FL 32603"} />
+        <ContactItem label="LinkedIn" value="linkedin.com/in/drumartinshead" href="https://www.linkedin.com/in/drumartinshead/" />
         <ContactItem label="Behance" value="behance.net/drumartin" href="https://www.behance.net/drumartin" />
       </dl>
     </div>
@@ -44,7 +43,7 @@ function ContactItem({
       <dt className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">
         {label}
       </dt>
-      <dd>
+      <dd className="whitespace-pre-line">
         {href ? (
           <a
             href={href}

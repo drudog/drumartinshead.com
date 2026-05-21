@@ -7,7 +7,7 @@
   </defs>
   <rect width="1600" height="1000" fill="url(#g)"/>
   <g fill="#FAFAF7" font-family="Inter Tight, Inter, sans-serif">
-    <text x="80" y="120" font-size="20" letter-spacing="4" opacity="0.7">CASE STUDY · 00</text>
+    <text x="80" y="120" font-size="20" letter-spacing="4" opacity="0.7">CASE STUDY · 01</text>
     <text x="80" y="900" font-size="120" font-weight="600">Familiar Voice</text>
     <text x="80" y="960" font-size="32" opacity="0.7">AI voice cloning for hearing rehabilitation</text>
   </g>
