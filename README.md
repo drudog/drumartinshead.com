@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# drumartin-portfolio
 
-## Getting Started
+Personal portfolio for Dru Martin — product design leader specializing in healthcare digitalization.
 
-First, run the development server:
+Replaces [drumartin.figma.site](https://drumartin.figma.site).
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- [React 19.2](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [MDX](https://mdxjs.com) via [`@next/mdx`](https://www.npmjs.com/package/@next/mdx)
+- [`next-themes`](https://github.com/pacocoursey/next-themes) for dark mode
+- [`motion`](https://motion.dev) for animation
+- [`lucide-react`](https://lucide.dev) for icons
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run build        # production build
+npm run start        # serve production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  page.tsx           # home
+  about/             # /about
+  contact/           # /contact
+  work/[slug]/       # dynamic case study route, renders MDX
+components/
+  nav, hero, theme-toggle, case-study-card, case-study-filter, case-study-toc, testimonial, footer
+  mdx/               # custom MDX components: Callout, StatBlock, PullQuote, ImageGallery
+content/             # case study MDX (one file per slug)
+lib/
+  case-studies.ts    # case study manifest (slug, title, tags, summary, hero)
+public/
+  images/work/{slug}/hero.svg
+  resume.pdf         # (drop in)
+mdx-components.tsx   # global MDX components map (Next.js convention)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding / editing case studies
 
-## Learn More
+1. Add an entry to `lib/case-studies.ts` (slug, title, tags, hero path…).
+2. Create `content/{slug}.mdx` with the body. Use the custom components:
+   - `<Callout variant="info|warn|insight">…</Callout>`
+   - `<StatBlock><Stat value="…" label="…" /></StatBlock>`
+   - `<PullQuote attribution="…">…</PullQuote>`
+   - `<ImageGallery items={[{ src, alt, caption }]} columns={2|3} />`
+3. Drop a hero image at `public/images/work/{slug}/hero.*` and update the manifest path.
 
-To learn more about Next.js, take a look at the following resources:
+## Theme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tokens live in `app/globals.css` as CSS variables under `@theme`. Dark mode flips them under `.dark`. Edit there, not in components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel — `vercel` from project root for a preview, `vercel --prod` for prod.
