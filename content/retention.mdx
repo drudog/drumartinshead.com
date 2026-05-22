@@ -1,53 +1,108 @@
-## Overview
+**Focus** — Retention design · Behavioral psychology · DAU optimization
+**Role** — Product Design Lead (End-to-end)
 
-> _TODO — One paragraph framing the retention problem and the behavioral system we shipped._
+## Executive Summary
 
-Auditory training only works if people actually do it — consistently, over weeks. Retention is the gamified map + streak system designed to make daily practice a habit without feeling like a casino.
+Post-launch, Lace AI Pro showed strong initial adoption but measurable patient drop-off within the first 14 days. Long-term clinical efficacy requires consistent daily usage — a minimum of 250 exercises.
 
-<StatBlock>
-  <Stat value="TODO%" label="Lift in 7-day retention" />
-  <Stat value="TODO" label="Avg. streak length" />
-  <Stat value="TODO%" label="Completion rate" />
-</StatBlock>
+I led the design of a behavioral retention system adapted from high-engagement consumer apps (like Duolingo) and tuned for a regulated healthcare context.
+
+<PullQuote attribution="Katie — verified Lace AI Pro user">
+I don&apos;t shy away from going to parties now... and my audiologist was shocked that I got a better score in background noise. I know it&apos;s because I have learned to focus by using Lace — thank you!
+</PullQuote>
 
 ## The Problem
 
-> _TODO — The behavioral problem and what existing solutions get wrong._
+Patient adherence declined early in the training journey, limiting:
 
-Drop-off after week one is the single biggest threat to outcomes. Most engagement systems borrow patterns from games and social apps that don&apos;t map well to a clinical context.
+- Clinical benefit attainment
+- Daily Active Users (DAU)
+- Long-term engagement metrics
+- Downstream provider confidence in the product
 
-## Approach
+Without habit formation, clinical science alone could not drive outcomes.
 
-> _TODO — Research, framework, design._
+## The Strategy
 
-### Behavioral framework
+I led the design end-to-end, focusing on three levers:
 
-I started from the Fogg Behavior Model (Motivation × Ability × Prompt) and built a layered system: a map that gives shape to the journey, a streak that gives daily resolution, and gentle nudges that catch users before they fall off.
+1. **Habit reinforcement** — a streak system and daily nudges
+2. **Progress visualization** — the Training Map as a level-based user journey
+3. **Social accountability** — a leaderboard where patients can see how they compare to other patients
 
-<Callout variant="insight">
-**Design principle:** Make the next action obvious. Make the streak forgiving. Never shame.
-</Callout>
+## Key Design Decisions
 
-### The map
+### The Training Map
 
-> _TODO — Visual progression, milestones, why it works._
+A visual progression journey that frames exercises as &ldquo;levels,&rdquo; not tasks. Progress feels visible and cumulative. Reinforces forward momentum.
 
-### The streak
+### Streak mechanics
 
-> _TODO — Resolution, recovery, edge cases._
+Daily streak counter prominently surfaced. Positive reinforcement notifications. Escalating motivational messaging tied to behavioral commitment research.
 
-### Nudges
+### &ldquo;At risk&rdquo; notification system
 
-> _TODO — When, how, what tone._
+Triggered at key times. Tone: supportive, not punitive. Early intervention prevents drop-off spirals.
 
-## Outcome
+### A patient training leaderboard
 
-> _TODO — Measured retention, qualitative feedback._
+Enabled patients to share progress with other patients while still retaining privacy in a healthcare-related environment. Reinforced accountability and pride. Strengthened the engagement loop.
 
-<PullQuote attribution="User, week 6">
-TODO — pull a representative quote.
-</PullQuote>
+## Key Screens
 
-## Reflections
+<ImageGallery
+  columns={2}
+  items={[
+    {
+      src: "/images/work/retention/screen-training-map.png",
+      alt: "The Training Map — a hexagonal level-progression journey",
+      caption: "The Training Map tracks user progress",
+    },
+    {
+      src: "/images/work/retention/lifestyle-engaged.jpg",
+      alt: "A patient using Lace AI Pro on her phone",
+      caption: "Patients find the training fun and engaging",
+    },
+    {
+      src: "/images/work/retention/screen-leaderboard.png",
+      alt: "Leaderboard and achievements screens",
+      caption: "Leaderboards and achievements are two key ways of keeping patients engaged",
+    },
+    {
+      src: "/images/work/retention/screen-streak.png",
+      alt: "Home dashboard showing a daily training streak",
+      caption: "The daily training streak and progress are ever-present",
+    },
+    {
+      src: "/images/work/retention/screen-milestone.png",
+      alt: "A level-up celebration screen with confetti",
+      caption: "Important patient milestones are celebrated",
+    },
+  ]}
+/>
 
-> _TODO — What worked, what I&apos;d revisit, what behavioral patterns I&apos;m still learning about._
+## Collaboration
+
+Worked with engineering on notification architecture and trigger timing to align with behavioral research on optimal nudge intervals. Collaborated with clinical leadership to ensure gamification mechanics reinforced clinical goals without eroding the product&apos;s medical credibility.
+
+The &ldquo;Brag Feature&rdquo; emerged from a cross-functional conversation with the provider success team, who identified that patient-to-provider progress sharing was a missing link in the engagement loop.
+
+## Outcomes &amp; Impact
+
+- Significant increase in Daily Active Users (DAU)
+- Improved 14-day retention rate
+- Higher percentage of users reaching therapeutic dose
+- Measurable improvement in clinical progress scores
+- Stronger provider confidence in prescribing Lace
+
+![Patient engagement — top patients voluntarily complete up to 30× the recommended dose](/images/work/retention/engagement-chart.png)
+
+![Patient compliance — Lace training at 37–48% completion versus 30% for physical therapy](/images/work/retention/compliance-chart.png)
+
+## Leadership
+
+- Post-launch optimization leadership
+- Behavioral design maturity
+- Consumer mechanics adapted to clinical contexts
+- Data-informed iteration
+- Long-term outcome orientation, not just feature shipping

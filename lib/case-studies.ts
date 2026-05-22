@@ -46,11 +46,11 @@ export const caseStudies: CaseStudy[] = [
     slug: "retention",
     number: "03",
     title: "Gamified Retention",
-    subtitle: "Training Map & Streak System",
+    subtitle: "Training Map & Streaks — post-launch habit architecture",
     summary:
       "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
-    hero: "/images/work/retention/hero.svg",
+    hero: "/images/work/retention/screen-leaderboard.png",
     year: "2024",
     role: "Lead Product Designer",
   },
