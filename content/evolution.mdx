@@ -1,50 +1,118 @@
 ## Overview
 
-> _TODO — One paragraph framing: the legacy LACE platform, why it needed to evolve, what we shipped._
+Legacy LACE was an outdated auditory training product with limited scalability, no AI capabilities, and a user experience that couldn&apos;t support the clinical outcomes patients needed. I led the complete strategic redesign and platform modernization into **Lace AI Pro** — an AI-powered, cross-platform digital therapeutic deployed in over 1,000 clinics nationwide.
 
-LACE is a clinically validated auditory training program in use in audiology clinics for nearly two decades. The platform was technically and visually stuck in 2008. Lace AI Pro is the ground-up rebuild — same clinical backbone, modern delivery.
+This was a 0→1 evolution in a regulated healthcare environment: an FDA Class II device, designed end-to-end in under six months.
 
 <StatBlock>
-  <Stat value="20+ yrs" label="Of clinical history" />
-  <Stat value="TODO" label="Active clinics" />
-  <Stat value="TODO" label="Sessions/month" />
+  <Stat value="10,000+" label="Exercises across 27 topics" />
+  <Stat value="1,000+" label="Clinics deployed in under a year" />
+  <Stat value="6,137" label="Patients in Q1 2025 outcomes analysis" />
 </StatBlock>
+
+![The Lace product page designed in 2025](/images/work/evolution/product-page.png)
+
+The platform&apos;s clinical outcomes, validated across 6,137 patients in Q1 2025 analysis by Dr. Miles Aron, outperform all previous clinical studies in auditory training. Speech-in-noise improvement of +2.6 dB SNR at therapeutic dose. Rapid speech comprehension gains of +36 WPM in under a month. Working memory response times improving by over 1.5 seconds at effective dose, up to 8 seconds in severe cases.
+
+The design decisions that made the platform work weren&apos;t cosmetic. They were clinical.
 
 ## The Problem
 
-> _TODO — What was broken about the legacy platform._
+The auditory training market was accelerating. Consumer apps and AI-first competitors were raising the bar on personalization and accessibility, while Legacy LACE remained a browser-based, single-platform product with no AI roadmap and a fixed content library that couldn&apos;t scale to new patient populations. Staying still was falling behind.
 
-- Adobe Flash dependency, broken on modern browsers
-- No mobile experience
-- No clinician dashboard
-- Difficult to maintain or extend
+- Legacy product was outdated with no path to AI integration
+- Fixed content library constrained applicability to new patient populations (APD, Hidden Hearing Loss)
+- Single-platform delivery didn&apos;t match how patients actually live and train
+- Competitive products were rapidly advancing on personalization and UX
 
-## Approach
+<PullQuote attribution="Cynthia M., verified Lace AI Pro user">
+Lace made me feel less like one more defective senior waiting on a medical miracle — I could participate in my own treatment. I could actually help myself. It&apos;s easy, it&apos;s affordable, it&apos;s fun.
+</PullQuote>
 
-> _TODO — Research, architecture, design system._
+## The Strategy
 
-### Mapping the clinical protocol
+**1 — Positioned Dynamic Threshold Training Engine™ technology.** A core adaptive layer that adjusts training difficulty in real time based on patient performance. The DTTE optimizes neuroplasticity by keeping patients at the threshold of their ability (~50% accuracy), the precise zone where the brain learns most efficiently. Validated: speech-in-noise improvements follow a strong log fit with R²=0.92 across 6,137 patients, outperforming all prior auditory training clinical studies.
 
-The hardest part wasn&apos;t the UI — it was preserving the **clinical protocol** while modernizing every surface around it. I worked directly with the clinical team to audit which interactions were load-bearing for outcomes vs. which were vestigial.
+**2 — Expanded content architecture** adding 10,000+ exercises across 27 topics, enabling broader patient applicability (APD, Hidden Hearing Loss, mild HL).
 
-### Building the design system
+**3 — Designed an AI coaching and personalization layer** including the Familiar Voices feature and AI Avatar guide system.
 
-<Callout>
-The system supports both clinician-facing and patient-facing surfaces, with shared tokens but distinct density and tone.
+**4 — Built cross-platform accessibility** across iOS, Android, and Desktop to meet patients where they are.
+
+## Key Design Decisions
+
+- App-based cross-platform accessibility
+- Lifetime license and subscription model framing — aligning the business model with patient commitment, reinforcing long-term engagement over episodic use
+- Multi-modal training types: Speech-in-Noise, Working Memory, Rapid Speech, Missing Word
+- A training-type selector creating clear clinical context and dosing guidance
+- Content library architecture surfacing 10,000+ exercises without cognitive overwhelm
+- Ease-in / ease-out &quot;softball&quot; mechanics designed to build patient confidence while maintaining engagement at threshold — a behavioral design choice with direct clinical validation
+
+## Key Screens
+
+![AI trainers provide guidance and encouragement](/images/work/evolution/screen-ai-trainers.png)
+
+![Missing word training improves deductive reasoning skills](/images/work/evolution/screen-missing-word.png)
+
+![Content library architecture — 10,000+ exercises, 27 topics](/images/work/evolution/screen-content-library.png)
+
+![Auditory training that meets patients where they are, on any device](/images/work/evolution/screen-cross-platform.png)
+
+## Clinical Outcomes
+
+This data strongly outperforms all previous clinical studies in auditory training.
+
+![Clinical outcomes across training types](/images/work/evolution/clinical-outcomes-chart.png)
+
+### Speech-in-noise training
+
+- +2.6 dB SNR improvement at effective dose (250+ exercises, &lt;1 month)
+- +6–9 dB SNR at higher training doses — life-changing for severe patients
+- +6–8 dB in severe-to-profound hearing loss cases
+- Corresponds to a 15–40% increase in word recognition
+
+### Rapid speech training
+
+- +36 WPM average improvement at 250+ exercises (&lt;1 month)
+- Range: +35–60 WPM — the difference between being lost and keeping up in conversation
+- Benefits patients across the full severity spectrum, including those without hearing loss
+
+### Working memory training
+
+- &gt;1.5 seconds faster response time at effective dose (100+ exercises)
+- Up to 8 seconds gained in daily conversation for severe cases
+- Improvements scale predictably with training dose (R²=0.76)
+
+### Missing word training
+
+- Severe cases: 6.8 seconds improvement in response time while advancing to higher difficulty levels
+- Average patient advanced from Level 1 to Level 3–5 difficulty
+
+<Callout variant="insight">
+Q1 2025 analysis by Dr. Miles Aron · N=6,137 patients. The DTTE positioning itself emerged from clinical-design dialogue — not from a brief, but from understanding the science deeply enough to name it.
 </Callout>
 
-### Designing for clinicians
+## Outcomes & Impact
 
-> _TODO — Workflow, dashboard, patient management._
+![Patient compliance vs. physical therapy — all LACE exercise types exceed the PT benchmark](/images/work/evolution/compliance-chart.png)
 
-### Designing for patients
+- Enabled broader patient applicability: APD, HHL, mild HL, and severe-to-profound populations
+- Clinical data outperforms all previous auditory training studies (Dr. Miles Aron, Q1 2025)
+- 37–48% patient compliance vs. 30% for physical therapy — Lace AI Pro beats the established standard across all four training types
+- Strengthened product differentiation in a competitive market
+- Supported FDA Class II medical device positioning
+- Deployed across 1,000+ clinics in under one year
+- Hearing Technology Innovator Award recipient (2024, 2025)
 
-> _TODO — Onboarding, session, progress._
+![Hearing Technology Innovator Award winner and FDA approved](/images/work/evolution/awards.png)
 
-## Outcome
+## Collaboration
 
-> _TODO — Measurable outcomes: adoption, engagement, clinical results._
+This was a full cross-functional build. I aligned engineering (adaptive algorithm constraints and cross-platform architecture), clinical research (therapeutic validity of training types and dosing thresholds), product marketing (platform narrative and FDA Class II positioning), and executive leadership (go-to-market timing and licensing model).
 
-## Reflections
+## Leadership
 
-> _TODO — What I learned bringing a legacy clinical product into the modern era._
+- Platform vision and architecture design
+- 0→1 product leadership at speed
+- Innovation within regulatory constraints
+- Cross-functional alignment across engineering, clinical, marketing, and executive teams
