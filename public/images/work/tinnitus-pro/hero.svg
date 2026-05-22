@@ -1,14 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#26262A"/>
-      <stop offset="1" stop-color="#3FB4A6"/>
-    </linearGradient>
-  </defs>
-  <rect width="1600" height="1000" fill="url(#g)"/>
-  <g fill="#FAFAF7" font-family="Inter Tight, Inter, sans-serif">
-    <text x="80" y="120" font-size="20" letter-spacing="4" opacity="0.7">CASE STUDY · 04</text>
-    <text x="80" y="900" font-size="120" font-weight="600">Tinnitus Pro</text>
-    <text x="80" y="960" font-size="32" opacity="0.7">From zero — a tinnitus management platform</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <rect width="1600" height="900" fill="#EDEBE6"/>
+  <rect x="3" y="3" width="1594" height="894" fill="none" stroke="#B5B3AD" stroke-width="3" stroke-dasharray="18 12"/>
+  <text x="800" y="430" font-family="ui-sans-serif, system-ui, sans-serif" font-size="44" font-weight="600" fill="#8A8881" text-anchor="middle">Hero image placeholder</text>
+  <text x="800" y="492" font-family="ui-monospace, monospace" font-size="22" fill="#A8A6A0" text-anchor="middle">tinnitus-pro / hero · 1600 × 900 · replace this file</text>
 </svg>

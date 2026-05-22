@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100">
+  <rect width="900" height="1100" fill="#EDEBE6"/>
+  <rect x="3" y="3" width="894" height="1094" fill="none" stroke="#B5B3AD" stroke-width="3" stroke-dasharray="16 11"/>
+  <text x="450" y="540" font-family="ui-sans-serif, system-ui, sans-serif" font-size="38" font-weight="600" fill="#8A8881" text-anchor="middle">Screen 2 placeholder</text>
+  <text x="450" y="592" font-family="ui-monospace, monospace" font-size="19" fill="#A8A6A0" text-anchor="middle">tinnitus-pro / screen-2 · replace this file</text>
+</svg>
