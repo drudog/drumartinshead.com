@@ -6,7 +6,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "voices" | "evolution" | "retention" | "tinnitus-pro";
+  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system";
   number: string;
   title: string;
   subtitle: string;
@@ -53,6 +53,18 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/retention/thumb.jpg",
     year: "2024",
     role: "Lead Product Designer",
+  },
+  {
+    slug: "pdf-system",
+    number: "05",
+    title: "Automated Case Study System",
+    subtitle: "Scalable Sales Enablement — PDF generation from structured content",
+    summary:
+      "Neurotone's sales team needed a growing library of clinic-specific case studies, each looking custom-made. I built a Node.js + Puppeteer system that generates print-ready 6-page PDFs from a single content file — zero manual layout, under 30 seconds to rebuild the full library.",
+    tags: ["Platform", "0→1"],
+    hero: "/images/work/pdf-system/kovel-cover.png",
+    year: "2025",
+    role: "Systems Design & Engineering",
   },
   {
     slug: "tinnitus-pro",
