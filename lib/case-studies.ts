@@ -6,7 +6,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app";
+  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger";
   number: string;
   title: string;
   subtitle: string;
@@ -89,6 +89,18 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/tinnitus-pro/thumb.jpg",
     year: "2026",
     role: "Product Research & Lead Designer",
+  },
+  {
+    slug: "beat-dagger",
+    number: "07",
+    title: "Beat Dagger",
+    subtitle: "Browser Audio Tool — step-sequencer metronome and recording studio",
+    summary:
+      "A browser-based musician's tool I built for myself — record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.",
+    tags: ["0→1"],
+    hero: "/images/work/beat-dagger/logo.png",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
   },
 ];
 
