@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { CaseStudyFilter } from "@/components/case-study-filter";
@@ -91,6 +92,20 @@ export default function Home() {
                 className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-foreground)] hover:text-[color:var(--color-accent)] transition"
               >
                 View Behance profile →
+              </a>
+              <a
+                href="https://www.behance.net/drumartin"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 block rounded-2xl overflow-hidden border border-[color:var(--color-border)] hover:opacity-90 transition"
+              >
+                <Image
+                  src="/images/behance-thumb.jpg"
+                  alt="Behance portfolio preview"
+                  width={1200}
+                  height={800}
+                  className="w-full object-cover"
+                />
               </a>
             </div>
           </div>

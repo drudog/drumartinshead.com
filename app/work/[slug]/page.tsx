@@ -87,10 +87,18 @@ export default async function CaseStudyPage({
         <div className="relative w-full aspect-[21/9] overflow-hidden bg-[color:var(--color-border)] mb-16">
           <Image
             src={cs.hero}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover scale-110 blur-2xl opacity-60 pointer-events-none select-none"
+            aria-hidden
+          />
+          <Image
+            src={cs.hero}
             alt={cs.title}
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </div>

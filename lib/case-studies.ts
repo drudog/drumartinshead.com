@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace AI Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
-    hero: "/images/work/voices/screen-preview.png",
+    hero: "/images/work/voices/thumb.jpg",
     year: "2025",
     role: "Lead Product Designer",
   },
@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace AI Pro, from strategy to clinical validation, in under a year.",
     tags: ["Platform", "Regulated/Healthcare", "0→1", "AI"],
-    hero: "/images/work/evolution/product-page.png",
+    hero: "/images/work/evolution/thumb.jpg",
     year: "2024",
     role: "Lead Product Designer",
   },
@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
-    hero: "/images/work/retention/screen-leaderboard.png",
+    hero: "/images/work/retention/thumb.jpg",
     year: "2024",
     role: "Lead Product Designer",
   },
@@ -62,7 +62,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch — guided sound therapy and behavioral support delivered direct to consumers.",
     tags: ["0→1", "Regulated/Healthcare", "AI"],
-    hero: "/images/work/tinnitus-pro/hero.svg",
+    hero: "/images/work/tinnitus-pro/thumb.jpg",
     year: "2026",
     role: "Product Research & Lead Designer",
   },
