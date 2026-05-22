@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -9,6 +10,19 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
+
+      {/* Hero photo */}
+      <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mb-12 bg-[color:var(--color-border)]">
+        <Image
+          src="/images/dru-avatar.jpg"
+          alt="Dru Martin"
+          fill
+          sizes="(min-width: 768px) 768px, 100vw"
+          className="object-cover object-top"
+          priority
+        />
+      </div>
+
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-6">
         About
       </p>
@@ -50,9 +64,6 @@ export default function AboutPage() {
           training, and a zero-to-one tinnitus management product.
         </p>
 
-        <p className="text-[color:var(--color-muted)]">
-          <em>This page is a draft — fuller timeline and detail coming.</em>
-        </p>
       </div>
 
       <div className="mt-12 flex flex-wrap gap-4">
