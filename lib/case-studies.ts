@@ -6,7 +6,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system";
+  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app";
   number: string;
   title: string;
   subtitle: string;
@@ -53,6 +53,18 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/retention/thumb.jpg",
     year: "2024",
     role: "Lead Product Designer",
+  },
+  {
+    slug: "certification-app",
+    number: "06",
+    title: "Beacon Certification App",
+    subtitle: "Partner Learning Platform — three-tier certification with no backend",
+    summary:
+      "Beacon's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments — with all state in localStorage and zero backend infrastructure.",
+    tags: ["Platform", "0→1"],
+    hero: "/images/work/certification-app/01-home.png",
+    year: "2025",
+    role: "Full-Stack Design & Engineering",
   },
   {
     slug: "pdf-system",
