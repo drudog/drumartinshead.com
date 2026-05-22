@@ -11,14 +11,14 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
 
-      {/* Hero photo */}
-      <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mb-12 bg-[color:var(--color-border)]">
+      {/* Hero banner */}
+      <div className="relative w-full aspect-[3/1] rounded-2xl overflow-hidden mb-12 bg-[color:var(--color-border)]">
         <Image
-          src="/images/dru-avatar.jpg"
+          src="/images/avatar-hero.png"
           alt="Dru Martin"
           fill
           sizes="(min-width: 768px) 768px, 100vw"
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
         />
       </div>
