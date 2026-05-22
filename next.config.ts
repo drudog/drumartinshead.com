@@ -15,7 +15,6 @@ const withMDX = createMDX({
     remarkPlugins: ["remark-gfm"],
     rehypePlugins: [
       "rehype-slug",
-      ["rehype-autolink-headings", { behavior: "wrap" }],
     ],
   },
 });
