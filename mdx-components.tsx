@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import React from "react";
-import Image, { type ImageProps } from "next/image";
+import { type ImageProps } from "next/image";
+import { LightboxImage } from "@/components/lightbox-image";
 import { Callout } from "@/components/mdx/callout";
 import { StatBlock, Stat } from "@/components/mdx/stat-block";
 import { PullQuote } from "@/components/mdx/pull-quote";
@@ -22,7 +23,7 @@ const components: MDXComponents = {
     </h2>
   ),
   img: (props) => (
-    <Image
+    <LightboxImage
       sizes="(min-width: 1024px) 768px, 100vw"
       width={1600}
       height={900}

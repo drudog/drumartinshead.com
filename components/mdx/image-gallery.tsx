@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LightboxImage } from "@/components/lightbox-image";
 
 type Item = { src: string; alt: string; caption?: string };
 
@@ -15,13 +15,14 @@ export function ImageGallery({
     >
       {items.map((item) => (
         <figure key={item.src} className="m-0">
-          <Image
+          <LightboxImage
             src={item.src}
             alt={item.alt}
             width={1200}
             height={800}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="rounded-lg w-full h-auto"
+            caption={item.caption}
           />
           {item.caption && (
             <figcaption className="mt-2 text-xs text-[color:var(--color-muted)]">
