@@ -158,12 +158,10 @@ export default function Home() {
                 </div>
                 <div>
                   <dt className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">
-                    Address
+                    Location
                   </dt>
                   <dd className="text-[color:var(--color-foreground)]">
-                    2105 NW 9th Ave.
-                    <br />
-                    Gainesville, FL 32603
+                    Gainesville, FL
                   </dd>
                 </div>
                 <div>
