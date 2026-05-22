@@ -1,60 +1,127 @@
 **Focus** — 0→1 Product Leadership · DTC Therapeutic · Behavior-Change Design
-**Role** — Product Research, Lead Designer (End-to-End, concept through launch)
+**Role** — Product Research, Lead Designer (End-to-End, Concept through Launch)
 **Timeline** — Under 4 months design
 **Revenue impact** — New revenue channel opened
 **Complexity** — High: AI + Clinical + Legal + Emotional UX
 
 ## Executive Summary
 
-Tinnitus affects millions, yet treatment options are fragmented, unclear, and typically require in-clinic intervention. I led the end-to-end design of Tinnitus Pro, an offering which delivers structured, evidence-based tinnitus relief through guided sound therapy and behavioral support.
+Tinnitus affects millions, yet treatment options are fragmented, unclear, and typically require in-clinic intervention. I led the end-to-end design of Tinnitus Pro, a direct-to-consumer digital therapeutic that delivers structured, evidence-based tinnitus relief through guided sound therapy and behavioral support.
 
 In an April 2026 first-look analysis, 40% of patients with bothersome tinnitus achieved clinically meaningful improvement — a reduction of more than 7 points on the THI (Tinnitus Handicap Inventory) per the Zeman 2011 standard — with a median reduction of 13 points among those who improved.
 
 <StatBlock>
   <Stat value="40%" label="Of bothersome-tinnitus patients achieved clinically meaningful improvement" />
-  <Stat value="13 pts" label="Median THI reduction among those who improved" />
-  <Stat value="Under 4 mo" label="Concept to launch-ready design" />
+  <Stat value="−13 pts" label="Median THI reduction among those who improved" />
+  <Stat value="19h" label="Sound therapy engagement" />
 </StatBlock>
+
+<Callout variant="warn">
+### ⚠️ Verify Before Publishing
+
+Clinical data in this case study requires confirmation before public release:
+
+- [ ] N=100 of 600 total enrolled patients — confirm this is the correct denominator for the first-look cohort
+- [ ] Bothersome-tinnitus subgroup N=25 — confirm this is the correct subgroup size for the 40% / −13 pt figures
+- [ ] Zeman 2011 threshold (>7 pts THI = clinically meaningful) — confirm citation is current and applicable
+- [ ] "First-look analysis" framing — confirm this language is approved for external use
+- [ ] 19h sound therapy engagement figure — confirm source and whether this is mean or median
+</Callout>
+
+## Video Walkthrough
+
+> _[ ADD LOOM — product walkthrough video ]_
+
+## System Diagram
+
+> _[ ADD DIAGRAM — Tinnitus Pro architecture / patient journey overview ]_
 
 ## The Problem
 
-Tinnitus affects millions, yet treatment options are fragmented, unclear, and typically require in-clinic intervention. Patients lacked accessible, clinically grounded tinnitus support.
+Patients dealing with tinnitus face a fragmented, discouraging treatment landscape:
 
-> _TODO — detailed problem breakdown. The Figma page still has Retention placeholder text in this section; awaiting the real Tinnitus problem points._
+- Patients lacked accessible, clinically grounded tinnitus support — most options require audiologist referral or in-clinic intervention
+- Treatment options are fragmented and unclear — patients cycle through sound machines, apps, and supplements with no clinical framework
+- Existing digital tools were tied to the hearing-aid ecosystem, locking out the broader population of tinnitus sufferers without hearing loss
+- Patients who had already tried and failed multiple solutions arrived burned out and skeptical — emotional UX had to account for this exhaustion
 
 ## The Strategy
 
-> _TODO — awaiting content. The Figma Strategy section currently holds Retention case study text (streaks / training map / leaderboard), not Tinnitus content._
+I led the design end-to-end, focusing on four strategic pillars:
+
+1. **Reframe as structured therapy** — position Tinnitus Pro as a clinical program, not another app, to establish credibility with a burned-out patient population
+2. **Daily adherence by design** — build habit loops and session architecture that make consistent use the path of least resistance
+3. **Clinical credibility + consumer usability** — balance evidence-based framing with the accessibility of a consumer health product; neither hospital-grade nor wellness-app
+4. **Modular sound therapy architecture** — design a flexible sound library and session structure that can adapt to individual tinnitus profiles and expand over time
 
 ## Key Design Decisions
 
-> _TODO — awaiting content. The Figma section still holds Retention placeholder content._
+### Onboarding as symptom triage
+
+First-run onboarding doubles as a structured symptom intake. Rather than generic sign-up questions, patients answer a short validated sequence that seeds their initial sound therapy prescription. Sets clinical expectations from minute one.
+
+### Therapy framing, not app framing
+
+Every surface uses "session," "therapy," and "program" language — never "content," "tracks," or "features." This is a deliberate choice to signal clinical intent and reduce the perception that patients are using entertainment software for a serious condition.
+
+### Low cognitive load session design
+
+Tinnitus patients often experience anxiety, fatigue, and concentration difficulty. Session UI is minimal: one primary action, no distractions. Cognitive load was treated as a clinical constraint, not a nice-to-have.
+
+### Modular sound therapy architecture
+
+Rather than a fixed library, sound therapy is structured as composable modules — tone type, frequency range, masking level — so future clinical guidance can update prescriptions without requiring new UX. This also allows for AI-driven personalization downstream.
+
+### Habit loop visibility
+
+Progress and streaks are surfaced at session end and on the home dashboard. Unlike the hearing training product (which shows cumulative levels), Tinnitus Pro emphasizes consistency over quantity — because the therapeutic mechanism is daily exposure, not skill accumulation.
 
 ## Key Screens
-
-> _TODO — final screens and captions to come. Blank placeholders are wired in below for layout; replace the files in `public/images/work/tinnitus-pro/`._
 
 <ImageGallery
   columns={3}
   items={[
-    { src: "/images/work/tinnitus-pro/screen-1.svg", alt: "Tinnitus Pro screen placeholder 1", caption: "Caption to come" },
-    { src: "/images/work/tinnitus-pro/screen-2.svg", alt: "Tinnitus Pro screen placeholder 2", caption: "Caption to come" },
-    { src: "/images/work/tinnitus-pro/screen-3.svg", alt: "Tinnitus Pro screen placeholder 3", caption: "Caption to come" },
-    { src: "/images/work/tinnitus-pro/screen-4.svg", alt: "Tinnitus Pro screen placeholder 4", caption: "Caption to come" },
-    { src: "/images/work/tinnitus-pro/screen-5.svg", alt: "Tinnitus Pro screen placeholder 5", caption: "Caption to come" },
+    { src: "/images/work/tinnitus-pro/screen-1.svg", alt: "Onboarding symptom intake flow", caption: "Onboarding as symptom triage — structured intake seeds the initial therapy prescription" },
+    { src: "/images/work/tinnitus-pro/screen-2.svg", alt: "Sound therapy session control", caption: "Sound therapy control — minimal UI to reduce cognitive load during sessions" },
+    { src: "/images/work/tinnitus-pro/screen-3.svg", alt: "Daily session player", caption: "Daily session player — therapy framing throughout, never app or content language" },
+    { src: "/images/work/tinnitus-pro/screen-4.svg", alt: "Progress dashboard", caption: "Progress dashboard — consistency over quantity, habit loop made visible" },
+    { src: "/images/work/tinnitus-pro/screen-5.svg", alt: "Session completion state", caption: "Session completion — reinforces the therapeutic milestone, not just task completion" },
   ]}
 />
 
 ## Collaboration
 
-> _TODO — awaiting content. The Figma section still holds Retention placeholder content._
+Worked with clinical leadership to validate the symptom intake sequence against existing tinnitus assessment frameworks, ensuring onboarding didn't inadvertently create diagnostic expectations. Collaborated with legal on how to frame clinical language in a direct-to-consumer context — particularly around "clinically meaningful improvement" claims and THI references.
+
+Worked with engineering on the modular sound architecture to ensure the prescription model was data-driven from day one, not hardcoded. This set up the infrastructure for future AI-personalized therapy paths.
 
 ## Outcomes &amp; Impact
 
-In an April 2026 first-look analysis, 40% of patients with bothersome tinnitus achieved clinically meaningful improvement — a THI reduction of more than 7 points (Zeman 2011 standard) — with a median reduction of 13 points among those who improved.
+In an April 2026 first-look analysis of the initial cohort (N=100 of 600 enrolled), 40% of patients with bothersome tinnitus (subgroup N=25) achieved clinically meaningful improvement — a THI reduction of more than 7 points per the Zeman 2011 standard — with a median reduction of 13 points among those who improved. Tinnitus severity at baseline predicted response, consistent with existing literature.
 
-> _TODO — additional outcomes. The Figma section still holds Retention placeholder content._
+**Patient spotlights (THI score: baseline → follow-up):**
+
+| Patient | Baseline THI | Follow-up THI | Reduction |
+|---|---|---|---|
+| Patient A | 66 | 32 | −34 pts |
+| Patient B | 40 | 14 | −26 pts |
+| Patient C | 50 | 30 | −20 pts |
+| Patient D | 56 | 42 | −14 pts |
+
+_THI (Tinnitus Handicap Inventory): clinically meaningful improvement defined as >7-point reduction (Zeman et al., 2011). Total program engagement: 19h sound therapy._
+
+## Business &amp; Product Impact
+
+- Opened a new direct-to-consumer revenue channel outside the hearing-aid-dependent ecosystem
+- Clinical validation data generated within the first-look period, supporting future marketing claims and provider confidence
+- Established a differentiated position in a fragmented market — evidence-based DTC tinnitus support at scale
+- Built a modular architecture that enables AI-personalized therapy prescriptions in future product iterations
+- Demonstrated Neurotone's ability to design, validate, and ship a regulated DTC therapeutic end-to-end in under four months
 
 ## Leadership
 
-> _TODO — awaiting content. The Figma section still holds Retention placeholder content._
+- End-to-end 0→1 product leadership — concept through launch-ready design in under 4 months
+- Cross-functional alignment across clinical, legal, and engineering under significant regulatory and timeline constraints
+- Patient-centered research approach with an anxious, underserved population that has high skepticism of unproven solutions
+- Balanced clinical credibility with consumer usability — avoided both hospital-grade over-engineering and wellness-app under-framing
+- Data-informed design validated against THI benchmarks; built measurement into the product from day one

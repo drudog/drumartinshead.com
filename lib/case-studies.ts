@@ -58,7 +58,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "tinnitus-pro",
     number: "04",
     title: "Tinnitus Pro",
-    subtitle: "From Zero — a direct-to-consumer tinnitus therapeutic",
+    subtitle: "0→1 Launch — a direct-to-consumer tinnitus therapeutic",
     summary:
       "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch — guided sound therapy and behavioral support delivered direct to consumers.",
     tags: ["0→1", "Regulated/Healthcare", "AI"],
