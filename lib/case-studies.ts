@@ -37,8 +37,8 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "0→1 — Legacy LACE to Lace AI Pro",
     summary:
       "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace AI Pro, from strategy to clinical validation, in under a year.",
-    tags: ["Platform", "Regulated/Healthcare", "0→1"],
-    hero: "/images/work/evolution/hero.svg",
+    tags: ["Platform", "Regulated/Healthcare", "0→1", "AI"],
+    hero: "/images/work/evolution/product-page.png",
     year: "2024",
     role: "Lead Product Designer",
   },
