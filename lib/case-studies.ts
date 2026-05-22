@@ -21,12 +21,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "voices",
     number: "01",
-    title: "Familiar Voice",
-    subtitle: "AI Voice Cloning Initiative",
+    title: "AI Voice Cloning Initiative",
+    subtitle: "Familiar Voice — personalization at scale in a regulated healthcare platform",
     summary:
       "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace AI Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
-    hero: "/images/work/voices/hero.svg",
+    hero: "/images/work/voices/screen-preview.png",
     year: "2025",
     role: "Lead Product Designer",
   },

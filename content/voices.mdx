@@ -1,49 +1,128 @@
-## Overview
+**Focus** — AI innovation · Scalable personalization
+**Role** — Product Design Lead (End-to-end)
+**Impact** — Market-defining feature
+**Scale** — 1,000+ clinics
+**Complexity** — High: AI + Clinical + Legal + Emotional UX + External Engineering Team
 
-> _TODO — One paragraph framing: what is Familiar Voice, who is it for, what problem does it solve._
+<Callout variant="insight">
+**HIPAA & GDPR compliant framework.** Designed from the ground up for data privacy and regulated healthcare use.
+</Callout>
 
-Familiar Voice lets users with hearing loss train their listening skills using the voices of the people closest to them — partners, kids, grandparents — instead of generic recordings.
+## Executive Summary
 
-<StatBlock>
-  <Stat value="TODO" label="Users in beta" />
-  <Stat value="TODO" label="Voice clones generated" />
-  <Stat value="TODO" label="Avg. weekly sessions" />
-</StatBlock>
+Clinical research showed that auditory training is significantly more effective when delivered in a familiar voice — such as a spouse or close family member. However, manually recording personalized content was operationally unscalable.
+
+I led the design of a secure, AI-powered **Invite & Clone** system that enabled patients to generate personalized therapeutic training using cloned voices from loved ones.
+
+The initiative became a primary differentiator for Lace AI Pro and elevated the platform&apos;s AI credibility in the market.
 
 ## The Problem
 
-> _TODO — The clinical and behavioral problem._
+Training effectiveness improves with familiar voices, but implementing at scale faced critical barriers:
 
-- Traditional auditory training uses unfamiliar voices, which makes carryover to real life harder.
-- Patients drop off because the practice doesn&apos;t feel relevant.
-- Voice cloning unlocks personalization at scale, but raises consent, safety, and clinical-validity questions.
+- Manual recording workflows were inefficient and inconsistent
+- Clinics could not manage individualized audio libraries at scale
+- Scaling across 1,000+ clinics required full automation
+- AI voice cloning risked distrust (uncanny valley effect in healthcare)
 
-## Approach
+We needed scalable personalization without sacrificing trust.
 
-> _TODO — Process: research, prototyping, validation._
+## The Strategy
 
-### Research
+**Core insight:** Emotional familiarity increases engagement and cognitive processing.
 
-Stakeholder interviews with audiologists and patients. Synthesis of [N] hours of session footage. Working closely with the clinical lead to map the existing exercise structure to the new modality.
+**Design objective:** Build a frictionless, ethically transparent AI voice cloning workflow that:
 
-### Designing for consent and trust
+- Feels safe
+- Feels simple
+- Feels clinically legitimate
+- Scales automatically
 
-<Callout variant="insight">
-**Design principle:** Every voice clone is created with explicit, revocable consent, and we surface that consent state in the UI at every meaningful step.
-</Callout>
+**Three pillars:**
 
-### Interaction model
+1. Seamless invitation flow
+2. High-quality recording capture
+3. Transparent AI voice synthesis onboarding
 
-> _TODO — Cover the onboarding, voice selection, and session experience._
-
-## Outcome
-
-> _TODO — Quantitative and qualitative results._
-
-<PullQuote attribution="Beta participant">
-TODO — pull a representative quote from beta feedback.
+<PullQuote attribution="Cathleen Q. — verified Lace AI Pro user">
+Lace has given me back my youth and joy of enjoying lectures, family, friends and group meetings. I feel so inspired and grateful to understand the process of learning to hear with the brain.
 </PullQuote>
 
-## Reflections
+## The recording experience
 
-> _TODO — What I&apos;d do differently, what surprised me, what&apos;s next._
+The voice donor flow is browser-based and works on any device. Real-time feedback on audio quality, an explicit consent step tied to the patient&apos;s name, and a clear path to remove the recording at any time.
+
+![Finish recording — the desktop voice donor flow, with consent language tied to the patient who requested it.](/images/work/voices/screen-preview.png)
+
+## Key Design Decisions
+
+### Invite &amp; clone workflow
+
+Patient sends a secure invite to a family member. Clear explanation of purpose and usage. Guided script collection. Removes clinic intervention entirely.
+
+### Mobile-first recording UI
+
+Large prompts, environmental guidance (&ldquo;Record in a quiet room&rdquo;), real-time audio quality feedback, minimal jargon. Non-technical users must produce clinically usable samples.
+
+### Transparent AI onboarding — uncanny valley mitigation
+
+Explicitly stated the voice is AI-generated. Preview-before-use. Full user control over activation. **Trust &gt; novelty.** In healthcare, perceived deception destroys adoption.
+
+### Emotional framing
+
+Positioned as connection-enhancing, not gimmicky. Reinforced dignity and familiarity throughout.
+
+## Key Screens
+
+<ImageGallery
+  columns={3}
+  items={[
+    {
+      src: "/images/work/voices/screen-invite.png",
+      alt: "Invite your friends and family to help you train",
+      caption: "Invite a friend to record their voice",
+    },
+    {
+      src: "/images/work/voices/screen-manage.png",
+      alt: "Choose your training voices — default and family voices",
+      caption: "Manage recorded and system voices",
+    },
+    {
+      src: "/images/work/voices/screen-preview.png",
+      alt: "Desktop voice donor flow — review and finish recording",
+      caption: "A recorded voice preview",
+    },
+    {
+      src: "/images/work/voices/screen-message.png",
+      alt: "Personalized audiologist message played in a cloned voice",
+      caption: "A personalized audiologist message using a cloned voice",
+    },
+    {
+      src: "/images/work/voices/screen-training.png",
+      alt: "Active training session using the voice of a family member",
+      caption: "Training session with a familiar voice",
+    },
+  ]}
+/>
+
+## Collaboration
+
+Worked across **AI engineering** (voice synthesis constraints), **clinical leadership** (therapeutic validity), **legal &amp; compliance** (consent and data usage), and **product marketing** (positioning differentiation).
+
+Navigated data privacy concerns, emotional sensitivity, technical constraints, and cross-platform deployment.
+
+## Outcomes &amp; Impact
+
+- Became a primary differentiator for Lace AI Pro
+- Strengthened positioning as AI-powered auditory rehabilitation
+- Increased provider excitement and demo conversion
+- Elevated perceived innovation maturity of the platform
+- Reinforced premium positioning of the product suite
+
+## Leadership
+
+- High-complexity AI initiative leadership
+- Ethical AI UX judgment in regulated healthcare
+- Multi-stakeholder orchestration (AI, clinical, legal, product, marketing)
+- Scalable personalization systems
+- Emotional UX in clinical contexts

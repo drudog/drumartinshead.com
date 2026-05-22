@@ -9,9 +9,9 @@ export function PullQuote({
 }) {
   return (
     <blockquote className="my-10 border-l-2 border-[color:var(--color-accent)] pl-6 not-italic">
-      <p className="font-display text-2xl sm:text-3xl leading-snug tracking-tight text-[color:var(--color-foreground)]">
+      <div className="font-display text-2xl sm:text-3xl leading-snug tracking-tight text-[color:var(--color-foreground)] [&>p]:m-0">
         {children}
-      </p>
+      </div>
       {attribution && (
         <footer className="mt-4 text-sm text-[color:var(--color-muted)]">— {attribution}</footer>
       )}
