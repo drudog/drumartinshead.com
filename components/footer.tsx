@@ -12,7 +12,7 @@ export function Footer() {
           <a href="https://www.behance.net/drumartin" target="_blank" rel="noreferrer" className="hover:text-[color:var(--color-foreground)] transition">
             Behance
           </a>
-          <Link href="/resume.pdf" className="hover:text-[color:var(--color-foreground)] transition">
+          <Link href="/2026-resume.pdf" className="hover:text-[color:var(--color-foreground)] transition">
             Resume
           </Link>
           <a href="mailto:drumartin@me.com" className="hover:text-[color:var(--color-foreground)] transition">

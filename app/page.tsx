@@ -211,7 +211,7 @@ export default function Home() {
                   Get in touch
                 </a>
                 <Link
-                  href="/resume.pdf"
+                  href="/2026-resume.pdf"
                   className="inline-flex items-center rounded-full border border-[color:var(--color-border)] px-6 py-3 text-sm font-medium hover:border-[color:var(--color-foreground)] transition"
                 >
                   Download resume (PDF)

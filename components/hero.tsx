@@ -23,7 +23,7 @@ export function Hero() {
           <ArrowDown className="h-4 w-4" />
         </Link>
         <Link
-          href="/resume.pdf"
+          href="/2026-resume.pdf"
           className="text-sm font-medium text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition px-4 py-3"
         >
           Download resume →

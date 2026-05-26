@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       <div className="mt-12 flex flex-wrap gap-4">
         <Link
-          href="/resume.pdf"
+          href="/2026-resume.pdf"
           className="inline-flex items-center rounded-full bg-[color:var(--color-foreground)] text-[color:var(--color-background)] px-6 py-3 text-sm font-medium transition hover:opacity-90"
         >
           Download resume (PDF)
