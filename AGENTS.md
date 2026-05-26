@@ -1,3 +1,7 @@
+## Content authoring rules
+
+- **Never use em dashes (—) in any authored content.** Use a colon for label/value pairs and captions, a comma or semicolon for prose clause connectors, and a period for sentence breaks.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
