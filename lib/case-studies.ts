@@ -55,16 +55,16 @@ export const caseStudies: CaseStudy[] = [
     role: "Lead Product Designer",
   },
   {
-    slug: "certification-app",
-    number: "06",
-    title: "Beacon Certification App",
-    subtitle: "Partner Learning Platform — three-tier certification with no backend",
+    slug: "tinnitus-pro",
+    number: "04",
+    title: "Tinnitus Pro",
+    subtitle: "0→1 Launch — a direct-to-consumer tinnitus therapeutic",
     summary:
-      "Beacon's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments — with all state in localStorage and zero backend infrastructure.",
-    tags: ["Platform", "0→1"],
-    hero: "/images/work/certification-app/01-home.png",
-    year: "2025",
-    role: "Full-Stack Design & Engineering",
+      "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch — guided sound therapy and behavioral support delivered direct to consumers.",
+    tags: ["0→1", "Regulated/Healthcare", "AI"],
+    hero: "/images/work/tinnitus-pro/thumb.jpg",
+    year: "2026",
+    role: "Product Research & Lead Designer",
   },
   {
     slug: "pdf-system",
@@ -79,16 +79,16 @@ export const caseStudies: CaseStudy[] = [
     role: "Systems Design & Engineering",
   },
   {
-    slug: "tinnitus-pro",
-    number: "04",
-    title: "Tinnitus Pro",
-    subtitle: "0→1 Launch — a direct-to-consumer tinnitus therapeutic",
+    slug: "certification-app",
+    number: "06",
+    title: "Beacon Certification App",
+    subtitle: "Partner Learning Platform — three-tier certification with no backend",
     summary:
-      "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch — guided sound therapy and behavioral support delivered direct to consumers.",
-    tags: ["0→1", "Regulated/Healthcare", "AI"],
-    hero: "/images/work/tinnitus-pro/thumb.jpg",
-    year: "2026",
-    role: "Product Research & Lead Designer",
+      "Beacon's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments — with all state in localStorage and zero backend infrastructure.",
+    tags: ["Platform", "0→1"],
+    hero: "/images/work/certification-app/01-home.png",
+    year: "2025",
+    role: "Full-Stack Design & Engineering",
   },
   {
     slug: "beat-dagger",
@@ -114,4 +114,16 @@ export const allTags: CaseStudyTag[] = [
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
   return caseStudies.find((cs) => cs.slug === slug);
+}
+
+export function getAdjacentCaseStudies(slug: string): {
+  prev: CaseStudy | null;
+  next: CaseStudy | null;
+} {
+  const index = caseStudies.findIndex((cs) => cs.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+  return {
+    prev: index > 0 ? caseStudies[index - 1] : null,
+    next: index < caseStudies.length - 1 ? caseStudies[index + 1] : null,
+  };
 }

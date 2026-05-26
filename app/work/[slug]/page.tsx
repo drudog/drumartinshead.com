@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import { caseStudies, getCaseStudy } from "@/lib/case-studies";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { caseStudies, getCaseStudy, getAdjacentCaseStudies } from "@/lib/case-studies";
 import { CaseStudyToc } from "@/components/case-study-toc";
 import { AnimateFadeUp } from "@/components/animate-fade-up";
 
@@ -41,6 +41,7 @@ export default async function CaseStudyPage({
   const cs = getCaseStudy(slug);
   if (!cs) notFound();
 
+  const { prev, next } = getAdjacentCaseStudies(slug);
   const { default: Content } = await import(`@/content/${slug}.mdx`);
 
   return (
@@ -48,13 +49,38 @@ export default async function CaseStudyPage({
       {/* Constrained header */}
       <AnimateFadeUp>
         <div className="mx-auto max-w-6xl px-6 pt-12 sm:pt-16 pb-10">
-          <Link
-            href="/#work"
-            className="inline-flex items-center gap-2 text-sm text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition mb-12"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to work
-          </Link>
+          {/* Top nav row */}
+          <div className="flex items-center justify-between mb-12">
+            <Link
+              href="/#work"
+              className="inline-flex items-center gap-2 text-sm text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to work
+            </Link>
+            <div className="flex items-center gap-6 text-sm">
+              {prev && (
+                <Link
+                  href={`/work/${prev.slug}`}
+                  className="inline-flex items-center gap-1.5 text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5" />
+                  <span className="font-mono text-xs">{prev.number}</span>
+                  <span className="hidden sm:inline">{prev.title}</span>
+                </Link>
+              )}
+              {next && (
+                <Link
+                  href={`/work/${next.slug}`}
+                  className="inline-flex items-center gap-1.5 text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition"
+                >
+                  <span className="hidden sm:inline">{next.title}</span>
+                  <span className="font-mono text-xs">{next.number}</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              )}
+            </div>
+          </div>
 
           <div className="relative overflow-hidden">
             {/* Decorative case number */}
@@ -117,6 +143,50 @@ export default async function CaseStudyPage({
               </div>
             </aside>
           </div>
+
+          {/* Bottom prev/next navigation */}
+          {(prev || next) && (
+            <div className="mt-16 pt-10 border-t border-[color:var(--color-border)]">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  {prev && (
+                    <Link
+                      href={`/work/${prev.slug}`}
+                      className="group flex flex-col gap-2 p-6 rounded-2xl border border-[color:var(--color-border)] hover:border-[color:var(--color-accent)] hover:bg-[color:var(--color-surface)] transition"
+                    >
+                      <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[color:var(--color-muted)] group-hover:text-[color:var(--color-accent)] transition">
+                        <ArrowLeft className="h-3 w-3" />
+                        Previous
+                      </span>
+                      <span className="font-mono text-xs text-[color:var(--color-muted)]">{prev.number}</span>
+                      <span className="font-display text-lg sm:text-xl font-semibold tracking-tight text-[color:var(--color-foreground)] leading-tight">
+                        {prev.title}
+                      </span>
+                      <span className="text-sm text-[color:var(--color-muted)]">{prev.role}</span>
+                    </Link>
+                  )}
+                </div>
+                <div>
+                  {next && (
+                    <Link
+                      href={`/work/${next.slug}`}
+                      className="group flex flex-col gap-2 p-6 rounded-2xl border border-[color:var(--color-border)] hover:border-[color:var(--color-accent)] hover:bg-[color:var(--color-surface)] transition text-right"
+                    >
+                      <span className="inline-flex items-center justify-end gap-1.5 text-xs font-mono uppercase tracking-widest text-[color:var(--color-muted)] group-hover:text-[color:var(--color-accent)] transition">
+                        Next
+                        <ArrowRight className="h-3 w-3" />
+                      </span>
+                      <span className="font-mono text-xs text-[color:var(--color-muted)]">{next.number}</span>
+                      <span className="font-display text-lg sm:text-xl font-semibold tracking-tight text-[color:var(--color-foreground)] leading-tight">
+                        {next.title}
+                      </span>
+                      <span className="text-sm text-[color:var(--color-muted)]">{next.role}</span>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </AnimateFadeUp>
     </div>
