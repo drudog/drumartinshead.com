@@ -1,42 +1,42 @@
-**Focus** — Full-Stack Design & Engineering · Learning Platform · 0→1
-**Role** — Sole designer and engineer (end-to-end)
-**Timeline** — 2025
-**Live** — [partner-certification.vercel.app](https://partner-certification.vercel.app) · [github.com/drudog/partner-certification](https://github.com/drudog/partner-certification)
-**Stack** — Next.js 16 · TypeScript · Tailwind CSS · shadcn/ui · Radix UI
+**Focus:** Full-Stack Design & Engineering · Learning Platform · 0→1
+**Role:** Sole designer and engineer (end-to-end)
+**Timeline:** 2025
+**Live:** [partner-certification.vercel.app](https://partner-certification.vercel.app) · [github.com/drudog/partner-certification](https://github.com/drudog/partner-certification)
+**Stack:** Next.js 16 · TypeScript · Tailwind CSS · shadcn/ui · Radix UI
 
 ## Executive Summary
 
-I designed and built a full-stack partner certification platform that delivers structured training across three progressive tiers. Partners read lessons, watch embedded videos, check understanding with inline quizzes, and prove mastery through a gated final assessment — with no backend required. Progress is persisted entirely in localStorage through a pure-function library I wrote to manage all state.
+I designed and built a full-stack partner certification platform that delivers structured training across three progressive tiers. Partners read lessons, watch embedded videos, check understanding with inline quizzes, and prove mastery through a gated final assessment, with no backend required. Progress is persisted entirely in localStorage through a pure-function library I wrote to manage all state.
 
 The platform gives Beacon's partner program a single destination that mirrors a real certification experience: read, learn, prove it.
 
 <StatBlock>
-  <Stat value="3" label="Progressive certification tiers — Certified, Gold, Platinum" />
-  <Stat value="0" label="Backend required — all state via localStorage pure-function library" />
-  <Stat value="6" label="Content types per lesson — prose, video, carousels, resources, quizzes, assessments" />
+  <Stat value="3" label="Progressive certification tiers: Certified, Gold, Platinum" />
+  <Stat value="0" label="Backend required: all state via localStorage pure-function library" />
+  <Stat value="6" label="Content types per lesson: prose, video, carousels, resources, quizzes, assessments" />
 </StatBlock>
 
 ## The Problem
 
-Partner programs typically sprawl across PDFs, slide decks, and scattered wikis. There's no structured learning path, no way to verify knowledge, and no sense of progression. This app gives partners a single destination with a real certification experience — one that enforces sequential mastery rather than letting partners skip to the end.
+Partner programs typically sprawl across PDFs, slide decks, and scattered wikis. There's no structured learning path, no way to verify knowledge, and no sense of progression. This app gives partners a single destination with a real certification experience, one that enforces sequential mastery rather than letting partners skip to the end.
 
 - No structured path existed for partner onboarding
-- Knowledge couldn't be verified — completion was self-reported
+- Knowledge couldn't be verified; completion was self-reported
 - Content scattered across PDFs and slides with no progression logic
 - Partners had no sense of achievement or certification to point to
 
 ## The Strategy
 
-1. **Mirror a real certification experience** — three tiered levels (Certified → Gold → Platinum) with progressive unlock gates enforced at the route level
-2. **Enforce sequential mastery** — lessons unlock in order; assessments lock until every preceding lesson is complete
-3. **No backend dependency** — ship fast, stay maintainable; all progress state in a pure-function localStorage library
-4. **Rich content without JavaScript bloat** — Markdown prose processed server-side via `remark` + `remark-html`; no JS shipped for reading
+1. **Mirror a real certification experience:** three tiered levels (Certified → Gold → Platinum) with progressive unlock gates enforced at the route level
+2. **Enforce sequential mastery:** lessons unlock in order; assessments lock until every preceding lesson is complete
+3. **No backend dependency:** ship fast, stay maintainable; all progress state in a pure-function localStorage library
+4. **Rich content without JavaScript bloat:** Markdown prose processed server-side via `remark` + `remark-html`; no JS shipped for reading
 
 ## Key Design Decisions
 
 ### Progressive tier gating
 
-Each certification tier is locked until the previous one is fully completed and its final assessment passed. This is enforced at the route level via a client-side access guard that silently redirects if a partner tries to skip ahead — the lock isn't just visual, it's structural.
+Each certification tier is locked until the previous one is fully completed and its final assessment passed. This is enforced at the route level via a client-side access guard that silently redirects if a partner tries to skip ahead; the lock isn't just visual, it's structural.
 
 ### Linear lesson progression
 
@@ -44,31 +44,31 @@ The app computes a flat ordered list of all lessons across all modules and check
 
 ### State without a backend
 
-All progress lives in `localStorage` under a single JSON key. A pure-function library (`lib/progress.ts`) handles every read, write, and derived state — `getLevelSummary`, `isLevelUnlocked`, `getNextLesson`. A `useProgress` hook wraps this in `useState` + `useEffect` for persistence on every change. Zero API routes, zero database.
+All progress lives in `localStorage` under a single JSON key. A pure-function library (`lib/progress.ts`) handles every read, write, and derived state: `getLevelSummary`, `isLevelUnlocked`, `getNextLesson`. A `useProgress` hook wraps this in `useState` + `useEffect` for persistence on every change. Zero API routes, zero database.
 
 ### Server-side content pipeline
 
-Lesson content is written in Markdown and processed at request time through a `remark` → `rehype` → `remark-html` pipeline. HTML is injected via `dangerouslySetInnerHTML` on a server component — no JavaScript shipped for prose rendering. This replaced `next-mdx-remote` which bundled an incompatible React 18 copy against Next.js 16's React 19.
+Lesson content is written in Markdown and processed at request time through a `remark` → `rehype` → `remark-html` pipeline. HTML is injected via `dangerouslySetInnerHTML` on a server component, with no JavaScript shipped for prose rendering. This replaced `next-mdx-remote` which bundled an incompatible React 18 copy against Next.js 16's React 19.
 
 ### shadcn/ui design system
 
-The full component set — `Button`, `Card`, `Badge`, `Progress` — is built on Radix UI primitives through shadcn/ui, styled with Tailwind CSS custom properties mapped to the Beacon design palette. The CSS variable layer (`--primary`, `--border`, `--radius`) keeps the design system coherent while ensuring every component is accessible out of the box.
+The full component set (`Button`, `Card`, `Badge`, `Progress`) is built on Radix UI primitives through shadcn/ui, styled with Tailwind CSS custom properties mapped to the Beacon design palette. The CSS variable layer (`--primary`, `--border`, `--radius`) keeps the design system coherent while ensuring every component is accessible out of the box.
 
 ## Key Screens
 
-![Home — three tiered certification levels with progressive lock/unlock states and progress bars](/images/work/certification-app/01-home.png)
+![Home: three tiered certification levels with progressive lock/unlock states and progress bars](/images/work/certification-app/01-home.png)
 
-![Level overview — real-time progress tracking and module navigation](/images/work/certification-app/02-level.png)
+![Level overview: real-time progress tracking and module navigation](/images/work/certification-app/02-level.png)
 
-![Module view — lessons with time estimates and quiz question count indicators](/images/work/certification-app/03-module.png)
+![Module view: lessons with time estimates and quiz question count indicators](/images/work/certification-app/03-module.png)
 
-![Lesson reader (desktop) — sticky sidebar navigation, formatted markdown content](/images/work/certification-app/04-lesson.png)
+![Lesson reader (desktop): sticky sidebar navigation, formatted markdown content](/images/work/certification-app/04-lesson.png)
 
 <ImageGallery
   columns={2}
   items={[
-    { src: "/images/work/certification-app/05-quiz.png", alt: "Knowledge check quiz — multiple choice with A–D selectable cards", caption: "Knowledge check (mobile) — multiple choice with answer confirmation and confetti on correct" },
-    { src: "/images/work/certification-app/06-assessment.png", alt: "Final assessment locked until all lessons complete", caption: "Certification assessment gate — locked until all lessons are complete" },
+    { src: "/images/work/certification-app/05-quiz.png", alt: "Knowledge check quiz: multiple choice with A-D selectable cards", caption: "Knowledge check (mobile): multiple choice with answer confirmation and confetti on correct" },
+    { src: "/images/work/certification-app/06-assessment.png", alt: "Final assessment locked until all lessons complete", caption: "Certification assessment gate: locked until all lessons are complete" },
   ]}
 />
 
@@ -76,11 +76,11 @@ The full component set — `Button`, `Card`, `Badge`, `Progress` — is built on
 
 ### Next.js 15+ async params
 
-All dynamic route `params` became a `Promise` in Next.js 15. Server components now `await params`; client components use `React.use(params)`. Missing this causes all dynamic routes to 404 silently — a breaking change with no obvious error message.
+All dynamic route `params` became a `Promise` in Next.js 15. Server components now `await params`; client components use `React.use(params)`. Missing this causes all dynamic routes to 404 silently, a breaking change with no obvious error message.
 
 ### React version conflict
 
-`next-mdx-remote` v6 bundled its own React 18 copy, throwing "React Element from an older version of React" errors against Next.js 16's React 19. Replaced the entire MDX pipeline with a lightweight `remark` + `remark-html` chain — no JSX emitted, no version conflict, smaller bundle.
+`next-mdx-remote` v6 bundled its own React 18 copy, throwing "React Element from an older version of React" errors against Next.js 16's React 19. Replaced the entire MDX pipeline with a lightweight `remark` + `remark-html` chain, with no JSX emitted, no version conflict, smaller bundle.
 
 ### Reserved variable naming
 
@@ -89,13 +89,13 @@ Next.js's ESLint config treats `module` as a reserved identifier (`@next/next/no
 ## Outcomes &amp; Impact
 
 - Delivered a fully functional three-tier certification platform with zero backend infrastructure
-- Partners can progress through structured learning paths with real mastery gates — not self-reported completion
-- Content authors add new lessons by writing a Markdown file — no code changes required
+- Partners can progress through structured learning paths with real mastery gates, not self-reported completion
+- Content authors add new lessons by writing a Markdown file; no code changes required
 - Deployed to Vercel; live at [partner-certification.vercel.app](https://partner-certification.vercel.app)
 
 ## Leadership
 
 - End-to-end ownership: architecture decisions, design system, engineering, and deployment
 - Identified and resolved three non-obvious framework-level breaking changes (async params, React version conflict, ESLint peer deps)
-- Designed for content-author handoff — adding lessons requires no engineering involvement
+- Designed for content-author handoff; adding lessons requires no engineering involvement
 - Built a stateful learning experience with zero backend cost or operational overhead

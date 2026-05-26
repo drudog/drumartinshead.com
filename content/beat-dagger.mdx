@@ -1,40 +1,40 @@
-**Focus** — Side Project · Browser Audio Engineering · 0→1
-**Role** — Sole designer and engineer
-**Timeline** — 2026
-**Live** — [beat-dagger.vercel.app](https://beat-dagger.vercel.app) · [github.com/drudog/beat-dagger](https://github.com/drudog/beat-dagger)
-**Stack** — React 18 · Vite · Web Audio API · WaveSurfer.js · IndexedDB
+**Focus:** Side Project · Browser Audio Engineering · 0→1
+**Role:** Sole designer and engineer
+**Timeline:** 2026
+**Live:** [beat-dagger.vercel.app](https://beat-dagger.vercel.app) · [github.com/drudog/beat-dagger](https://github.com/drudog/beat-dagger)
+**Stack:** React 18 · Vite · Web Audio API · WaveSurfer.js · IndexedDB
 
 ## Executive Summary
 
-Beat Dagger is a browser-based musician's tool I built for myself — record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.
+Beat Dagger is a browser-based musician's tool I built for myself: record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.
 
 It solves a specific friction point for solo musicians: getting a solid rhythmic reference *into* a take without juggling a separate metronome app. Everything lives in one screen.
 
 <StatBlock>
-  <Stat value="< 1ms" label="Beat accuracy — look-ahead Web Audio scheduler, immune to JS event-loop jank" />
-  <Stat value="6" label="Time signatures — 2/4 through 7/8, with per-beat accent/ghost/mute and 16th-note subdivision" />
-  <Stat value="0" label="Server — 100% local storage via IndexedDB, no auth, no data sent anywhere" />
+  <Stat value="< 1ms" label="Beat accuracy: look-ahead Web Audio scheduler, immune to JS event-loop jank" />
+  <Stat value="6" label="Time signatures: 2/4 through 7/8, with per-beat accent/ghost/mute and 16th-note subdivision" />
+  <Stat value="0" label="Server: 100% local storage via IndexedDB, no auth, no data sent anywhere" />
 </StatBlock>
 
 ## The Problem
 
-Solo musicians recording at home have to juggle a DAW, a separate metronome app, and a recording interface — and none of them talk to each other. When you hit record, you're hoping the timing reference you set up is still running, and that your take starts in sync with beat 1. It usually doesn't.
+Solo musicians recording at home have to juggle a DAW, a separate metronome app, and a recording interface, and none of them talk to each other. When you hit record, you're hoping the timing reference you set up is still running, and that your take starts in sync with beat 1. It usually doesn't.
 
 Beat Dagger collapses everything into one screen: build your click track, set a count-in, hit record, and your mic opens exactly on beat 1.
 
 ## What It Does
 
-- **Hit record** — the metronome fires, a count-in ticks off, and your mic opens exactly on beat 1
-- **Step sequencer** — up to 4 simultaneous sound rows (click, soft click, woodblock, beep, shaker), per-beat accent/ghost/mute levels, optional 16th-note subdivision
-- **Waveform review** — WaveSurfer renders the recording with optional beat markers immediately after capture
-- **Presets** — save full metronome configs (BPM, time sig, pattern, volume, count-in) under a name; switch between song setups instantly
-- **Local library** — named, timestamped recordings stored in IndexedDB; playback any time, no account needed
+- **Hit record:** the metronome fires, a count-in ticks off, and your mic opens exactly on beat 1
+- **Step sequencer:** up to 4 simultaneous sound rows (click, soft click, woodblock, beep, shaker), per-beat accent/ghost/mute levels, optional 16th-note subdivision
+- **Waveform review:** WaveSurfer renders the recording with optional beat markers immediately after capture
+- **Presets:** save full metronome configs (BPM, time sig, pattern, volume, count-in) under a name; switch between song setups instantly
+- **Local library:** named, timestamped recordings stored in IndexedDB; playback any time, no account needed
 
 ## Key Design Decisions
 
 ### Look-ahead audio scheduler
 
-The metronome uses a look-ahead scheduler (25ms lookahead, 150ms schedule window) rather than `setInterval`. Beats fire with sub-millisecond accuracy regardless of JavaScript event-loop jank. The audio context is created synchronously inside the user gesture call stack — a Safari requirement that most implementations get wrong.
+The metronome uses a look-ahead scheduler (25ms lookahead, 150ms schedule window) rather than `setInterval`. Beats fire with sub-millisecond accuracy regardless of JavaScript event-loop jank. The audio context is created synchronously inside the user gesture call stack, a Safari requirement that most implementations get wrong.
 
 ### Zero-latency mic acquisition
 
@@ -42,11 +42,11 @@ The metronome uses a look-ahead scheduler (25ms lookahead, 150ms schedule window
 
 ### IndexedDB persistence without Blob
 
-Safari's structured clone algorithm rejects Blobs in IndexedDB. All recordings are stored as `ArrayBuffer` + MIME type instead — a non-obvious fix that makes the library work identically across Chrome, Firefox, and Safari without a workaround layer.
+Safari's structured clone algorithm rejects Blobs in IndexedDB. All recordings are stored as `ArrayBuffer` + MIME type instead, a non-obvious fix that makes the library work identically across Chrome, Firefox, and Safari without a workaround layer.
 
 ### Runtime MIME detection
 
-`MediaRecorder` MIME type is detected at runtime: `audio/mp4` on Safari, `audio/webm;codecs=opus` everywhere else. No user-agent sniffing — just `MediaRecorder.isTypeSupported()`.
+`MediaRecorder` MIME type is detected at runtime: `audio/mp4` on Safari, `audio/webm;codecs=opus` everywhere else. No user-agent sniffing, just `MediaRecorder.isTypeSupported()`.
 
 ## Key Features
 
@@ -58,15 +58,15 @@ Safari's structured clone algorithm rejects Blobs in IndexedDB. All recordings a
 | **Count-in** | Off / 1 bar / 2 bars / 4 bars |
 | **Presets** | Save/load/delete full metronome configs by name |
 | **Recordings** | Named, timestamped, waveform playback via WaveSurfer |
-| **Storage** | 100% local — IndexedDB, no server, no auth |
+| **Storage** | 100% local: IndexedDB, no server, no auth |
 
-![Beat Dagger home screen — record button, live timer, and collapsed metronome panel](/images/work/beat-dagger/screen-home.jpg)
+![Beat Dagger home screen: record button, live timer, and collapsed metronome panel](/images/work/beat-dagger/screen-home.jpg)
 
-![Beat Dagger step sequencer expanded — BPM slider, time signature, Click row with 4 beats, Add sound, Presets, and Count-in options](/images/work/beat-dagger/screen-sequencer.jpg)
+![Beat Dagger step sequencer expanded: BPM slider, time signature, Click row with 4 beats, Add sound, Presets, and Count-in options](/images/work/beat-dagger/screen-sequencer.jpg)
 
 ## Outcomes &amp; Impact
 
-- Live at [beat-dagger.vercel.app](https://beat-dagger.vercel.app) — deployed as a static Vercel app with zero server cost
+- Live at [beat-dagger.vercel.app](https://beat-dagger.vercel.app), deployed as a static Vercel app with zero server cost
 - Works identically across Chrome, Firefox, and Safari (four targeted Safari compatibility fixes)
 - Demonstrates range: Web Audio API scheduling, IndexedDB persistence, and waveform rendering in a production-grade client-side app
 
@@ -74,4 +74,4 @@ Safari's structured clone algorithm rejects Blobs in IndexedDB. All recordings a
 
 - Identified a real personal workflow problem and shipped a solution rather than reaching for an existing app
 - Navigated four non-obvious browser compatibility issues without libraries or polyfills
-- Built for zero operational overhead — no server, no database, no maintenance cost
+- Built for zero operational overhead: no server, no database, no maintenance cost

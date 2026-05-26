@@ -1,24 +1,24 @@
-**Focus** — Systems Design · Document Automation · Brand Engineering
-**Role** — Sole designer and engineer
-**Timeline** — 2025
-**Revenue impact** — Eliminated manual layout cost for a growing sales asset type
-**Complexity** — Medium: Node.js, Puppeteer, CSS print layout, asset pipeline
+**Focus:** Systems Design · Document Automation · Brand Engineering
+**Role:** Sole designer and engineer
+**Timeline:** 2025
+**Revenue impact:** Eliminated manual layout cost for a growing sales asset type
+**Complexity:** Medium: Node.js, Puppeteer, CSS print layout, asset pipeline
 
 ## Executive Summary
 
-I designed and built a fully automated document production system that generates print-ready, 6-page PDF case studies from structured content files. Each PDF represents a different audiology practice — unique practitioners, pull quotes, patient photos, and performance data — all produced from a single terminal command with zero manual layout work.
+I designed and built a fully automated document production system that generates print-ready, 6-page PDF case studies from structured content files. Each PDF represents a different audiology practice: unique practitioners, pull quotes, patient photos, and performance data, all produced from a single terminal command with zero manual layout work.
 
 The system was built for Neurotone's sales team, who needed a continuously growing library of practice-specific case studies to support clinic onboarding. The constraint: each study had to look custom-made, but no one on the team could spend hours in a design tool each time a new clinic was onboarded.
 
 <StatBlock>
   <Stat value="< 30s" label="To rebuild the entire case study library from scratch" />
-  <Stat value="6 pages" label="Per study — fully laid out, print-ready PDF" />
+  <Stat value="6 pages" label="Per study: fully laid out, print-ready PDF" />
   <Stat value="5+" label="Unique practice studies shipped from the same system" />
 </StatBlock>
 
 ## The Problem
 
-The sales team needed a continuously growing library of case studies — each featuring a unique practitioner, their clinical philosophy, patient outcome data, and brand-consistent layout — to support clinic onboarding conversations.
+The sales team needed a continuously growing library of case studies, each featuring a unique practitioner, their clinical philosophy, patient outcome data, and brand-consistent layout, to support clinic onboarding conversations.
 
 - Doing this manually in a design tool meant rebuilding every document from scratch
 - Any copy change required reopening the file, reflowing text, and re-exporting
@@ -27,20 +27,20 @@ The sales team needed a continuously growing library of case studies — each fe
 
 ## The Strategy
 
-1. **Separate content from layout** — each study is a single `.md` file with YAML frontmatter for structured data and a Markdown body for prose. The generator owns all layout decisions
-2. **Enforce design in code** — typography, spacing, brand consistency, and conditional layouts are all CSS rules, not per-document decisions
-3. **Make onboarding trivial** — adding a new study means creating a folder, writing a content file, dropping in photos, and running one command
-4. **Build for handoff** — the client's team can produce new studies without design involvement
+1. **Separate content from layout:** each study is a single `.md` file with YAML frontmatter for structured data and a Markdown body for prose. The generator owns all layout decisions
+2. **Enforce design in code:** typography, spacing, brand consistency, and conditional layouts are all CSS rules, not per-document decisions
+3. **Make onboarding trivial:** adding a new study means creating a folder, writing a content file, dropping in photos, and running one command
+4. **Build for handoff:** the client's team can produce new studies without design involvement
 
 ## Key Design Decisions
 
 ### Content architecture: YAML + Markdown
 
-Each case study is driven by a single `.md` file split into two parts. YAML frontmatter carries all structured content — pull quotes, at-a-glance stats, pricing callouts, checklist items, result cards, patient outcomes, and photo references. The Markdown body supplies paragraph copy keyed by section heading. The generator assembles these into a fully laid out 6-page document.
+Each case study is driven by a single `.md` file split into two parts. YAML frontmatter carries all structured content: pull quotes, at-a-glance stats, pricing callouts, checklist items, result cards, patient outcomes, and photo references. The Markdown body supplies paragraph copy keyed by section heading. The generator assembles these into a fully laid out 6-page document.
 
 ### 6-page layout system
 
-Every study follows a fixed page structure: cover and practice intro → practice model → patient conversations → implementation → results → takeaways and QR code. Each page template is a reusable HTML/CSS layout that pulls from the content file — no copy-paste, no per-study adjustments.
+Every study follows a fixed page structure: cover and practice intro → practice model → patient conversations → implementation → results → takeaways and QR code. Each page template is a reusable HTML/CSS layout that pulls from the content file, with no copy-paste, no per-study adjustments.
 
 ### Conditional layouts
 
@@ -48,7 +48,7 @@ Pages auto-adapt based on content presence. The results page renders a single-se
 
 ### Orphan prevention and vertical rhythm
 
-A single CSS custom property (`--vspace: 30px`) enforces consistent spacing across every element. A utility function inserts a non-breaking space before the last word of any text block, preventing single-word widows across all content variations — a print-design detail that would normally require manual review.
+A single CSS custom property (`--vspace: 30px`) enforces consistent spacing across every element. A utility function inserts a non-breaking space before the last word of any text block, preventing single-word widows across all content variations, a print-design detail that would normally require manual review.
 
 ### Asset pipeline
 
@@ -59,37 +59,37 @@ Practice photos resolve from a per-study `/photos/` folder. Small assets (icons,
 <ImageGallery
   columns={2}
   items={[
-    { src: "/images/work/pdf-system/kovel-cover.png", alt: "Elite Hearing of Colorado Springs — cover page", caption: "Cover — Elite Hearing of Colorado Springs" },
-    { src: "/images/work/pdf-system/davis-cover.png", alt: "Davis Audiology — cover page", caption: "Cover — Davis Audiology (3-location practice, same system)" },
-    { src: "/images/work/pdf-system/grote-cover.png", alt: "KC Hearing — cover page", caption: "Cover — KC Hearing" },
-    { src: "/images/work/pdf-system/palmetto-cover.png", alt: "Palmetto Audiology — cover page", caption: "Cover — Palmetto Audiology" },
+    { src: "/images/work/pdf-system/kovel-cover.png", alt: "Elite Hearing of Colorado Springs: cover page", caption: "Cover: Elite Hearing of Colorado Springs" },
+    { src: "/images/work/pdf-system/davis-cover.png", alt: "Davis Audiology: cover page", caption: "Cover: Davis Audiology (3-location practice, same system)" },
+    { src: "/images/work/pdf-system/grote-cover.png", alt: "KC Hearing: cover page", caption: "Cover: KC Hearing" },
+    { src: "/images/work/pdf-system/palmetto-cover.png", alt: "Palmetto Audiology: cover page", caption: "Cover: Palmetto Audiology" },
   ]}
 />
 
-![Page 2 — practice model with sidebar pull quote and pricing callout](/images/work/pdf-system/kovel-practice-model.png)
+![Page 2: practice model with sidebar pull quote and pricing callout](/images/work/pdf-system/kovel-practice-model.png)
 
-![Page 3 — patient conversations with three-column cues section](/images/work/pdf-system/kovel-patient-conversations.png)
+![Page 3: patient conversations with three-column cues section](/images/work/pdf-system/kovel-patient-conversations.png)
 
-![Page 4 — implementation challenges with action checklist and pull quote](/images/work/pdf-system/kovel-implementation.png)
+![Page 4: implementation challenges with action checklist and pull quote](/images/work/pdf-system/kovel-implementation.png)
 
-![Page 5 — two-panel results layout: practice impact and patient impact](/images/work/pdf-system/kovel-results.png)
+![Page 5: two-panel results layout, practice impact and patient impact](/images/work/pdf-system/kovel-results.png)
 
 <ImageGallery
   columns={2}
   items={[
-    { src: "/images/work/pdf-system/kovel-takeaways.png", alt: "Key takeaways page with QR code", caption: "Page 6 — numbered summary rows, textured background, QR code" },
-    { src: "/images/work/pdf-system/davis-takeaways.png", alt: "Davis Audiology takeaways page", caption: "Page 6 — Davis variant showing same layout, different content" },
+    { src: "/images/work/pdf-system/kovel-takeaways.png", alt: "Key takeaways page with QR code", caption: "Page 6: numbered summary rows, textured background, QR code" },
+    { src: "/images/work/pdf-system/davis-takeaways.png", alt: "Davis Audiology takeaways page", caption: "Page 6: Davis variant showing same layout, different content" },
   ]}
 />
 
 ## Collaboration
 
-Built independently as a systems design and engineering project in support of the Neurotone sales team. Worked with the sales and clinical teams to understand what information drove clinic buying decisions, which shaped the page structure and content hierarchy. The final system was designed so that non-technical team members could produce new studies by writing a content file — no design or engineering involvement required after initial build.
+Built independently as a systems design and engineering project in support of the Neurotone sales team. Worked with the sales and clinical teams to understand what information drove clinic buying decisions, which shaped the page structure and content hierarchy. The final system was designed so that non-technical team members could produce new studies by writing a content file; no design or engineering involvement required after initial build.
 
 ## Outcomes &amp; Impact
 
 - Eliminated all manual layout work for a growing sales asset type
-- Made copy edits instant — change a line, rebuild in seconds
+- Made copy edits instant: change a line, rebuild in seconds
 - Ensured pixel-perfect brand consistency across every study regardless of content variation
 - Rebuilt the full library in under 30 seconds
 - Created a foundation the sales team can hand off content into without design involvement
@@ -99,6 +99,6 @@ Built independently as a systems design and engineering project in support of th
 
 - End-to-end ownership: system architecture, design system, code, and delivery
 - Identified and eliminated a scaling bottleneck before it became a production problem
-- Built for handoff — the client can operate the system without the original author
+- Built for handoff: the client can operate the system without the original author
 - Applied print design discipline (orphan prevention, vertical rhythm) programmatically
 - Translated a design problem into an engineering solution without losing visual quality
