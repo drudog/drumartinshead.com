@@ -112,7 +112,7 @@ export default async function CaseStudyPage({
       <AnimateFadeUp delay={0.1}>
         <div className="relative w-full aspect-[21/9] overflow-hidden bg-[color:var(--color-border)] mb-16">
           <Image
-            src={cs.hero}
+            src={cs.heroPage ?? cs.hero}
             alt=""
             fill
             sizes="100vw"
@@ -120,7 +120,7 @@ export default async function CaseStudyPage({
             aria-hidden
           />
           <Image
-            src={cs.hero}
+            src={cs.heroPage ?? cs.hero}
             alt={cs.title}
             fill
             sizes="100vw"
