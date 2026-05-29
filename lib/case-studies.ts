@@ -27,7 +27,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
-    hero: "/images/work/voices/thumb.jpg",
+    hero: "/images/work/voices/hero-voices.png",
     year: "2025",
     role: "Lead Product Designer",
   },
@@ -39,7 +39,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace Pro, from strategy to clinical validation, in under a year.",
     tags: ["Platform", "Regulated/Healthcare", "0→1", "AI"],
-    hero: "/images/work/evolution/thumb.jpg",
+    hero: "/images/work/evolution/hero-lace.png",
     year: "2024",
     role: "Lead Product Designer",
   },
@@ -51,7 +51,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
-    hero: "/images/work/retention/thumb.jpg",
+    hero: "/images/work/retention/hero-fun-02.png",
     year: "2024",
     role: "Lead Product Designer",
   },
