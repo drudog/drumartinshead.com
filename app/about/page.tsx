@@ -58,7 +58,7 @@ export default function AboutPage() {
 
         <h2>Background</h2>
         <p>
-          Most recently, I&apos;ve led design at Lace AI — including the
+          Most recently, I&apos;ve led design at Neurotone AI — including the
           redesign of LACE (a two-decade-old auditory training platform used in
           audiology clinics), the launch of AI voice cloning for personalized
           training, and a zero-to-one tinnitus management product.

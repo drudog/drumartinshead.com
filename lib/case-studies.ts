@@ -24,7 +24,7 @@ export const caseStudies: CaseStudy[] = [
     title: "AI Voice Cloning Initiative",
     subtitle: "Familiar Voice — personalization at scale in a regulated healthcare platform",
     summary:
-      "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace AI Pro.",
+      "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/voices/thumb.jpg",
     year: "2025",
@@ -34,9 +34,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "evolution",
     number: "02",
     title: "Evolution",
-    subtitle: "0→1 — Legacy LACE to Lace AI Pro",
+    subtitle: "0→1 — Legacy LACE to Lace Pro",
     summary:
-      "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace AI Pro, from strategy to clinical validation, in under a year.",
+      "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace Pro, from strategy to clinical validation, in under a year.",
     tags: ["Platform", "Regulated/Healthcare", "0→1", "AI"],
     hero: "/images/work/evolution/thumb.jpg",
     year: "2024",
