@@ -100,7 +100,6 @@ export default async function CaseStudyPage({
               </p>
               <dl className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm border-t border-[color:var(--color-border)] pt-8">
                 <Meta label="Year" value={cs.year} />
-                <Meta label="Role" value={cs.role} />
                 <Meta label="Tags" value={cs.tags.join(" · ")} />
               </dl>
             </header>
