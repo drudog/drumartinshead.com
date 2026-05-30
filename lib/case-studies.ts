@@ -76,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Neurotone's sales team needed a growing library of clinic-specific case studies, each looking custom-made. I built a Node.js + Puppeteer system that generates print-ready 6-page PDFs from a single content file — zero manual layout, under 30 seconds to rebuild the full library.",
     tags: ["Platform", "0→1"],
-    hero: "/images/work/pdf-system/kovel-cover.png",
+    hero: "/images/work/pdf-system/hero-study.png",
     year: "2025",
     role: "Systems Design & Engineering",
   },
