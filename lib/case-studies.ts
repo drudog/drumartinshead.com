@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
       "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/voices/hero-voices.png",
-    year: "2026",
+    year: "2025",
     role: "Lead Product Designer",
   },
   {
