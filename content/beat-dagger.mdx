@@ -23,13 +23,15 @@ Solo musicians recording at home have to juggle a DAW, a separate metronome app,
 
 Beat Dagger collapses everything into one screen: build your click track, set a count-in, hit record, and your mic opens exactly on beat 1.
 
-## What It Does
+## The Strategy
 
-- **Hit record:** the metronome fires, a count-in ticks off, and your mic opens exactly on beat 1
-- **Step sequencer:** up to 4 simultaneous sound rows (click, soft click, woodblock, beep, shaker), per-beat accent/ghost/mute levels, optional 16th-note subdivision
-- **Waveform review:** WaveSurfer renders the recording with optional beat markers immediately after capture
-- **Presets:** save full metronome configs (BPM, time sig, pattern, volume, count-in) under a name; switch between song setups instantly
-- **Local library:** named, timestamped recordings stored in IndexedDB; playback any time, no account needed
+The core design principle: collapse the studio problem into a single screen. One surface for building your click track, recording your take, and reviewing the result — no app switching, no timing drift.
+
+1. **Record to the beat:** count-in ticks before the mic opens, so beat 1 is aligned by design, not by luck
+2. **Step sequencer as the click track:** up to 4 customizable sound rows with per-beat accent, ghost, and mute levels — precise enough for odd time signatures, simple enough to set in seconds
+3. **Immediate waveform review:** WaveSurfer renders the recording with beat markers right after capture, so you know whether the take is worth keeping before you move on
+4. **Named presets per song:** save full metronome configs — BPM, time signature, pattern, count-in — so switching between sessions is instant
+5. **Local-first storage:** recordings live in IndexedDB, named and timestamped; no account, no server, no friction
 
 ## Key Design Decisions
 
@@ -61,13 +63,19 @@ Safari's structured clone algorithm rejects Blobs in IndexedDB. All recordings a
 | **Recordings** | Named, timestamped, waveform playback via WaveSurfer |
 | **Storage** | 100% local: IndexedDB, no server, no auth |
 
+## Key Screens
+
 <ImageGallery
-  columns={3}
+  columns={2}
   items={[
     { src: "/images/work/beat-dagger/screen-home.jpg", alt: "Beat Dagger home screen: record button, live timer, and collapsed metronome panel", caption: "Home screen: record button, live timer, and collapsed metronome panel" },
     { src: "/images/work/beat-dagger/screen-sequencer.jpg", alt: "Beat Dagger step sequencer expanded", caption: "Step sequencer: BPM slider, time signature, per-beat accent/ghost/mute, and count-in options" },
   ]}
 />
+
+## Collaboration
+
+Built independently as a side project for personal use. Every decision came from direct experience with the problem — no stakeholders, no briefs, just a specific workflow friction point and a weekend to solve it.
 
 ## Outcomes &amp; Impact
 

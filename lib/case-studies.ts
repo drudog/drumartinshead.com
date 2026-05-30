@@ -63,8 +63,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "No existing product to reference. A patient population that's anxious, often older, and burned out on solutions that didn't work. I led the design of Tinnitus Pro from scratch — guided sound therapy and behavioral support delivered direct to consumers.",
     tags: ["0→1", "Regulated/Healthcare", "AI"],
-    hero: "/images/work/tinnitus-pro/hero.png",
-    heroPage: "/images/work/tinnitus-pro/hero-copy.png",
+    hero: "/images/work/tinnitus-pro/hero-copy.png",
     year: "2026",
     role: "Product Research & Lead Designer",
   },
