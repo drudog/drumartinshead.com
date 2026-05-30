@@ -35,7 +35,7 @@ export function LightboxImage({ caption, className, ...imgProps }: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-8"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-8 pb-8"
             onClick={() => setOpen(false)}
           >
             <button
@@ -51,17 +51,17 @@ export function LightboxImage({ caption, className, ...imgProps }: Props) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.92, opacity: 0 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="relative max-w-[90vw] max-h-[85vh] flex flex-col items-center gap-3"
+              className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center gap-3"
               onClick={(e) => e.stopPropagation()}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imgProps.src as string}
                 alt={imgProps.alt as string}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                className="min-h-0 max-w-full object-contain rounded-lg shadow-2xl flex-1"
               />
               {caption && (
-                <p className="text-sm text-white/60 text-center">{caption}</p>
+                <p className="shrink-0 text-sm text-white/60 text-center">{caption}</p>
               )}
             </motion.div>
           </motion.div>
