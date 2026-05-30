@@ -7,6 +7,7 @@ import { StatBlock, Stat } from "@/components/mdx/stat-block";
 import { PullQuote } from "@/components/mdx/pull-quote";
 import { ImageGallery } from "@/components/mdx/image-gallery";
 import { MetaGrid, MetaItem } from "@/components/mdx/meta-grid";
+import { VideoEmbed } from "@/components/mdx/video-embed";
 
 const components: MDXComponents = {
   Callout,
@@ -16,6 +17,7 @@ const components: MDXComponents = {
   ImageGallery,
   MetaGrid,
   MetaItem,
+  VideoEmbed,
   h2: ({ children, id }: { children?: React.ReactNode; id?: string }) => (
     <h2
       id={id}
