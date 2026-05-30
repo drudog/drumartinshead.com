@@ -1,6 +1,6 @@
 import { LightboxImage } from "@/components/lightbox-image";
 
-type Item = { src: string; alt: string; caption?: string };
+type Item = { src: string; alt: string; caption?: string; href?: string };
 
 export function ImageGallery({
   items,
@@ -25,8 +25,14 @@ export function ImageGallery({
             caption={item.caption}
           />
           {item.caption && (
-            <figcaption className="mt-2 text-xs text-[color:var(--color-muted)]">
-              {item.caption}
+            <figcaption className="mt-2 text-xs text-center text-[color:var(--color-muted)]">
+              {item.href ? (
+                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[color:var(--color-accent)] hover:underline">
+                  {item.caption}
+                </a>
+              ) : (
+                item.caption
+              )}
             </figcaption>
           )}
         </figure>
