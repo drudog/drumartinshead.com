@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
       "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
     tags: ["AI", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/voices/hero-voices.png",
-    year: "2025",
+    year: "2026",
     role: "Lead Product Designer",
   },
   {
@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
       "Legacy LACE had no AI roadmap, no scalability, and a fixed content library. I led the 0→1 redesign into Lace Pro, from strategy to clinical validation, in under a year.",
     tags: ["Platform", "Regulated/Healthcare", "0→1", "AI"],
     hero: "/images/work/evolution/hero-lace.png",
-    year: "2024",
+    year: "2025",
     role: "Lead Product Designer",
   },
   {
@@ -52,7 +52,7 @@ export const caseStudies: CaseStudy[] = [
       "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
     hero: "/images/work/retention/hero-fun-02.png",
-    year: "2024",
+    year: "2025",
     role: "Lead Product Designer",
   },
   {
@@ -76,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
       "Neurotone's sales team needed a growing library of clinic-specific case studies, each looking custom-made. I built a Node.js + Puppeteer system that generates print-ready 6-page PDFs from a single content file — zero manual layout, under 30 seconds to rebuild the full library.",
     tags: ["Platform", "0→1"],
     hero: "/images/work/pdf-system/hero-study.png",
-    year: "2025",
+    year: "2026",
     role: "Systems Design & Engineering",
   },
   {
@@ -88,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
       "Beacon's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments — with all state in localStorage and zero backend infrastructure.",
     tags: ["Platform", "0→1"],
     hero: "/images/work/certification-app/01-home.png",
-    year: "2025",
+    year: "2026",
     role: "Full-Stack Design & Engineering",
   },
   {
