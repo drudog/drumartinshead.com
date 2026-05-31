@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-20">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-6">
-        00 · Executive Summary
+        00 · Mission
       </p>
       <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight max-w-5xl leading-[1.08]">
         I evolve clinically proven concepts into{" "}
