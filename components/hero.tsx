@@ -10,9 +10,8 @@ export function Hero() {
       <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight max-w-5xl leading-[1.08]">
         I evolve clinically proven concepts into{" "}
         <span className="text-[color:var(--color-accent)]">
-          digital experiences that scale
-        </span>{" "}
-        , not just across markets, but across lives.
+          digital experiences that scale.
+        </span>
       </h1>
       <div className="mt-12 flex items-center gap-4">
         <Link
