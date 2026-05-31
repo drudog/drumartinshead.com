@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
-      "Beacon's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments, with all state in localStorage and zero backend infrastructure.",
+      "Lace Pro's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments, with all state in localStorage and zero backend infrastructure.",
     tags: ["Platform", "0→1"],
     hero: "/images/work/certification-app/01-home.png",
     year: "2026",
