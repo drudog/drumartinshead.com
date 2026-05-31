@@ -27,7 +27,8 @@ export default function AboutPage() {
         About
       </p>
       <h1 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-tight">
-        Designing products that hold up under pressure.
+        Designing products that hold up{" "}
+        <span className="text-[color:var(--color-accent)]">under pressure.</span>
       </h1>
 
       <div className="prose prose-lg dark:prose-invert mt-12 max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-[color:var(--color-foreground)] prose-p:leading-relaxed prose-a:text-[color:var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
