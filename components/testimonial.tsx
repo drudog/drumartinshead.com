@@ -12,7 +12,7 @@ export function Testimonial({ quote, author, role }: TestimonialProps) {
       </blockquote>
       <figcaption className="mt-4 text-sm text-[color:var(--color-muted)]">
         <span className="font-medium text-[color:var(--color-foreground)]">{author}</span>
-        {" — "}
+        {", "}
         {role}
       </figcaption>
     </figure>

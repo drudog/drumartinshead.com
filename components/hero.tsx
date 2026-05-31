@@ -12,7 +12,7 @@ export function Hero() {
         <span className="text-[color:var(--color-accent)]">
           digital experiences that scale
         </span>{" "}
-        — not just across markets, but across lives.
+        , not just across markets, but across lives.
       </h1>
       <div className="mt-12 flex items-center gap-4">
         <Link

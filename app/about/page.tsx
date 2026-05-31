@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Product design leader based in Gainesville, FL — healthcare digitalization, behavioral design, 0→1 product work.",
+  description: "Product design leader based in Gainesville, FL: healthcare digitalization, behavioral design, 0→1 product work.",
 };
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <div className="prose prose-lg dark:prose-invert mt-12 max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-[color:var(--color-foreground)] prose-p:leading-relaxed prose-a:text-[color:var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
         <p className="lead">
-          I&apos;m Dru — a product design leader based in Gainesville, FL. I&apos;ve
+          I&apos;m Dru, a product design leader based in Gainesville, FL. I&apos;ve
           spent the last several years focused on healthcare digitalization,
           translating clinically validated programs into experiences clinicians
           trust and patients return to.
@@ -43,22 +43,22 @@ export default function AboutPage() {
           I take ownership end-to-end: discovery, research synthesis, IA,
           interaction, visual, prototype, handoff, and the inevitable
           post-launch iteration. I care about the moments users are most
-          vulnerable — the first session, the relapse, the unclear instruction
-          — because that&apos;s where bad design does the most damage.
+          vulnerable: the first session, the relapse, the unclear instruction,
+          because that&apos;s where bad design does the most damage.
         </p>
 
         <h2>What I&apos;m good at</h2>
         <ul>
           <li>Zero-to-one product design in regulated environments</li>
           <li>Translating clinical and research protocols into product</li>
-          <li>Behavioral design — habit loops, streaks, motivational scaffolding</li>
+          <li>Behavioral design: habit loops, streaks, motivational scaffolding</li>
           <li>Design systems that hold up across long-running product surfaces</li>
           <li>Working closely with engineering and clinical/research stakeholders</li>
         </ul>
 
         <h2>Background</h2>
         <p>
-          Most recently, I&apos;ve led design at Neurotone AI — including the
+          Most recently, I&apos;ve led design at Neurotone AI, including the
           redesign of LACE (a two-decade-old auditory training platform used in
           audiology clinics), the launch of AI voice cloning for personalized
           training, and a zero-to-one tinnitus management product.

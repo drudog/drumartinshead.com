@@ -25,14 +25,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dru Martin — Product Design Leader",
+    default: "Dru Martin: Product Design Leader",
     template: "%s · Dru Martin",
   },
   description:
     "I evolve clinically proven concepts into digital experiences that scale. Product design leader specializing in healthcare digitalization.",
   metadataBase: new URL("https://drumartin.vercel.app"),
   openGraph: {
-    title: "Dru Martin — Product Design Leader",
+    title: "Dru Martin: Product Design Leader",
     description:
       "Product design leader specializing in healthcare digitalization.",
     type: "website",

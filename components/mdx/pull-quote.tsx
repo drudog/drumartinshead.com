@@ -13,7 +13,7 @@ export function PullQuote({
         {children}
       </div>
       {attribution && (
-        <footer className="mt-6 text-sm text-[color:var(--color-muted)] text-right">— {attribution}</footer>
+        <footer className="mt-6 text-sm text-[color:var(--color-muted)] text-right">{attribution}</footer>
       )}
     </blockquote>
   );

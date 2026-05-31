@@ -1,6 +1,6 @@
 # drumartin-portfolio
 
-Personal portfolio for Dru Martin — product design leader specializing in healthcare digitalization.
+Personal portfolio for Dru Martin, product design leader specializing in healthcare digitalization.
 
 Replaces [drumartin.figma.site](https://drumartin.figma.site).
 
@@ -60,4 +60,4 @@ Tokens live in `app/globals.css` as CSS variables under `@theme`. Dark mode flip
 
 ## Deploy
 
-Vercel — `vercel` from project root for a preview, `vercel --prod` for prod.
+Vercel: `vercel` from project root for a preview, `vercel --prod` for prod.
