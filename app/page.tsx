@@ -81,9 +81,12 @@ export default function Home() {
                 Work samples from a past life
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)]">
-                I have more case studies on my Behance profile: print,
-                marketing, and earlier UI work from before the Neurotone
-                chapter.
+                Before Neurotone, I spent several years in B2B SaaS: leading
+                UX at <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform serving thousands of agencies and SMBs, and contributing design work at{" "}
+                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong>, one of the largest email marketing platforms in the world. At both, I managed 4–5 person design teams while remaining hands-on as an IC. That chapter shaped how I think about complex workflow UX, multi-stakeholder products, and designing for users who live inside software all day.
+              </p>
+              <p className="mt-4 text-[color:var(--color-muted)]">
+                Print, marketing, and earlier UI work from that period lives on my Behance profile.
               </p>
               <a
                 href="https://www.behance.net/drumartin"
