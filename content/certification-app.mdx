@@ -1,21 +1,30 @@
 <MetaGrid>
   <MetaItem label="Focus" value="Full-Stack Design & Engineering · Learning Platform · 0→1" />
-  <MetaItem label="Timeline" value="2026" />
   <MetaItem label="Live" value="partner-certification.vercel.app" />
   <MetaItem label="Stack" value="Next.js 16 · TypeScript · Tailwind CSS · shadcn/ui · Radix UI" />
 </MetaGrid>
 
 ## Executive Summary
 
-I designed and built a full-stack partner certification platform that delivers structured training across three progressive tiers. Partners read lessons, watch embedded videos, check understanding with inline quizzes, and prove mastery through a gated final assessment, with no backend required. Progress is persisted entirely in localStorage through a pure-function library I wrote to manage all state.
+I designed and built a full-stack partner certification platform that delivers structured training across three progressive tiers. Partners read lessons, watch embedded videos, check understanding with inline quizzes, and prove mastery through a gated final assessment. The entire platform ships with no server infrastructure: progress state is managed through a pure-function library I wrote, keeping the system fast to build, easy to maintain, and free to run.
 
 The platform gives Beacon's partner program a single destination that mirrors a real certification experience: read, learn, prove it.
 
 <StatBlock>
   <Stat value="3" label="Progressive certification tiers: Certified, Gold, Platinum" />
-  <Stat value="0" label="Backend required: all state via localStorage pure-function library" />
+  <Stat value="$0" label="Ongoing infrastructure cost: no server, no database, no hosting fees" />
   <Stat value="6" label="Content types per lesson: prose, video, carousels, resources, quizzes, assessments" />
 </StatBlock>
+
+## Try It
+
+<div style={{width: "100%", height: "700px", borderRadius: "12px", overflow: "hidden", margin: "1.5rem 0", border: "1px solid rgba(128,128,128,0.15)"}}>
+  <iframe
+    src="https://partner-certification.vercel.app"
+    style={{width: "100%", height: "100%", border: "none"}}
+    title="Beacon Certification App: live app"
+  />
+</div>
 
 ## The Problem
 
@@ -30,7 +39,7 @@ Partner programs typically sprawl across PDFs, slide decks, and scattered wikis.
 
 1. **Mirror a real certification experience:** three tiered levels (Certified → Gold → Platinum) with progressive unlock gates enforced at the route level
 2. **Enforce sequential mastery:** lessons unlock in order; assessments lock until every preceding lesson is complete
-3. **No backend dependency:** ship fast, stay maintainable; all progress state in a pure-function localStorage library
+3. **Ship fast, stay maintainable:** all progress state in a pure-function localStorage library, no server infrastructure to build, deploy, or maintain
 4. **Rich content without JavaScript bloat:** Markdown prose processed server-side via `remark` + `remark-html`; no JS shipped for reading
 
 ## Key Design Decisions
@@ -43,9 +52,9 @@ Each certification tier is locked until the previous one is fully completed and 
 
 The app computes a flat ordered list of all lessons across all modules and checks whether every preceding lesson is marked complete before granting access. If not, the user is redirected to the first incomplete lesson. Partners can't self-report completion or navigate out of order.
 
-### State without a backend
+### Progress tracking with no infrastructure cost
 
-All progress lives in `localStorage` under a single JSON key. A pure-function library (`lib/progress.ts`) handles every read, write, and derived state: `getLevelSummary`, `isLevelUnlocked`, `getNextLesson`. A `useProgress` hook wraps this in `useState` + `useEffect` for persistence on every change. Zero API routes, zero database.
+All progress lives in `localStorage` under a single JSON key. A pure-function library (`lib/progress.ts`) handles every read, write, and derived state: `getLevelSummary`, `isLevelUnlocked`, `getNextLesson`. A `useProgress` hook wraps this in `useState` + `useEffect` for persistence on every change. No API routes, no database, no ongoing hosting cost.
 
 ### Server-side content pipeline
 
@@ -60,32 +69,33 @@ The full component set (`Button`, `Card`, `Badge`, `Progress`) is built on Radix
 <ImageGallery
   columns={3}
   items={[
-    { src: "/images/work/certification-app/01-home.png", alt: "Home: three tiered certification levels", caption: "Home: three tiered certification levels with progressive lock/unlock states and progress bars" },
     { src: "/images/work/certification-app/02-level.png", alt: "Level overview: real-time progress tracking and module navigation", caption: "Level overview: real-time progress tracking and module navigation" },
     { src: "/images/work/certification-app/03-module.png", alt: "Module view: lessons with time estimates and quiz question count indicators", caption: "Module view: lessons with time estimates and quiz question count indicators" },
     { src: "/images/work/certification-app/04-lesson.png", alt: "Lesson reader (desktop): sticky sidebar navigation, formatted markdown content", caption: "Lesson reader (desktop): sticky sidebar navigation, formatted markdown content" },
     { src: "/images/work/certification-app/05-quiz.png", alt: "Knowledge check quiz: multiple choice with A-D selectable cards", caption: "Knowledge check (mobile): multiple choice with answer confirmation and confetti on correct" },
     { src: "/images/work/certification-app/06-assessment.png", alt: "Final assessment locked until all lessons complete", caption: "Certification assessment gate: locked until all lessons are complete" },
+    { src: "/images/work/certification-app/07-lesson-video.jpg", alt: "Lesson reader with embedded video walkthrough and sidebar navigation", caption: "Rich lesson content: embedded video, sidebar navigation, and read-time estimates" },
+    { src: "/images/work/certification-app/08-lesson-carousel.jpg", alt: "Lesson reader with image carousel and prose content", caption: "Image carousel with slide captions alongside formatted lesson prose" },
   ]}
 />
 
 ## Challenges Solved
 
-### Next.js 15+ async params
+### Silent routing failures
 
-All dynamic route `params` became a `Promise` in Next.js 15. Server components now `await params`; client components use `React.use(params)`. Missing this causes all dynamic routes to 404 silently, a breaking change with no obvious error message.
+A framework-level change caused dynamic lesson routes to fail with no visible error: pages would simply 404. Diagnosed and resolved a non-obvious API change in how route parameters are passed through the component tree, restoring all dynamic routes without touching lesson or module content.
 
-### React version conflict
+### Dependency conflict blocking the content pipeline
 
-`next-mdx-remote` v6 bundled its own React 18 copy, throwing "React Element from an older version of React" errors against Next.js 16's React 19. Replaced the entire MDX pipeline with a lightweight `remark` + `remark-html` chain, with no JSX emitted, no version conflict, smaller bundle.
+A third-party content rendering library shipped with its own incompatible version of React, breaking the entire lesson rendering pipeline at build time. Replaced it with a lightweight custom pipeline that processes Markdown server-side, resolved the conflict, and reduced the JavaScript bundle size in the process.
 
-### Reserved variable naming
+### CI pipeline blocked at deployment
 
-Next.js's ESLint config treats `module` as a reserved identifier (`@next/next/no-assign-module-variable`). Renamed all destructured course module variables to `mod` to unblock Vercel's CI pipeline.
+A naming collision between a course variable and a framework-reserved identifier failed silently in local dev but blocked deployment in Vercel's CI pipeline. Identified the conflict, renamed the affected variables across the codebase, and restored clean deploys.
 
 ## Outcomes &amp; Impact
 
-- Delivered a fully functional three-tier certification platform with zero backend infrastructure
+- Eliminated the need for a third-party LMS or certification platform, avoiding recurring subscription costs with a purpose-built solution
 - Partners can progress through structured learning paths with real mastery gates, not self-reported completion
 - Content authors add new lessons by writing a Markdown file; no code changes required
 - Deployed to Vercel; live at [partner-certification.vercel.app](https://partner-certification.vercel.app)
