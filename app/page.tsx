@@ -86,7 +86,7 @@ export default function Home() {
                 <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong>, one of the largest email marketing platforms in the world. At both, I managed 4–5 person design teams while remaining hands-on as an IC. That chapter shaped how I think about complex workflow UX, multi-stakeholder products, and designing for users who live inside software all day.
               </p>
               <p className="mt-4 text-[color:var(--color-muted)]">
-                Print, marketing, and earlier UI work from that period lives on my Behance profile.
+                Earlier UX and product design work from that period lives on my Behance profile.
               </p>
               <a
                 href="https://www.behance.net/drumartin"
