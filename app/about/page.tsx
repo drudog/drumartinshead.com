@@ -65,6 +65,46 @@ export default function AboutPage() {
           training, and a zero-to-one tinnitus management product.
         </p>
 
+        <h2>Outside of work</h2>
+        <p>
+          When I&apos;m not designing, I play drums for two local Gainesville
+          bands: <strong className="text-[color:var(--color-foreground)]">Supertwin</strong> and{" "}
+          <strong className="text-[color:var(--color-foreground)]">BAD DOG</strong>.
+          My son has picked it up too and plays drums in a band of his own with
+          a few of his pre-teen friends. The rest of my free time usually
+          involves a mountain bike.
+        </p>
+
+        <figure className="not-prose my-8">
+          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-[color:var(--color-border)]">
+            <Image
+              src="/images/about/20260221_Skeletizer_Record_Release-1587.JPG"
+              alt="Dru playing drums with Supertwin / BAD DOG"
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-2 text-xs text-[color:var(--color-muted)]">
+            Photo credit: unknown
+          </figcaption>
+        </figure>
+
+        <figure className="not-prose my-8">
+          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-[color:var(--color-border)]">
+            <Image
+              src="/images/about/02_-5-positive-Edit.JPG"
+              alt="Dru mountain biking"
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-2 text-xs text-[color:var(--color-muted)]">
+            Photo credit: David Pettit George
+          </figcaption>
+        </figure>
+
       </div>
 
       <div className="mt-12 flex flex-wrap gap-4">
