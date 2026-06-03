@@ -154,10 +154,10 @@ export default function Home() {
                   </dt>
                   <dd>
                     <a
-                      href="mailto:drumartin@me.com"
+                      href="mailto:parsley.hatchet_7n@icloud.com"
                       className="text-[color:var(--color-foreground)] hover:text-[color:var(--color-accent)] transition"
                     >
-                      drumartin@me.com
+                      parsley.hatchet_7n@icloud.com
                     </a>
                   </dd>
                 </div>
@@ -167,10 +167,10 @@ export default function Home() {
                   </dt>
                   <dd>
                     <a
-                      href="tel:+13522832887"
+                      href="tel:+13524485475"
                       className="text-[color:var(--color-foreground)] hover:text-[color:var(--color-accent)] transition"
                     >
-                      (352) 283-2887
+                      (352) 448-5475
                     </a>
                   </dd>
                 </div>
@@ -208,7 +208,7 @@ export default function Home() {
               </dl>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="mailto:drumartin@me.com"
+                  href="mailto:parsley.hatchet_7n@icloud.com"
                   className="inline-flex items-center rounded-full bg-[color:var(--color-foreground)] text-[color:var(--color-background)] px-6 py-3 text-sm font-medium transition hover:opacity-90"
                 >
                   Get in touch

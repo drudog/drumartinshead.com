@@ -19,8 +19,8 @@ export default function ContactPage() {
       </p>
 
       <dl className="mt-12 grid sm:grid-cols-2 gap-8 text-sm">
-        <ContactItem label="Email" value="drumartin@me.com" href="mailto:drumartin@me.com" />
-        <ContactItem label="Phone" value="(352) 283-2887" href="tel:+13522832887" />
+        <ContactItem label="Email" value="parsley.hatchet_7n@icloud.com" href="mailto:parsley.hatchet_7n@icloud.com" />
+        <ContactItem label="Phone" value="(352) 448-5475" href="tel:+13524485475" />
         <ContactItem label="Location" value="Gainesville, FL" />
         <ContactItem label="LinkedIn" value="linkedin.com/in/drumartinshead" href="https://www.linkedin.com/in/drumartinshead/" />
         <ContactItem label="Behance" value="behance.net/drumartin" href="https://www.behance.net/drumartin" />
