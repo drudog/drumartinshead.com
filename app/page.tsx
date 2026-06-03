@@ -157,7 +157,7 @@ export default function Home() {
                       href="mailto:parsley.hatchet_7n@icloud.com"
                       className="text-[color:var(--color-foreground)] hover:text-[color:var(--color-accent)] transition"
                     >
-                      parsley.hatchet_7n@icloud.com
+                      Send an email
                     </a>
                   </dd>
                 </div>
