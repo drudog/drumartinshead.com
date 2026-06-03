@@ -15,7 +15,7 @@ export function Footer() {
           <Link href="/2026-resume.pdf" className="hover:text-[color:var(--color-foreground)] transition">
             Resume
           </Link>
-          <a href="mailto:drumartin@me.com" className="hover:text-[color:var(--color-foreground)] transition">
+          <a href="mailto:parsley.hatchet_7n@icloud.com" className="hover:text-[color:var(--color-foreground)] transition">
             Email
           </a>
         </div>
