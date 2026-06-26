@@ -24,19 +24,19 @@ export default function Home() {
               </p>
               <p>
                 I design systems end-to-end, from concept to execution, at
-                speed. Systems that align teams, drive desired customer
-                behavior, and capitalize on market opportunities.
+                speed. Systems that give teams a shared direction, move users
+                toward the right behavior, and don&apos;t fall apart when the
+                product scales.
               </p>
               <p>
-                In regulated healthcare environments where complexity is common,
-                I design clear and compelling experiences throughout the
-                customer lifecycle, from onboarding to adoption to expansion,
-                with measurable impact.
+                Healthcare is complicated by default. My job is to make the
+                experience feel otherwise: from a clinician&apos;s first login
+                to a patient finishing a twelve-week program.
               </p>
               <p>
-                My diverse expertise spans outcome-driven print, marketing,
-                UI/UX, and front-end engineering. In my free time I explore my
-                passion for music and visual arts.
+                I&apos;ve done the work across the stack: print, marketing,
+                UI/UX, and enough front-end engineering to ship my own tools.
+                In my free time I explore my passion for music and visual arts.
               </p>
               <p className="font-display text-xl text-[color:var(--color-accent)]">
                 Technology should elevate people. That&apos;s the work.
