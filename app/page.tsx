@@ -17,10 +17,18 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 max-w-3xl space-y-6 text-lg leading-relaxed text-[color:var(--color-foreground)]">
               <p>
-                With <strong>Lace Pro</strong>, I helped transform auditory
-                training from an afterthought into the standard of care in over{" "}
-                <strong>1,000 Audiology clinics</strong>. The message? Hearing
-                isn&apos;t just about the ears, it&apos;s about the brain.
+                Nearly fourteen years of product design, most of it where the
+                stakes are high and the workflows are messy: B2B SaaS platforms
+                serving millions of small businesses, and AI healthcare
+                products where the outcomes are clinical.
+              </p>
+              <p>
+                I&apos;ve led design teams at <strong>SharpSpring</strong> and{" "}
+                <strong>Constant Contact</strong>, going head-to-head with
+                HubSpot in marketing automation, and stayed hands-on the whole
+                time. Most recently, with <strong>Lace Pro</strong>, I helped
+                transform auditory training from an afterthought into the
+                standard of care in over <strong>1,000 audiology clinics</strong>.
               </p>
               <p>
                 I design systems end-to-end, from concept to execution, at
@@ -29,9 +37,10 @@ export default function Home() {
                 product scales.
               </p>
               <p>
-                Healthcare is complicated by default. My job is to make the
-                experience feel otherwise: from a clinician&apos;s first login
-                to a patient finishing a twelve-week program.
+                Complex domains are complicated by default. My job is to make
+                the experience feel otherwise: whether that&apos;s an agency
+                managing fifty client campaigns or a patient finishing a
+                twelve-week program.
               </p>
               <p>
                 I&apos;ve done the work across the stack: print, marketing,
@@ -60,9 +69,9 @@ export default function Home() {
                 Case studies
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)] max-w-2xl">
-                Four projects from my time at Neurotone, building Lace Pro
-                into the standard-of-care platform for auditory training in over
-                1,000 clinics.
+                Recent work spanning AI product design, platform modernization,
+                behavioral systems, and design engineering. All of it owned
+                end-to-end; some of it shipped to 1,000+ clinics.
               </p>
             </div>
           </div>
@@ -74,16 +83,15 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)]">
-              Past Work
+              B2B SaaS
             </p>
             <div className="md:col-span-2 max-w-2xl">
               <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">
-                Work samples from a past life
+                Nine years leading design in B2B SaaS
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)]">
-                Before Neurotone, I spent several years in B2B SaaS: leading
-                UX at <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform serving thousands of agencies and SMBs, and contributing design work at{" "}
-                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong>, one of the largest email marketing platforms in the world. At both, I managed 4–5 person design teams while remaining hands-on as an IC. That chapter shaped how I think about complex workflow UX, multi-stakeholder products, and designing for users who live inside software all day.
+                Before Neurotone, I led UX at <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform serving thousands of agencies and SMBs, and managed product design at{" "}
+                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong>, one of the largest email marketing platforms in the world. At both, I ran 4 to 5 person design teams while staying hands-on as an IC. That work shaped how I think about complex workflow UX, multi-stakeholder products, and designing for users who live inside software all day.
               </p>
               <p className="mt-4 text-[color:var(--color-muted)]">
                 Earlier UX and product design work from that period lives on my Behance profile.

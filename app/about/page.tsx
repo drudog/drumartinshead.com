@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Product design leader based in Gainesville, FL: healthcare digitalization, behavioral design, 0→1 product work.",
+  description: "Product design leader based in Gainesville, FL: B2B SaaS, AI product design, design systems, and 0→1 work in regulated environments.",
 };
 
 export default function AboutPage() {
@@ -33,10 +33,11 @@ export default function AboutPage() {
 
       <div className="prose prose-lg dark:prose-invert mt-12 max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-[color:var(--color-foreground)] prose-p:leading-relaxed prose-a:text-[color:var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
         <p className="lead">
-          I&apos;m Dru, a product design leader based in Gainesville, FL. I&apos;ve
-          spent the last several years focused on healthcare digitalization,
-          translating clinically validated programs into experiences clinicians
-          trust and patients return to.
+          I&apos;m Dru, a product design leader based in Gainesville, FL.
+          I&apos;ve spent nearly fourteen years designing complex products:
+          leading design teams at two of the largest marketing platforms in
+          B2B SaaS, then building AI-powered healthcare products that
+          clinicians trust and patients return to.
         </p>
 
         <h2>How I work</h2>
@@ -51,10 +52,12 @@ export default function AboutPage() {
         <h2>What I&apos;m good at</h2>
         <ul>
           <li>Zero-to-one product design in regulated environments</li>
+          <li>Complex workflow UX for B2B SaaS and enterprise platforms</li>
+          <li>Leading and mentoring design teams while staying hands-on</li>
           <li>Translating clinical and research protocols into product</li>
           <li>Behavioral design: habit loops, streaks, motivational scaffolding</li>
           <li>Design systems that hold up across long-running product surfaces</li>
-          <li>Working closely with engineering and clinical/research stakeholders</li>
+          <li>Working closely with engineering and cross-functional stakeholders</li>
         </ul>
 
         <h2>Background</h2>

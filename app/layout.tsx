@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: "%s · Dru Martin",
   },
   description:
-    "I evolve clinically proven concepts into digital experiences that scale. Product design leader specializing in healthcare digitalization.",
+    "I evolve complex systems into digital experiences that scale. Product design leader with nearly 14 years across B2B SaaS and AI healthcare products.",
   metadataBase: new URL("https://drumartin.vercel.app"),
   openGraph: {
     title: "Dru Martin: Product Design Leader",
     description:
-      "Product design leader specializing in healthcare digitalization.",
+      "Product design leader: B2B SaaS, AI products, and design systems that scale.",
     type: "website",
     locale: "en_US",
   },

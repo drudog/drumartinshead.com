@@ -8,7 +8,7 @@ export function Hero() {
         00 · Mission
       </p>
       <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight max-w-5xl leading-[1.08]">
-        I evolve clinically proven concepts into{" "}
+        I evolve complex systems into{" "}
         <span className="text-[color:var(--color-accent)]">
           digital experiences that scale.
         </span>
