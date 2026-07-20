@@ -1,0 +1,102 @@
+<MetaGrid>
+  <MetaItem label="Focus" value="Side Project · Mobile Ordering PWA · 0→1" />
+  <MetaItem label="Timeline" value="June–July 2026" />
+  <MetaItem label="Live" value="afternoon-orders.vercel.app" />
+  <MetaItem label="Stack" value="Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Square (Catalog, Orders, Payments) · Vercel Edge Config" />
+</MetaGrid>
+
+## Executive Summary
+
+Afternoon Orders is a mobile-first ordering PWA for a real coffee shop, built directly on Square rather than a third-party ordering platform. Customers browse a live Square-backed menu, customize drinks by size and modifier, pay by card, and get a real pickup order back from Square, no app install required.
+
+It solves a specific gap: Square's own online ordering products are either bundled into a generic storefront template or locked behind a higher-tier plan. This app reads the shop's actual Catalog, Orders, and Payments data directly through Square's APIs, so the ordering experience can be built to match the brand instead of a template, with the shop's live menu and hours as the single source of truth.
+
+<StatBlock>
+  <Stat value="27 / 9" label="Menu items across categories, synced live from Square's Catalog API, zero hardcoded content" />
+  <Stat value="$0/mo" label="Hosting cost: Vercel free tier plus Edge Config, no database, no separate backend" />
+  <Stat value="5 / 5" label="Icon-only controls (stepper, cart badge, add, close) ship an explicit aria-label" />
+</StatBlock>
+
+## Try It
+
+<div style={{width: "100%", height: "700px", borderRadius: "12px", overflow: "hidden", margin: "1.5rem 0", border: "1px solid rgba(128,128,128,0.15)"}}>
+  <iframe
+    src="https://afternoon-orders.vercel.app/"
+    style={{width: "100%", height: "100%", border: "none"}}
+    title="Afternoon Orders: live app"
+  />
+</div>
+
+## The Problem
+
+Most ordering-app design assumes a morning rush: a line out the door, a customer trying to skip the queue, a UI built to shave seconds off checkout. This shop's actual traffic is different. It's an afternoon cafe. The crowd is slower, more likely to browse a matcha or a pastry they haven't tried than to blast through a repeat order on autopilot.
+
+Designing for rush-hour throughput would have meant a dense, list-first, get-to-checkout-fast layout, the same shape as every quick-service ordering app. That would have been the wrong tool for this traffic pattern. The real friction wasn't speed, it was discovery and trust: does a customer know what's good here, do they know if the shop is even open right now, and can they get a pickup time that actually matches when they'll arrive.
+
+## The Strategy
+
+1. **Browse-first, not order-first.** A bento-style category grid built from the shop's own product photography sits above the menu list, inviting exploration before urgency, matching a browsier afternoon crowd rather than a queue-skipping rush crowd.
+2. **The menu is the source of truth, not a CMS.** Items, prices, images, modifiers, and hours all come straight from Square's Catalog and Business Hours APIs. Nothing about the menu is duplicated or hand-maintained in the app.
+3. **Trust the platform for money.** Cards are tokenized client-side through Square's Web Payments SDK; the server never sees card data. Every price and tax total is resolved by Square's Orders API, so a total can't be tampered with from the client.
+4. **Local-first cart.** The cart lives in localStorage. No accounts, no server round-trip just to hold an item in a bag.
+5. **Fail open, not closed.** Any transient read failure on hours or closures defaults to "open." A Vercel or Edge Config hiccup should never be the reason a real customer can't place a real order.
+
+## Key Design Decisions
+
+### Shareable modal via intercepting routes
+
+Tapping a menu item opens its detail as an overlay on top of the menu, but the URL still changes to a real, shareable `/item/[id]`. This uses Next's parallel-plus-intercepting-route convention: an `@modal` slot with an `(.)item/[id]` route intercepts the navigation so it renders as a modal instead of a full page, while a hard refresh or direct link still renders the same content as a standalone page. The tradeoff: both the parent page and the intercepted route are `force-dynamic`, so every open is a live Square read rather than a cached one, a deliberate correctness-over-speed choice for a menu that can change mid-shift.
+
+### Closures as a bolt-on to Square, not a Square feature
+
+Square Online has a "Restricted dates" closure feature, but no public API to read it from a custom storefront. Owner-set closures (one-off dates and recurring weekly blocks like "closed Saturdays until 10am") are instead stored in a Vercel Edge Config store, managed from a `/admin/closures` page. Regular reads go through Edge Config's fast, eventually-consistent SDK cache. The admin write path reads and writes through the slower Vercel REST API instead, because two closures added in quick succession through the cached read could clobber each other; the REST API always returns the latest version, which matters for a read-modify-write on a short list edited by one person at a time.
+
+### Cart line identity folds in modifiers
+
+A cart line's id is the variation id alone when there are no modifiers, or the variation id plus a sorted, joined list of modifier ids when there are. Two customized versions of the same drink (an oat-milk latte and a regular latte) never merge into one line, but adding the exact same customized drink twice correctly increments quantity instead of creating a duplicate row.
+
+### A synthetic "none" for optional single-selects
+
+Square's radio-style modifier groups don't have a built-in way to represent "customer chose nothing." Optional single-select groups default to a synthetic `"none"` id that exists only in local component state and is explicitly filtered out before anything is sent to Square's Orders API. Sending it as a real modifier id was an actual bug in an earlier version of this build; the fix is now a one-line guard with a comment explaining why it has to stay.
+
+## Key Features
+
+| Area | Detail |
+|---|---|
+| Menu | Synced live from Square's Catalog API: 27 items across 9 categories, no hardcoded content |
+| Discovery | Bento-style category grid (mixed square and wide tiles) surfaces product photography above the scrollable list |
+| Customization | Per-item size selector plus radio and checkbox modifier groups with live price deltas |
+| Cart | Quantity stepper, remove, localStorage persistence, no login required |
+| Checkout | ASAP or 15-minute pickup, Square Web Payments SDK tokenization, server-side order and payment creation |
+| Hours & closures | Live Square business hours plus an owner-editable admin panel for one-off and recurring closures, backed by Edge Config |
+| PWA | Installable web app manifest and an offline app-shell service worker |
+| Confirmation | Order confirmation page reads the placed order back from Square directly |
+
+## Key Screens
+
+<ImageGallery
+  columns={2}
+  items={[
+    { src: "/images/work/afternoon-orders/screen-menu.jpg", alt: "Afternoon Orders menu list showing categories with prices and quick-add buttons", caption: "Menu: live Square catalog grouped by category, with one-tap add for uncustomized items" },
+    { src: "/images/work/afternoon-orders/screen-item-detail.jpg", alt: "Afternoon Orders item detail screen with size selector and modifier options", caption: "Item detail: size selector and modifier groups with live price deltas" },
+    { src: "/images/work/afternoon-orders/screen-cart.jpg", alt: "Afternoon Orders cart screen with quantity stepper and subtotal", caption: "Cart: quantity stepper, remove, and a subtotal that defers tax to Square at checkout" },
+  ]}
+/>
+
+## Collaboration
+
+Built independently as a side project for a real coffee shop, with no external stakeholders or design briefs. Every decision, from the bento grid layout to the closures system, came from direct reasoning about the shop's actual traffic pattern and Square's actual API surface, not a handed-down spec.
+
+## Outcomes &amp; Impact
+
+- Live at [afternoon-orders.vercel.app](https://afternoon-orders.vercel.app), a real ordering flow running against a Square sandbox environment
+- Demonstrates a full-stack Next.js 16 App Router build: intercepting routes, server-side Square Catalog/Orders/Payments integration, and a client-tokenized payment flow
+- Installable as a PWA on mobile, with an offline app-shell service worker
+- Built a custom closures system to cover a real gap in Square Online's own restricted-dates feature
+
+## Leadership
+
+- Chose to build directly on Square's raw APIs instead of a templated storefront, trading a slower start for full control over the brand experience
+- Identified that Square Online's closure feature has no public read API, and designed a bolt-on Edge Config system rather than working around it with a workaround inside Square itself
+- Decided the app should fail open on every non-critical read (hours, closures) so a transient infrastructure issue never blocks a real order
+- Set the discovery-first layout deliberately against the rush-hour ordering-app norm, based on the shop's actual afternoon traffic pattern rather than a generic best practice

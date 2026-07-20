@@ -6,7 +6,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger";
+  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -68,8 +68,32 @@ export const caseStudies: CaseStudy[] = [
     role: "Product Research & Lead Designer",
   },
   {
-    slug: "pdf-system",
+    slug: "afternoon-orders",
     number: "05",
+    title: "Afternoon Orders",
+    subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
+    summary:
+      "Square's own online ordering is either a generic storefront template or locked behind a higher plan. I built a mobile-first ordering PWA directly on Square's Catalog, Orders, and Payments APIs, browse, customize, and pay for pickup, matching the shop's actual brand and its slower afternoon traffic pattern instead of a rush-hour template.",
+    tags: ["0→1", "Platform"],
+    hero: "/images/work/afternoon-orders/hero-afternoon-orders.jpg",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
+  },
+  {
+    slug: "beat-dagger",
+    number: "06",
+    title: "Beat Dagger",
+    subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
+    summary:
+      "A browser-based musician's tool I built for myself: record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.",
+    tags: ["0→1"],
+    hero: "/images/work/beat-dagger/logo.png",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
+  },
+  {
+    slug: "pdf-system",
+    number: "07",
     title: "Automated Case Study System",
     subtitle: "Scalable Sales Enablement: PDF generation from structured content",
     summary:
@@ -81,25 +105,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "certification-app",
-    number: "06",
+    number: "08",
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
       "Lace Pro's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments, with all state in localStorage and zero backend infrastructure.",
     tags: ["Platform", "0→1"],
     hero: "/images/work/certification-app/01-home.png",
-    year: "2026",
-    role: "Full-Stack Design & Engineering",
-  },
-  {
-    slug: "beat-dagger",
-    number: "07",
-    title: "Beat Dagger",
-    subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
-    summary:
-      "A browser-based musician's tool I built for myself: record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.",
-    tags: ["0→1"],
-    hero: "/images/work/beat-dagger/logo.png",
     year: "2026",
     role: "Full-Stack Design & Engineering",
   },
