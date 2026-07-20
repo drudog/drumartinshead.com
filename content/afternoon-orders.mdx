@@ -13,19 +13,8 @@ It solves a specific gap: Square's own online ordering products are either bundl
 
 <StatBlock>
   <Stat value="27 / 9" label="Menu items across categories, synced live from Square's Catalog API, zero hardcoded content" />
-  <Stat value="$0/mo" label="Hosting cost: Vercel free tier plus Edge Config, no database, no separate backend" />
-  <Stat value="5 / 5" label="Icon-only controls (stepper, cart badge, add, close) ship an explicit aria-label" />
+  <Stat value="3" label="Square APIs wired directly: Catalog, Orders, and Payments, no third-party ordering platform in between" />
 </StatBlock>
-
-## Try It
-
-<div style={{width: "100%", height: "700px", borderRadius: "12px", overflow: "hidden", margin: "1.5rem 0", border: "1px solid rgba(128,128,128,0.15)"}}>
-  <iframe
-    src="https://afternoon-orders.vercel.app/"
-    style={{width: "100%", height: "100%", border: "none"}}
-    title="Afternoon Orders: live app"
-  />
-</div>
 
 ## The Problem
 
@@ -43,21 +32,21 @@ Designing for rush-hour throughput would have meant a dense, list-first, get-to-
 
 ## Key Design Decisions
 
-### Shareable modal via intercepting routes
+### A shareable menu item, without leaving the menu
 
-Tapping a menu item opens its detail as an overlay on top of the menu, but the URL still changes to a real, shareable `/item/[id]`. This uses Next's parallel-plus-intercepting-route convention: an `@modal` slot with an `(.)item/[id]` route intercepts the navigation so it renders as a modal instead of a full page, while a hard refresh or direct link still renders the same content as a standalone page. The tradeoff: both the parent page and the intercepted route are `force-dynamic`, so every open is a live Square read rather than a cached one, a deliberate correctness-over-speed choice for a menu that can change mid-shift.
+Tapping a menu item opens its details as an overlay right on top of the menu, so browsing never feels interrupted. But the link still changes to that item's own page, so a customer can share a drink with a friend or open it directly and land on the same details, not just a blank menu. The tradeoff is a deliberate one: every time that overlay opens, it pulls a fresh read from Square rather than a cached copy, because a menu that can change mid-shift is worth a little extra loading time to keep accurate.
 
-### Closures as a bolt-on to Square, not a Square feature
+### Closures the shop's own tools can't handle
 
-Square Online has a "Restricted dates" closure feature, but no public API to read it from a custom storefront. Owner-set closures (one-off dates and recurring weekly blocks like "closed Saturdays until 10am") are instead stored in a Vercel Edge Config store, managed from a `/admin/closures` page. Regular reads go through Edge Config's fast, eventually-consistent SDK cache. The admin write path reads and writes through the slower Vercel REST API instead, because two closures added in quick succession through the cached read could clobber each other; the REST API always returns the latest version, which matters for a read-modify-write on a short list edited by one person at a time.
+Square's own online store lets an owner mark the shop closed for a date range, but that setting isn't visible to a custom-built storefront like this one. So closures, both one-off days and recurring blocks like "closed Saturdays until 10am", live in a separate, lightweight store the owner manages from a private admin page. Everyday checks read from a fast cache; the admin page itself writes and re-reads through a slower but always-current path, so two closures entered back to back can't accidentally overwrite each other.
 
-### Cart line identity folds in modifiers
+### Two customized drinks never collide in the cart
 
-A cart line's id is the variation id alone when there are no modifiers, or the variation id plus a sorted, joined list of modifier ids when there are. Two customized versions of the same drink (an oat-milk latte and a regular latte) never merge into one line, but adding the exact same customized drink twice correctly increments quantity instead of creating a duplicate row.
+A drink with no customization is tracked by its own identity alone. A customized one, say an oat-milk latte, is tracked by its identity plus its specific choices. That way, an oat-milk latte and a regular latte sit as two separate lines in the cart, but ordering the exact same oat-milk latte twice correctly bumps the quantity instead of adding a duplicate row.
 
-### A synthetic "none" for optional single-selects
+### Letting a customer choose "nothing, thanks"
 
-Square's radio-style modifier groups don't have a built-in way to represent "customer chose nothing." Optional single-select groups default to a synthetic `"none"` id that exists only in local component state and is explicitly filtered out before anything is sent to Square's Orders API. Sending it as a real modifier id was an actual bug in an earlier version of this build; the fix is now a one-line guard with a comment explaining why it has to stay.
+Some drink customizations are optional, and Square's own modifier format has no built-in way to represent a customer deliberately choosing none of the options. The app handles that with a placeholder "no selection" state that lives only on screen and gets stripped out before the order is ever sent to Square. An earlier version of the app skipped that step and let the placeholder leak into a real order, a bug now closed off for good.
 
 ## Key Features
 
