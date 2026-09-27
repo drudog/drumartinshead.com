@@ -17,7 +17,7 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 max-w-3xl space-y-6 text-lg leading-relaxed text-[color:var(--color-foreground)]">
               <p>
-                Nearly fourteen years of product design, most of it where the
+                Fourteen years of product design, most of it where the
                 stakes are high and the workflows are messy: B2B SaaS platforms
                 serving millions of small businesses, and AI healthcare
                 products where the outcomes are clinical.

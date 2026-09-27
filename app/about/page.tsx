@@ -34,7 +34,7 @@ export default function AboutPage() {
       <div className="prose prose-lg dark:prose-invert mt-12 max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-[color:var(--color-foreground)] prose-p:leading-relaxed prose-a:text-[color:var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
         <p className="lead">
           I&apos;m Dru, a product design leader based in Gainesville, FL.
-          I&apos;ve spent nearly fourteen years designing complex products:
+          I&apos;ve spent fourteen years designing complex products:
           leading design teams at two of the largest marketing platforms in
           B2B SaaS, then building AI-powered healthcare products that
           clinicians trust and patients return to.
