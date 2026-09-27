@@ -33,39 +33,29 @@ export default function AboutPage() {
 
       <div className="prose prose-lg dark:prose-invert mt-12 max-w-none prose-headings:font-display prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-[color:var(--color-foreground)] prose-p:leading-relaxed prose-a:text-[color:var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
         <p className="lead">
-          I&apos;m Dru, a product design leader based in Gainesville, FL.
-          I&apos;ve spent fourteen years designing complex products:
-          leading design teams at two of the largest marketing platforms in
-          B2B SaaS, then building AI-powered healthcare products that
-          clinicians trust and patients return to.
+          I make complicated software simple enough that people keep using
+          it. That&apos;s the result I get hired for, whether the user is a
+          small business running its marketing or a patient doing hearing
+          therapy at home.
         </p>
 
-        <h2>How I work</h2>
         <p>
-          I take ownership end-to-end: discovery, research synthesis, IA,
-          interaction, visual, prototype, handoff, and the inevitable
-          post-launch iteration. I care about the moments users are most
-          vulnerable: the first session, the relapse, the unclear instruction,
-          because that&apos;s where bad design does the most damage.
+          Since 2024 I&apos;ve led design at Neurotone AI. I rebuilt a
+          20-year-old hearing therapy program and took it from first sketch to
+          launch in under six months. It&apos;s now used in nearly 1,500
+          audiology clinics and won an industry innovation award two years in
+          a row. I also designed what keeps patients coming back: 38% stick
+          with their training, compared with under 30% for physical therapy,
+          and 61% at the best clinics.
         </p>
 
-        <h2>What I&apos;m good at</h2>
-        <ul>
-          <li>Zero-to-one product design in regulated environments</li>
-          <li>Complex workflow UX for B2B SaaS and enterprise platforms</li>
-          <li>Leading and mentoring design teams while staying hands-on</li>
-          <li>Translating clinical and research protocols into product</li>
-          <li>Behavioral design: habit loops, streaks, motivational scaffolding</li>
-          <li>Design systems that hold up across long-running product surfaces</li>
-          <li>Working closely with engineering and cross-functional stakeholders</li>
-        </ul>
-
-        <h2>Background</h2>
         <p>
-          Most recently, I&apos;ve led design at Neurotone AI, including the
-          redesign of LACE (a two-decade-old auditory training platform used in
-          audiology clinics), the launch of AI voice cloning for personalized
-          training, and a zero-to-one tinnitus management product.
+          Before that I spent nearly ten years at SharpSpring and Constant
+          Contact, growing from UX designer to Head of UX to Product Design
+          Manager. I hired and led a team of designers, researchers, and
+          writers, and kept it steady through an acquisition and a reorg. One
+          designer I hired as an intern now leads growth design at Noom. I
+          still do the work myself, from research to prototypes in code.
         </p>
 
         <h2>Outside of work</h2>
@@ -107,6 +97,14 @@ export default function AboutPage() {
             Photo credit: David Pettit George
           </figcaption>
         </figure>
+
+        <h2>Let&apos;s talk</h2>
+        <p>
+          Contact me if you&apos;re hiring a Product Design Manager, Head of
+          Design, or Staff or Principal Product Designer, especially for B2B
+          software, AI products, or healthcare. I&apos;m in Gainesville, FL and
+          work remotely.
+        </p>
 
       </div>
 
