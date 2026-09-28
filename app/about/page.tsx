@@ -43,8 +43,8 @@ export default function AboutPage() {
           Since 2024 I&apos;ve led design at Neurotone AI. I rebuilt a
           20-year-old hearing therapy program and took it from first sketch to
           launch in under six months. It&apos;s now used in nearly 1,500
-          audiology clinics and won an industry innovation award two years in
-          a row. I also designed what keeps patients coming back: 38% stick
+          audiology clinics and won an industry innovation award three years
+          in a row. I also designed what keeps patients coming back: 38% stick
           with their training, compared with under 30% for physical therapy,
           and 61% at the best clinics.
         </p>
