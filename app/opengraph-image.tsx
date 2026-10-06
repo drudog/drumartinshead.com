@@ -39,8 +39,8 @@ export default function Image() {
             letterSpacing: "-0.02em",
           }}
         >
-          <span>I evolve complex systems into</span>
-          <span style={{ color: "#3fb4a6" }}>digital experiences that scale.</span>
+          <span>I build design teams</span>
+          <span style={{ color: "#3fb4a6" }}>and still ship the work.</span>
         </div>
         <div style={{ fontSize: 26, color: "#a1a1a0" }}>
           B2B SaaS design leadership · AI products in regulated health · drumartinshead.com

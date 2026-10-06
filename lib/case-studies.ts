@@ -1,4 +1,5 @@
 export type CaseStudyTag =
+  | "Leadership"
   | "AI"
   | "Behavioral Design"
   | "0→1"
@@ -6,7 +7,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
+  slug: "leadership" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -20,20 +21,8 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "voices",
-    number: "01",
-    title: "AI Voice Cloning Initiative",
-    subtitle: "Familiar Voice: personalization at scale in a regulated healthcare platform",
-    summary:
-      "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
-    tags: ["AI", "Regulated/Healthcare", "0→1"],
-    hero: "/images/work/voices/hero-voices.png",
-    year: "2025",
-    role: "Lead Product Designer",
-  },
-  {
     slug: "evolution",
-    number: "02",
+    number: "01",
     title: "Evolution",
     subtitle: "0→1: Legacy LACE to Lace Pro",
     summary:
@@ -44,8 +33,32 @@ export const caseStudies: CaseStudy[] = [
     role: "Lead Product Designer",
   },
   {
-    slug: "retention",
+    slug: "leadership",
+    number: "02",
+    title: "Building a Design Team",
+    subtitle: "SharpSpring and Constant Contact: from first manager through an acquisition and a reorg",
+    summary:
+      "I grew from designer to Head of UX at SharpSpring, built a team of designers, researchers, and content designers, and led it through the Constant Contact acquisition and the reorg after it. An intern I hired now leads growth design at Noom.",
+    tags: ["Leadership"],
+    hero: "/images/work/leadership/hero-leadership.svg",
+    year: "2018–2024",
+    role: "Head of UX · Product Design Manager",
+  },
+  {
+    slug: "voices",
     number: "03",
+    title: "AI Voice Cloning Initiative",
+    subtitle: "Familiar Voice: personalization at scale in a regulated healthcare platform",
+    summary:
+      "Personalization improves clinical outcomes. Manual recording doesn't scale. I led the design of an AI voice cloning workflow that resolved both, becoming a primary market differentiator for Lace Pro.",
+    tags: ["AI", "Regulated/Healthcare", "0→1"],
+    hero: "/images/work/voices/hero-voices.png",
+    year: "2025",
+    role: "Lead Product Designer",
+  },
+  {
+    slug: "retention",
+    number: "04",
     title: "Gamified Retention",
     subtitle: "Training Map & Streaks: post-launch habit architecture",
     summary:
@@ -57,7 +70,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "tinnitus-pro",
-    number: "04",
+    number: "05",
     title: "Tinnitus Pro",
     subtitle: "0→1 Launch: a provider-prescribed tinnitus therapeutic",
     summary:
@@ -69,7 +82,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "afternoon-orders",
-    number: "05",
+    number: "06",
     title: "Afternoon Orders",
     subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
     summary:
@@ -81,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "beat-dagger",
-    number: "06",
+    number: "07",
     title: "Beat Dagger",
     subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
     summary:
@@ -93,7 +106,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "pdf-system",
-    number: "07",
+    number: "08",
     title: "Automated Case Study System",
     subtitle: "Scalable Sales Enablement: PDF generation from structured content",
     summary:
@@ -105,7 +118,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "certification-app",
-    number: "08",
+    number: "09",
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
@@ -118,6 +131,7 @@ export const caseStudies: CaseStudy[] = [
 ];
 
 export const allTags: CaseStudyTag[] = [
+  "Leadership",
   "AI",
   "Behavioral Design",
   "0→1",

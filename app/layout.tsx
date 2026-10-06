@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: "%s · Dru Martin",
   },
   description:
-    "I evolve complex systems into digital experiences that scale. Product design leader with 14 years across B2B SaaS and AI healthcare products.",
+    "Product design leader who builds teams and still ships the work. Head of UX and Product Design Manager in B2B SaaS; now leading design for an AI digital therapeutic in nearly 1,500 clinics.",
   metadataBase: new URL("https://www.drumartinshead.com"),
   openGraph: {
     title: "Dru Martin: Product Design Leader",
     description:
-      "Product design leader: B2B SaaS, AI products, and design systems that scale.",
+      "Product design leader who builds teams and still ships the work: B2B SaaS and AI products in regulated health.",
     type: "website",
     locale: "en_US",
   },

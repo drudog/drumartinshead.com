@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#0b0b0c"/>
+  <g font-family="Inter, -apple-system, Helvetica, Arial, sans-serif">
+    <text x="120" y="190" fill="#a1a1a0" font-size="30" letter-spacing="6">DESIGN LEADERSHIP · 2014 TO 2024</text>
+    <text x="120" y="290" fill="#f5f5f4" font-size="78" font-weight="600" letter-spacing="-1.5">From designer to manager,</text>
+    <text x="120" y="385" fill="#3fb4a6" font-size="78" font-weight="600" letter-spacing="-1.5">through an acquisition and a reorg.</text>
+    <line x1="200" y1="640" x2="1330" y2="640" stroke="#26262a" stroke-width="4"/>
+    <line x1="200" y1="640" x2="1330" y2="640" stroke="#3fb4a6" stroke-width="4" stroke-dasharray="0 560 570 0"/>
+    <g fill="#141416" stroke="#3fb4a6" stroke-width="4">
+      <circle cx="200" cy="640" r="16" stroke="#a1a1a0"/>
+      <circle cx="480" cy="640" r="16" stroke="#a1a1a0"/>
+      <circle cx="760" cy="640" r="16"/>
+      <circle cx="1040" cy="640" r="16"/>
+      <circle cx="1330" cy="640" r="16"/>
+    </g>
+    <g font-size="28" fill="#a1a1a0">
+      <text x="200" y="600" text-anchor="middle">2014</text>
+      <text x="480" y="600" text-anchor="middle">2016</text>
+      <text x="760" y="600" text-anchor="middle">2018</text>
+      <text x="1040" y="600" text-anchor="middle">2021</text>
+      <text x="1330" y="600" text-anchor="middle">After</text>
+    </g>
+    <g font-size="30" fill="#f5f5f4" font-weight="600">
+      <text x="200" y="710" text-anchor="middle">UX Designer</text>
+      <text x="480" y="710" text-anchor="middle">Senior UX</text>
+      <text x="760" y="710" text-anchor="middle">Head of UX</text>
+      <text x="1040" y="710" text-anchor="middle">Acquisition</text>
+      <text x="1330" y="710" text-anchor="middle">Reorg</text>
+    </g>
+    <g font-size="26" fill="#a1a1a0">
+      <text x="200" y="752" text-anchor="middle">SharpSpring</text>
+      <text x="480" y="752" text-anchor="middle">SharpSpring</text>
+      <text x="760" y="752" text-anchor="middle">Built the team</text>
+      <text x="1040" y="752" text-anchor="middle">Constant Contact</text>
+      <text x="1330" y="752" text-anchor="middle">Inherited a new team</text>
+    </g>
+    <text x="120" y="890" fill="#a1a1a0" font-size="28">Designers, researchers, and content designers reporting to me</text>
+  </g>
+</svg>

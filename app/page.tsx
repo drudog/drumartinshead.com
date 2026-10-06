@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { CaseStudyFilter } from "@/components/case-study-filter";
@@ -55,6 +54,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-t border-[color:var(--color-border)]">
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="grid md:grid-cols-3 gap-10 items-start">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)]">
+              Leadership
+            </p>
+            <div className="md:col-span-2 max-w-2xl">
+              <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">
+                Nine years in B2B SaaS, five-plus leading design
+              </h2>
+              <p className="mt-4 text-[color:var(--color-muted)]">
+                At <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform for agencies and SMBs, I grew from UX designer to Head of UX and built the design team: hiring, critique, reviews, and the routines it ran on. Designers, researchers, and content designers reported to me. I carried that team through the{" "}
+                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong> acquisition, then took over a new team after the reorg that followed.
+              </p>
+              <ul className="mt-6 space-y-3 text-[color:var(--color-foreground)]">
+                <li>A designer I hired as an intern now leads growth design at Noom.</li>
+                <li>The team stayed intact through the acquisition and kept shipping through layoffs.</li>
+                <li>My team designed Constant Contact&apos;s upsell flows, with daily active usage as a core metric.</li>
+              </ul>
+              <div className="mt-8 flex flex-wrap items-center gap-6">
+                <Link
+                  href="/work/leadership"
+                  className="inline-flex items-center rounded-full bg-[color:var(--color-foreground)] text-[color:var(--color-background)] px-6 py-3 text-sm font-medium transition hover:opacity-90"
+                >
+                  Read the leadership case study
+                </Link>
+                <a
+                  href="https://www.behance.net/drumartin"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition"
+                >
+                  Earlier B2B work on Behance →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         id="work"
         className="border-t border-[color:var(--color-border)] scroll-mt-20"
@@ -69,57 +108,13 @@ export default function Home() {
                 Case studies
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)] max-w-2xl">
-                Recent work spanning AI product design, platform modernization,
-                behavioral systems, and design engineering. All of it owned
-                end-to-end; some of it shipped to nearly 1,500 clinics.
+                Team leadership, AI product design, platform modernization,
+                behavioral systems, and design engineering. Some of it shipped
+                to nearly 1,500 clinics.
               </p>
             </div>
           </div>
           <CaseStudyFilter />
-        </div>
-      </section>
-
-      <section className="border-t border-[color:var(--color-border)]">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-          <div className="grid md:grid-cols-3 gap-10 items-start">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)]">
-              B2B SaaS
-            </p>
-            <div className="md:col-span-2 max-w-2xl">
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">
-                Nine years in B2B SaaS, five-plus leading design
-              </h2>
-              <p className="mt-4 text-[color:var(--color-muted)]">
-                Before Neurotone, I led UX at <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform serving thousands of agencies and SMBs, and managed product design at{" "}
-                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong>, one of the largest email marketing platforms in the world. At both, I ran 4 to 5 person design teams while staying hands-on as an IC. That work shaped how I think about complex workflow UX, multi-stakeholder products, and designing for users who live inside software all day.
-              </p>
-              <p className="mt-4 text-[color:var(--color-muted)]">
-                Earlier UX and product design work from that period lives on my Behance profile.
-              </p>
-              <a
-                href="https://www.behance.net/drumartin"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-foreground)] hover:text-[color:var(--color-accent)] transition"
-              >
-                View Behance profile →
-              </a>
-              <a
-                href="https://www.behance.net/drumartin"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 block rounded-2xl overflow-hidden border border-[color:var(--color-border)] hover:opacity-90 transition"
-              >
-                <Image
-                  src="/images/behance-thumb.jpg"
-                  alt="Behance portfolio preview"
-                  width={1200}
-                  height={800}
-                  className="w-full object-cover"
-                />
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -131,6 +126,11 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 space-y-12">
               <Testimonial
+                quote="It's hard to overstate the impact Dru has had on my career. I can genuinely say I owe my career in Product to him. Dru hired me as an intern at SharpSpring when I was making the leap from graphic and web design into UX. Dru saw potential in me, took a chance on me, and then patiently gave me the space to grow into it. He has a calm, steady way of helping people grow without trying to shape them into a particular mold. Looking back, I realize how much of the way I lead designers today was shaped during those years."
+                author="Savannah Chase"
+                role="Growth Product Design Lead & Manager; reported to Dru at SharpSpring"
+              />
+              <Testimonial
                 quote="Working with Dru was an exceptional experience. He was my manager at both SharpSpring and Constant Contact following the acquisition, and I can confidently say he's the best manager I've had in my entire career. Dru stands out because he genuinely values input, whether it's about strategy, design concepts, or concerns. He actively listens, strives to fully understand your perspective, and provides thoughtful responses, even if it means taking some time to gather additional insights. In stakeholder meetings, Dru consistently brings a unique viewpoint, often uncovering brilliant ideas that others overlook. His ability to think creatively and outside the conventional bounds significantly enhances team dynamics and project outcomes. If given the chance, I would jump at the opportunity to work with Dru again. He's not just a remarkable manager but also a skilled designer and a great friend. Any company would be lucky to have him."
                 author="Aaron Cougle"
                 role="Reported to Dru at SharpSpring and Constant Contact"
@@ -139,11 +139,6 @@ export default function Home() {
                 quote="I've had the privilege of working with Dru at both SharpSpring and Neurotone, and I can tell you: he's the design leader you want when the stakes are high and the problem is hard. At SharpSpring he led UX across a complex marketing automation platform. At Neurotone, he translated clinical research into an AI-powered digital health product, owning product design end-to-end. In both cases he brought the same thing: genuine range across UX, design systems, and engineering collaboration, paired with an ego-free approach that makes teams better. Dru knows when to lead and when to support, and he reads that instinctively. In complex, high-stakes product environments, that kind of judgment is as valuable as any technical skill. If you're building a serious product design team, Dru is someone you build around."
                 author="Shane Bouchard"
                 role="Dru's manager at SharpSpring, later a colleague at Neurotone"
-              />
-              <Testimonial
-                quote="I've had the chance to work closely with Dru at both SharpSpring and Neurotone, and he's one of those designers who really thinks like a product person. He doesn't just focus on the UI; he's always thinking about the bigger picture and how design decisions impact the product, the users, and the business. At Neurotone we worked together during the evolution of Lace Pro, where Dru played an important role in helping shape the experience as the platform grew into a scalable, AI-driven product used by over 1,000 clinics. He has a great ability to translate complex ideas into intuitive experiences, especially in a space like healthcare where there are a lot of constraints and moving parts. What I appreciate most about Dru is that he works well across teams. He collaborates easily with engineering, product, marketing, and leadership, and keeps everyone focused on building something that actually solves real problems for users. He's thoughtful about systems, not just screens, and that mindset has made a real difference in the products we've built together."
-                author="Josh Jordan"
-                role="Worked on the same team as Dru at SharpSpring and Neurotone"
               />
             </div>
           </div>
