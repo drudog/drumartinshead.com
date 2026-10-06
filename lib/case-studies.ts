@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Building a Design Team",
     subtitle: "SharpSpring and Constant Contact: from first manager through an acquisition and a reorg",
     summary:
-      "I grew from designer to Head of UX at SharpSpring, built a team of designers, researchers, and content designers, and led it through the Constant Contact acquisition and the reorg after it. An intern I hired now leads growth design at Noom.",
+      "I grew from designer to Head of UX at SharpSpring, built the design team, and led it through the Constant Contact acquisition. At Constant Contact I managed designers, researchers, and content designers. An intern I hired now leads growth design at Noom.",
     tags: ["Leadership"],
     hero: "/images/work/leadership/hero-leadership.svg",
     year: "2018–2024",

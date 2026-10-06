@@ -52,8 +52,9 @@ export default function AboutPage() {
         <p>
           Before that I spent over nine years at SharpSpring and Constant
           Contact, growing from UX designer to Head of UX to Product Design
-          Manager. I hired and led a team of designers, researchers, and
-          writers, and kept it steady through an acquisition and a reorg. One
+          Manager. I hired and led a design team and kept it steady through an
+          acquisition and a reorg. At Constant Contact, designers, researchers,
+          and content designers reported to me. One
           designer I hired as an intern now leads growth design at Noom. I
           still do the work myself, from research to prototypes in code.
         </p>

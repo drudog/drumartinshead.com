@@ -62,11 +62,11 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 max-w-2xl">
               <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">
-                Nine years in B2B SaaS, five-plus leading design
+                Five years leading design teams in B2B SaaS
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)]">
-                At <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform for agencies and SMBs, I grew from UX designer to Head of UX and built the design team: hiring, critique, reviews, and the routines it ran on. Designers, researchers, and content designers reported to me. I carried that team through the{" "}
-                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong> acquisition, then took over a new team after the reorg that followed.
+                I spent nine years in B2B SaaS. At <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform for agencies and SMBs, I grew from UX designer to Head of UX and built the design team: hiring, critique, reviews, and the routines it ran on. I carried that team through the{" "}
+                <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong> acquisition, then took over a new team after the reorg that followed. At Constant Contact, designers, researchers, and content designers reported to me.
               </p>
               <ul className="mt-6 space-y-3 text-[color:var(--color-foreground)]">
                 <li>A designer I hired as an intern now leads growth design at Noom.</li>
