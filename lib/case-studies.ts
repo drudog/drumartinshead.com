@@ -49,7 +49,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Gamified Retention",
     subtitle: "Training Map & Streaks: post-launch habit architecture",
     summary:
-      "Patients needed 250+ exercises to reach clinical benefit. Most stopped before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context.",
+      "Most patients stopped training before week two. I led the design of a behavioral retention system adapted from high-engagement consumer apps and tuned for a regulated healthcare context. The data it produced measured the clinical dose for the first time: 250+ exercises.",
     tags: ["Behavioral Design", "Regulated/Healthcare"],
     hero: "/images/work/retention/hero-fun-02.png",
     year: "2025",

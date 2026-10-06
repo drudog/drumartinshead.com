@@ -50,7 +50,7 @@ export default function AboutPage() {
         </p>
 
         <p>
-          Before that I spent nearly ten years at SharpSpring and Constant
+          Before that I spent over nine years at SharpSpring and Constant
           Contact, growing from UX designer to Head of UX to Product Design
           Manager. I hired and led a team of designers, researchers, and
           writers, and kept it steady through an acquisition and a reorg. One

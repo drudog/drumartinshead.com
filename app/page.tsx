@@ -28,7 +28,7 @@ export default function Home() {
                 HubSpot in marketing automation, and stayed hands-on the whole
                 time. Most recently, with <strong>Lace Pro</strong>, I helped
                 transform auditory training from an afterthought into the
-                standard of care in over <strong>1,000 audiology clinics</strong>.
+                standard of care in nearly <strong>1,500 audiology clinics</strong>.
               </p>
               <p>
                 I design systems end-to-end, from concept to execution, at
@@ -71,7 +71,7 @@ export default function Home() {
               <p className="mt-4 text-[color:var(--color-muted)] max-w-2xl">
                 Recent work spanning AI product design, platform modernization,
                 behavioral systems, and design engineering. All of it owned
-                end-to-end; some of it shipped to 1,000+ clinics.
+                end-to-end; some of it shipped to nearly 1,500 clinics.
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 max-w-2xl">
               <h2 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight">
-                Nine years leading design in B2B SaaS
+                Nine years in B2B SaaS, five-plus leading design
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)]">
                 Before Neurotone, I led UX at <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform serving thousands of agencies and SMBs, and managed product design at{" "}
@@ -133,7 +133,7 @@ export default function Home() {
               <Testimonial
                 quote="I've had the privilege of working with Dru at both SharpSpring and Neurotone, and I can tell you: he's the design leader you want when the stakes are high and the problem is hard. At SharpSpring he led UX across a complex marketing automation platform. At Neurotone, he translated clinical research into an AI-powered digital health product, owning product design end-to-end. In both cases he brought the same thing: genuine range across UX, design systems, and engineering collaboration, paired with an ego-free approach that makes teams better. Dru knows when to lead and when to support, and he reads that instinctively. In complex, high-stakes product environments, that kind of judgment is as valuable as any technical skill. If you're building a serious product design team, Dru is someone you build around."
                 author="Shane Bouchard"
-                role="Worked with Dru at SharpSpring and Neurotone"
+                role="Dru's manager at SharpSpring, later a colleague at Neurotone"
               />
               <Testimonial
                 quote="I've had the chance to work closely with Dru at both SharpSpring and Neurotone, and he's one of those designers who really thinks like a product person. He doesn't just focus on the UI; he's always thinking about the bigger picture and how design decisions impact the product, the users, and the business. At Neurotone we worked together during the evolution of Lace Pro, where Dru played an important role in helping shape the experience as the platform grew into a scalable, AI-driven product used by over 1,000 clinics. He has a great ability to translate complex ideas into intuitive experiences, especially in a space like healthcare where there are a lot of constraints and moving parts. What I appreciate most about Dru is that he works well across teams. He collaborates easily with engineering, product, marketing, and leadership, and keeps everyone focused on building something that actually solves real problems for users. He's thoughtful about systems, not just screens, and that mindset has made a real difference in the products we've built together."
