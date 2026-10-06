@@ -1,5 +1,6 @@
 export type CaseStudyTag =
   | "Leadership"
+  | "B2B"
   | "AI"
   | "Behavioral Design"
   | "0→1"
@@ -7,7 +8,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "leadership" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
+  slug: "leadership" | "pro-portal" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -17,6 +18,7 @@ export type CaseStudy = {
   heroPage?: string;
   year: string;
   role: string;
+  section: "main" | "code";
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -31,6 +33,7 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/evolution/hero-lace.png",
     year: "2025",
     role: "Lead Product Designer",
+    section: "main",
   },
   {
     slug: "leadership",
@@ -39,14 +42,28 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "SharpSpring and Constant Contact: from first manager through an acquisition and a reorg",
     summary:
       "I grew from designer to Head of UX at SharpSpring, built the design team, and led it through the Constant Contact acquisition. At Constant Contact I managed designers, researchers, and content designers. An intern I hired now leads growth design at Noom.",
-    tags: ["Leadership"],
+    tags: ["Leadership", "B2B"],
     hero: "/images/work/leadership/hero-leadership.svg",
     year: "2018–2024",
     role: "Head of UX · Product Design Manager",
+    section: "main",
+  },
+  {
+    slug: "pro-portal",
+    number: "03",
+    title: "Provider Portal & Pricing",
+    subtitle: "Three billing models, two failures, and the ROI calculator behind the one that worked",
+    summary:
+      "Patients only get Lace Pro if an audiologist enrolls them, so the provider portal is the front door. I designed enrollment to fit inside the appointment, shipped three billing models to find one clinics would use, and built the first version of the ROI calculator reps use to sell it.",
+    tags: ["B2B", "Regulated/Healthcare"],
+    hero: "/images/work/pro-portal/hero-roi-calculator.jpg",
+    year: "2024–2025",
+    role: "Lead Product Designer",
+    section: "main",
   },
   {
     slug: "voices",
-    number: "03",
+    number: "04",
     title: "AI Voice Cloning Initiative",
     subtitle: "Familiar Voice: personalization at scale in a regulated healthcare platform",
     summary:
@@ -55,10 +72,11 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/voices/hero-voices.png",
     year: "2025",
     role: "Lead Product Designer",
+    section: "main",
   },
   {
     slug: "retention",
-    number: "04",
+    number: "05",
     title: "Gamified Retention",
     subtitle: "Training Map & Streaks: post-launch habit architecture",
     summary:
@@ -67,10 +85,11 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/retention/hero-fun-02.png",
     year: "2025",
     role: "Lead Product Designer",
+    section: "main",
   },
   {
     slug: "tinnitus-pro",
-    number: "05",
+    number: "06",
     title: "Tinnitus Pro",
     subtitle: "0→1 Launch: a provider-prescribed tinnitus therapeutic",
     summary:
@@ -79,34 +98,11 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/tinnitus-pro/hero-copy.png",
     year: "2026",
     role: "Product Research & Lead Designer",
-  },
-  {
-    slug: "afternoon-orders",
-    number: "06",
-    title: "Afternoon Orders",
-    subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
-    summary:
-      "Square's own online ordering is either a generic storefront template or locked behind a higher plan. I built a mobile-first ordering PWA directly on Square's Catalog, Orders, and Payments APIs, browse, customize, and pay for pickup, matching the shop's actual brand and its slower afternoon traffic pattern instead of a rush-hour template.",
-    tags: ["0→1", "Platform"],
-    hero: "/images/work/afternoon-orders/hero-afternoon-orders.jpg",
-    year: "2026",
-    role: "Full-Stack Design & Engineering",
-  },
-  {
-    slug: "beat-dagger",
-    number: "07",
-    title: "Beat Dagger",
-    subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
-    summary:
-      "A browser-based musician's tool I built for myself: record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.",
-    tags: ["0→1"],
-    hero: "/images/work/beat-dagger/logo.png",
-    year: "2026",
-    role: "Full-Stack Design & Engineering",
+    section: "main",
   },
   {
     slug: "pdf-system",
-    number: "08",
+    number: "07",
     title: "Automated Case Study System",
     subtitle: "Scalable Sales Enablement: PDF generation from structured content",
     summary:
@@ -115,10 +111,11 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/pdf-system/hero-study.png",
     year: "2026",
     role: "Systems Design & Engineering",
+    section: "code",
   },
   {
     slug: "certification-app",
-    number: "09",
+    number: "08",
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
@@ -127,11 +124,39 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/work/certification-app/01-home.png",
     year: "2026",
     role: "Full-Stack Design & Engineering",
+    section: "code",
+  },
+  {
+    slug: "afternoon-orders",
+    number: "09",
+    title: "Afternoon Orders",
+    subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
+    summary:
+      "Square's own online ordering is either a generic storefront template or locked behind a higher plan. I built a mobile-first ordering PWA directly on Square's Catalog, Orders, and Payments APIs, browse, customize, and pay for pickup, matching the shop's actual brand and its slower afternoon traffic pattern instead of a rush-hour template.",
+    tags: ["0→1", "Platform"],
+    hero: "/images/work/afternoon-orders/hero-afternoon-orders.jpg",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
+    section: "code",
+  },
+  {
+    slug: "beat-dagger",
+    number: "10",
+    title: "Beat Dagger",
+    subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
+    summary:
+      "A browser-based musician's tool I built for myself: record audio takes with a precision step-sequencer metronome running alongside, review your waveform, save named presets for different songs, and build a local library of recordings. No server. No sign-in. No installs.",
+    tags: ["0→1"],
+    hero: "/images/work/beat-dagger/logo.png",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
+    section: "code",
   },
 ];
 
 export const allTags: CaseStudyTag[] = [
   "Leadership",
+  "B2B",
   "AI",
   "Behavioral Design",
   "0→1",

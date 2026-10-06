@@ -6,6 +6,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const links = [
   { href: "/#work", label: "Work" },
+  { href: "/ai", label: "AI" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -18,21 +19,21 @@ export function Nav() {
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-display font-semibold tracking-tight text-[color:var(--color-foreground)]"
+          className="whitespace-nowrap font-display font-semibold tracking-tight text-[color:var(--color-foreground)]"
         >
           Dru Martin
         </Link>
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex items-center gap-0 sm:gap-2">
           {links.map((link) => {
             const active =
-              link.href === "/about" || link.href === "/contact"
+              link.href === "/about" || link.href === "/contact" || link.href === "/ai"
                 ? pathname === link.href
                 : false;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-sm transition ${
+                className={`px-2 sm:px-3 py-2 text-sm transition ${
                   active
                     ? "text-[color:var(--color-foreground)]"
                     : "text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)]"
@@ -42,7 +43,7 @@ export function Nav() {
               </Link>
             );
           })}
-          <div className="ml-2">
+          <div className="ml-1 sm:ml-2">
             <ThemeToggle />
           </div>
         </nav>

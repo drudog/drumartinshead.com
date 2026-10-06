@@ -8,8 +8,9 @@ export function CaseStudyFilter() {
   const [active, setActive] = useState<CaseStudyTag | "all">("all");
 
   const filtered = useMemo(() => {
-    if (active === "all") return caseStudies;
-    return caseStudies.filter((cs) => cs.tags.includes(active));
+    const main = caseStudies.filter((cs) => cs.section === "main");
+    if (active === "all") return main;
+    return main.filter((cs) => cs.tags.includes(active));
   }, [active]);
 
   return (

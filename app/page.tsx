@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { CaseStudyFilter } from "@/components/case-study-filter";
+import { CodeProjects } from "@/components/code-projects";
 import { Testimonial } from "@/components/testimonial";
 
 export default function Home() {
@@ -22,20 +23,6 @@ export default function Home() {
                 products where the outcomes are clinical.
               </p>
               <p>
-                I&apos;ve led design teams at <strong>SharpSpring</strong> and{" "}
-                <strong>Constant Contact</strong>, going head-to-head with
-                HubSpot in marketing automation, and stayed hands-on the whole
-                time. Most recently, with <strong>Lace Pro</strong>, I helped
-                transform auditory training from an afterthought into the
-                standard of care in nearly <strong>1,500 audiology clinics</strong>.
-              </p>
-              <p>
-                I design systems end-to-end, from concept to execution, at
-                speed. Systems that give teams a shared direction, move users
-                toward the right behavior, and don&apos;t fall apart when the
-                product scales.
-              </p>
-              <p>
                 Complex domains are complicated by default. My job is to make
                 the experience feel otherwise: whether that&apos;s an agency
                 managing fifty client campaigns or a patient finishing a
@@ -43,8 +30,15 @@ export default function Home() {
               </p>
               <p>
                 I&apos;ve done the work across the stack: print, marketing,
-                UI/UX, and enough front-end engineering to ship my own tools.
-                In my free time I explore my passion for music and visual arts.
+                UI/UX, and enough front-end engineering to ship my own tools.{" "}
+                <Link
+                  href="/ai"
+                  className="text-[color:var(--color-accent)] hover:underline"
+                >
+                  Here&apos;s how I work with AI
+                </Link>
+                . In my free time I explore my passion for music and visual
+                arts.
               </p>
               <p className="font-display text-xl text-[color:var(--color-accent)]">
                 Technology should elevate people. That&apos;s the work.
@@ -65,7 +59,7 @@ export default function Home() {
                 Five years leading design teams in B2B SaaS
               </h2>
               <p className="mt-4 text-[color:var(--color-muted)]">
-                I spent nine years in B2B SaaS. At <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform for agencies and SMBs, I grew from UX designer to Head of UX and built the design team: hiring, critique, reviews, and the routines it ran on. I carried that team through the{" "}
+                I spent nine years in B2B SaaS. At <strong className="text-[color:var(--color-foreground)]">SharpSpring</strong>, a marketing automation platform for agencies and SMBs that competed head-to-head with HubSpot, I grew from UX designer to Head of UX and built the design team: hiring, critique, reviews, and the routines it ran on. I carried that team through the{" "}
                 <strong className="text-[color:var(--color-foreground)]">Constant Contact</strong> acquisition, then took over a new team after the reorg that followed. At Constant Contact, designers, researchers, and content designers reported to me.
               </p>
               <ul className="mt-6 space-y-3 text-[color:var(--color-foreground)]">
@@ -115,6 +109,26 @@ export default function Home() {
             </div>
           </div>
           <CaseStudyFilter />
+        </div>
+      </section>
+
+      <section className="border-t border-[color:var(--color-border)]">
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="grid md:grid-cols-3 gap-10 items-start">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)]">
+              Built in code
+            </p>
+            <div className="md:col-span-2">
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">
+                Things I designed and built myself
+              </h2>
+              <p className="mt-3 mb-8 text-[color:var(--color-muted)] max-w-2xl">
+                Tools for Neurotone&apos;s sales and partner teams, plus a couple
+                of side projects. Next.js, TypeScript, Node, and Claude Code.
+              </p>
+              <CodeProjects />
+            </div>
+          </div>
         </div>
       </section>
 

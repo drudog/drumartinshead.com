@@ -1,0 +1,88 @@
+<MetaGrid>
+  <MetaItem label="Focus" value="B2B provider experience · Pricing experiments · Sales enablement" />
+  <MetaItem label="Users" value="Audiologists and the clinic owners who decide whether Lace stays" />
+  <MetaItem label="My role" value="Lead Product Designer: portal flows, enrollment, ROI calculator design and first build" />
+  <MetaItem label="Partners" value="Head of Product, engineering, account reps" />
+</MetaGrid>
+
+## Executive Summary
+
+Patients only get Lace Pro if an audiologist recommends it and enrolls them. So the provider portal isn't an admin screen at the edge of the product. It's the front door.
+
+The portal had three jobs: make it easy for a clinician to sign a patient up and get them started, show clinics the product was worth offering, and let us test billing models quickly enough to find one providers would actually use. We went through three. Two failed, and the reasons they failed taught us more than the one that worked.
+
+<StatBlock>
+  <Stat value="3" label="Billing models shipped and tested, each with its own lean enrollment flow" />
+  <Stat value="0" label="Passwords: patients sign in with a phone number, a deliberate choice for an older population" />
+  <Stat value="5" label="Revenue streams modeled in the ROI calculator a rep can preconfigure for a clinic" />
+</StatBlock>
+
+## The Problem
+
+Enrollment happens inside a visit that already exists. The provider runs a hearing test, finds deficits, and recommends auditory training. Whatever the software asks of them has to fit into that appointment without slowing it down.
+
+Clinic owners are also running small businesses. A product they offer has to make sense on the invoice, in the conversation with the patient, and in the practice's numbers. If any of those three feels risky, the easiest move is to not recommend it.
+
+## Enrollment in the Room
+
+The flow follows the visit:
+
+1. The provider gets the patient's buy-in out loud first: it improves outcomes, it's easy, it's fun. No software yet.
+2. The provider creates the patient in the portal with basic information.
+3. The patient gets a text message, and the provider confirms it arrived.
+4. The patient downloads the app before leaving the room.
+5. The patient signs in with their phone number. No password.
+
+That last decision mattered more than any screen. Lace Pro's patients are mostly older and often not confident with technology. A forgotten password at home, alone, is where a recommended therapy quietly ends.
+
+## Billing Model 1: Provider's Choice
+
+At enrollment, the provider chose whether to bundle Lace into their care or bill the patient separately. Bundles were volume-discounted.
+
+It failed, and not because of the flow. Providers are very sensitive to how a charge looks on the patient's invoice. Rather than add a line item they'd have to explain, they skipped enrollment. The real constraint lived on a piece of paper outside our product.
+
+## Billing Model 2: The Free Trial
+
+Next we tried a seven-day free trial for patients. When it ended, a patient could request a license, which emailed their provider for approval.
+
+Patients didn't ask for access. Our head of product's read was right: a free trial contradicted what we were trying to make Lace, which was part of the audiologist's standard of care. It turned a clinical recommendation into an optional handout and gave providers an easy reason to put off recommending it. A longer trial would have failed the same way. The problem was the model, not the length.
+
+<Callout variant="insight">
+What I'd do differently: the question that sank the free trial was answerable before a single screen was built. Does a free trial make sense for something we want treated as standard of care? No. I designed the flow without putting the strategy and the pricing experiment side by side.
+</Callout>
+
+## Billing Model 3: What Worked
+
+Unlimited licensing, tiered by the number of providers in the practice. Clinics stopped charging patients for Lace directly. Instead, they could include training in the hearing aid fitting the patient already expects to pay for.
+
+That took cost out of the enrollment decision entirely. The enrollment screen went back to being purely clinical, and recommending Lace became part of the visit instead of a sales conversation.
+
+Each model had its own enrollment flow, kept deliberately lean so we could ship the experiment fast and learn from it rather than polish something we might throw away.
+
+## The ROI Calculator
+
+Clinic owners needed to see the business case in their own numbers, and our account reps needed something they could hand over without being in the room to explain it.
+
+I designed the [ROI calculator](https://neurotone.webflow.io/roi-calculator) and built the first working prototype in code, then iterated on it and handed it to a developer for production polish. A few decisions shaped it:
+
+- **The biggest number isn't the license.** The strongest value argument was fewer hearing aid returns, not revenue from training. The calculator leads with that.
+- **Assumptions are inputs, not claims.** Return rates and how much training reduces them came from leading practices in the field, not a controlled study. So the clinic can edit them. A number a clinic owner can change is a number they'll trust.
+- **Reps can preconfigure it.** Every input lives in the URL, so a rep can send a link already set up for a specific clinic's situation.
+
+![The Lace Pro ROI calculator](/images/work/pro-portal/hero-roi-calculator.jpg)
+
+## What the Best Clinics Knew
+
+Average adherence across clinics was 38%. At the best clinics, it was 61%. Those clinics did three things differently: they prescribed Lace consistently, they explained it as standard of care, and they weren't afraid to charge for it.
+
+Each of those lines up with one of the billing lessons. Model 1 died on providers' reluctance to charge. Model 2 died on undercutting standard of care. Model 3 worked because it took the per-patient decision away, so prescribing became automatic. The best clinics were doing by hand what the third model did structurally.
+
+## What I'd Do Next
+
+None of the best-clinic behaviors are workflow problems. They're about confidence and how providers talk about the product. So the next step is enablement, not another screen:
+
+- Show each clinic how it compares to similar practices.
+- Put the outcome evidence in front of the provider at the moment they're recommending Lace.
+- Build the prescribing language the best clinics use into provider onboarding.
+
+That work hasn't been built yet. It's the first thing I'd pick up.
