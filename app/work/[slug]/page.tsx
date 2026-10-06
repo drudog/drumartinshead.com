@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { caseStudies, getCaseStudy, getAdjacentCaseStudies } from "@/lib/case-studies";
 import { CaseStudyToc } from "@/components/case-study-toc";
 import { AnimateFadeUp } from "@/components/animate-fade-up";
+import { AudienceBackLink } from "@/components/audience-memory";
 
 export const dynamicParams = false;
 
@@ -51,13 +52,7 @@ export default async function CaseStudyPage({
         <div className="mx-auto max-w-6xl px-6 pt-12 sm:pt-16 pb-10">
           {/* Top nav row */}
           <div className="flex items-center justify-between mb-12">
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-2 text-sm text-[color:var(--color-muted)] hover:text-[color:var(--color-foreground)] transition"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to work
-            </Link>
+            <AudienceBackLink />
             <div className="flex items-center gap-6 text-sm">
               {prev && (
                 <Link
