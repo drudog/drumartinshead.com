@@ -110,13 +110,18 @@ export default function AiPage() {
 
         <h2>What I&apos;d bring to a team</h2>
         <p>
-          I haven&apos;t measured an AI velocity gain across a whole design
-          team, and I&apos;m not going to invent one. What I&apos;d do is set a
-          baseline first: how long work takes from brief to review today, and
-          where the time actually goes. Then introduce AI where it removes
-          real work, like prototyping from real components and first drafts of
-          documentation, and measure against that baseline. Teams adopt tools
-          when they can see the time they got back.
+          AI made my own work dramatically faster. Designs and prototypes
+          come together quickly, so I can put far more initial variations on
+          the table before narrowing down. It&apos;s the same expand-and-contract
+          rhythm good UX has always used, with a much faster cycle: more
+          options explored early, and quicker, better-informed decisions about
+          which ones to cut.
+        </p>
+        <p>
+          I&apos;d bring that way of working to a team: coaching designers to
+          use AI to widen the exploration, not to skip the judgment. And
+          I&apos;d set a baseline for how long work takes from brief to review,
+          so the team can see the time it gets back.
         </p>
       </div>
 

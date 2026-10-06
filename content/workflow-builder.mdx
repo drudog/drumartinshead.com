@@ -1,0 +1,81 @@
+<MetaGrid>
+  <MetaItem label="Focus" value="B2B workflow UX · Complex configuration · Visual language" />
+  <MetaItem label="Product" value="SharpSpring marketing automation, used by agencies and their clients" />
+  <MetaItem label="Users" value="Marketers and agency teams building automated campaigns" />
+  <MetaItem label="My role" value="Head of UX; sole designer from early flows through final visual design" />
+</MetaGrid>
+
+## Executive Summary
+
+SharpSpring&apos;s automation engine let users automate marketing and admin actions based on what a lead did: fill out a form, open an email, visit a page. It was powerful, but it was dense with configuration options, and the learning curve was steep.
+
+The goal was to let users build a workflow as a visual decision tree, so the logic, the branches, and the order of events would be clear at a glance, especially when someone came back later to review a workflow that was already running.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: "12px", margin: "1.5rem 0"}}>
+  <iframe
+    src="https://www-ccv.adobe.io/v1/player/ccv/726-8fHPNiA/embed?api_key=behance1&bgcolor=%23191919"
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none"}}
+    allow="fullscreen"
+    allowFullScreen
+    title="Visual Workflow Builder: clickthrough of the final product"
+  />
+</div>
+
+## The Problem
+
+Marketing automation is logic. A typical workflow says something like: when a contact fills out this form, check whether they meet these conditions, then send this email, wait five days, and branch depending on what they do next.
+
+In the old builder, all of that lived in forms and dropdowns. Each rule was a row of selects. Building a workflow meant holding the whole decision tree in your head, and reading one back meant reconstructing it from a list of settings. For agencies managing automation across many client accounts, that cost time on every workflow and made mistakes hard to spot.
+
+## The Strategy
+
+1. **Show the logic as a map.** Every workflow becomes a tree that starts at one point and branches visibly, so the structure is the first thing you see.
+2. **Give each kind of step its own look.** Triggers, filters, actions, and nested workflows each get a distinct color, shape, and icon, so a user can scan a workflow without reading every card.
+3. **Make rules read like sentences.** Conditions are written the way you&apos;d say them out loud, with the AND and OR logic drawn on the page instead of hidden in a setting.
+4. **Put the next step where it belongs.** Instead of drag and drop, an add button appears at every point in the tree where a new step could logically go.
+
+## Key Design Decisions
+
+### A visual language for logic
+
+Triggers, filters, compound filters, actions, and nested workflows each needed to be told apart instantly, in several states: default, hover, selected, and inactive. I built a small visual system for the step cards, with a color and icon for each type and hover controls to edit, delete, add, or expand a step in place.
+
+![Visual language for workflow steps: triggers, filters, actions, and nested workflows, with hover controls](/images/work/workflow-builder/visual-language.jpg)
+
+### Add buttons instead of drag and drop
+
+Drag and drop is the obvious pattern for a builder, and it&apos;s a poor fit for branching logic: users have to know where a step is allowed to go before they can put it there. The early flows replaced it with an add button at every logical insertion point, shown on hover, opening a short menu of step types: triggers, filters, actions, and decisions. Users only see valid places to add a step.
+
+### Rules you can read
+
+The before-and-after below shows the biggest change. The old compound filter was a stack of dropdowns. The new one summarizes itself in the header (&ldquo;2 groups, 3 rules&rdquo;), reads as plain sentences, and draws the OR and AND logic so the grouping is visible. Details collapse when you don&apos;t need them.
+
+![Before and after: a form-based compound filter compared with the readable sentence-style version](/images/work/workflow-builder/before-after.jpg)
+
+### Complex workflows that stay readable
+
+Real workflows get big. Nested workflows collapse into a single hexagon labeled with how many actions they contain. Wait steps carry a small badge with their delay. When a workflow is turned off, its triggers show a blocked icon and the steps fade, so it&apos;s obvious at a glance that nothing is running.
+
+## Process
+
+We started with low-fidelity flows to show stakeholders how the builder would behave, and iterated on them several times before moving to visual design. The annotations on those early flows are where most of the interaction decisions were made.
+
+<ImageGallery
+  columns={2}
+  items={[
+    { src: "/images/work/workflow-builder/early-flows.jpg", alt: "Early low-fidelity flows and annotated sketches of the workflow builder", caption: "Early flows: the add-a-step menu, yes/no decision branches, and annotations replacing drag and drop" },
+    { src: "/images/work/workflow-builder/inactive-states.jpg", alt: "Inactive workflow states with blocked triggers and faded steps", caption: "Edge states: how an inactive workflow looks, specified down to opacity" },
+  ]}
+/>
+
+## The Result
+
+![The finished Visual Workflow Builder with branching filters, actions, and a nested workflow](/images/work/workflow-builder/final-workflow.jpg)
+
+The finished builder turned a dense configuration screen into a map that marketers could build and read. One workflow could branch four ways from a single trigger, mix simple and compound filters, and hand off to a nested workflow, and still be understood by someone seeing it for the first time.
+
+We didn&apos;t instrument it with metrics, but our support team heard about it constantly. Customers told them they were building workflows in a fraction of the time it used to take, and that they were setting up automations they had never thought to try before. When a tool gets easier to read, people start using the parts of it they didn&apos;t know were there.
+
+## What It Taught Me
+
+Complex B2B tools don&apos;t get simpler by hiding options. They get simpler when the structure of the work becomes visible. The same idea runs through my later work: a provider portal that fits inside a clinical visit, and a design system where every component&apos;s purpose is obvious from how it looks.

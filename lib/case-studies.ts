@@ -8,7 +8,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "leadership" | "pro-portal" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
+  slug: "leadership" | "pro-portal" | "workflow-builder" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -62,8 +62,21 @@ export const caseStudies: CaseStudy[] = [
     section: "main",
   },
   {
-    slug: "voices",
+    slug: "workflow-builder",
     number: "04",
+    title: "Visual Workflow Builder",
+    subtitle: "SharpSpring: turning dense marketing automation logic into a map people can read",
+    summary:
+      "SharpSpring's automation engine was powerful but buried in forms and dropdowns. I designed a visual builder that shows every workflow as a branching decision tree, with a visual language for each kind of step and rules that read like sentences.",
+    tags: ["B2B", "Platform"],
+    hero: "/images/work/workflow-builder/hero-workflow-builder.jpg",
+    year: "2018",
+    role: "Head of UX · Sole Designer",
+    section: "main",
+  },
+  {
+    slug: "voices",
+    number: "05",
     title: "AI Voice Cloning Initiative",
     subtitle: "Familiar Voice: personalization at scale in a regulated healthcare platform",
     summary:
@@ -76,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "retention",
-    number: "05",
+    number: "06",
     title: "Gamified Retention",
     subtitle: "Training Map & Streaks: post-launch habit architecture",
     summary:
@@ -89,7 +102,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "tinnitus-pro",
-    number: "06",
+    number: "07",
     title: "Tinnitus Pro",
     subtitle: "0→1 Launch: a provider-prescribed tinnitus therapeutic",
     summary:
@@ -102,7 +115,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "pdf-system",
-    number: "07",
+    number: "08",
     title: "Automated Case Study System",
     subtitle: "Scalable Sales Enablement: PDF generation from structured content",
     summary:
@@ -115,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "certification-app",
-    number: "08",
+    number: "09",
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
@@ -128,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "afternoon-orders",
-    number: "09",
+    number: "10",
     title: "Afternoon Orders",
     subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
     summary:
@@ -141,7 +154,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "beat-dagger",
-    number: "10",
+    number: "11",
     title: "Beat Dagger",
     subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
     summary:
