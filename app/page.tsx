@@ -131,6 +131,11 @@ export default function Home() {
             </p>
             <div className="md:col-span-2 space-y-12">
               <Testimonial
+                quote="Working with Dru was an exceptional experience. He was my manager at both SharpSpring and Constant Contact following the acquisition, and I can confidently say he's the best manager I've had in my entire career. Dru stands out because he genuinely values input, whether it's about strategy, design concepts, or concerns. He actively listens, strives to fully understand your perspective, and provides thoughtful responses, even if it means taking some time to gather additional insights. In stakeholder meetings, Dru consistently brings a unique viewpoint, often uncovering brilliant ideas that others overlook. His ability to think creatively and outside the conventional bounds significantly enhances team dynamics and project outcomes. If given the chance, I would jump at the opportunity to work with Dru again. He's not just a remarkable manager but also a skilled designer and a great friend. Any company would be lucky to have him."
+                author="Aaron Cougle"
+                role="Reported to Dru at SharpSpring and Constant Contact"
+              />
+              <Testimonial
                 quote="I've had the privilege of working with Dru at both SharpSpring and Neurotone, and I can tell you: he's the design leader you want when the stakes are high and the problem is hard. At SharpSpring he led UX across a complex marketing automation platform. At Neurotone, he translated clinical research into an AI-powered digital health product, owning product design end-to-end. In both cases he brought the same thing: genuine range across UX, design systems, and engineering collaboration, paired with an ego-free approach that makes teams better. Dru knows when to lead and when to support, and he reads that instinctively. In complex, high-stakes product environments, that kind of judgment is as valuable as any technical skill. If you're building a serious product design team, Dru is someone you build around."
                 author="Shane Bouchard"
                 role="Dru's manager at SharpSpring, later a colleague at Neurotone"
