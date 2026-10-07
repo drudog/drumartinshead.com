@@ -1,6 +1,7 @@
 export type CaseStudyTag =
   | "Leadership"
   | "B2B"
+  | "Brand"
   | "AI"
   | "Behavioral Design"
   | "0→1"
@@ -8,7 +9,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "leadership" | "pro-portal" | "workflow-builder" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
+  slug: "leadership" | "pro-portal" | "workflow-builder" | "brand" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -75,8 +76,21 @@ export const caseStudies: CaseStudy[] = [
     section: "main",
   },
   {
-    slug: "voices",
+    slug: "brand",
     number: "05",
+    title: "Brand & Launch Creative",
+    subtitle: "Neurotone: running the brand after the agency handoff, and launching Tinnitus Pro",
+    summary:
+      "An agency built Neurotone's brand and handed it off. I've run it since: a livelier palette, type rules in the design system, deck and email templates, and new landing pages. For Tinnitus Pro I created the brand and all the launch creative, from a countdown email campaign to a video mailer for prospective clinics.",
+    tags: ["Brand", "Regulated/Healthcare"],
+    hero: "/images/work/brand/hero-brand.jpg",
+    year: "2024–2026",
+    role: "Lead Product Designer · Brand",
+    section: "main",
+  },
+  {
+    slug: "voices",
+    number: "06",
     title: "AI Voice Cloning Initiative",
     subtitle: "Familiar Voice: personalization at scale in a regulated healthcare platform",
     summary:
@@ -89,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "retention",
-    number: "06",
+    number: "07",
     title: "Gamified Retention",
     subtitle: "Training Map & Streaks: post-launch habit architecture",
     summary:
@@ -102,7 +116,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "tinnitus-pro",
-    number: "07",
+    number: "08",
     title: "Tinnitus Pro",
     subtitle: "0→1 Launch: a provider-prescribed tinnitus therapeutic",
     summary:
@@ -115,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "pdf-system",
-    number: "08",
+    number: "09",
     title: "Automated Case Study System",
     subtitle: "Scalable Sales Enablement: PDF generation from structured content",
     summary:
@@ -128,7 +142,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "certification-app",
-    number: "09",
+    number: "10",
     title: "Beacon Certification App",
     subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
     summary:
@@ -141,7 +155,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "afternoon-orders",
-    number: "10",
+    number: "11",
     title: "Afternoon Orders",
     subtitle: "Mobile Ordering PWA: a coffee shop's own ordering flow built directly on Square",
     summary:
@@ -154,7 +168,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "beat-dagger",
-    number: "11",
+    number: "12",
     title: "Beat Dagger",
     subtitle: "Browser Audio Tool: step-sequencer metronome and recording studio",
     summary:
@@ -170,6 +184,7 @@ export const caseStudies: CaseStudy[] = [
 export const allTags: CaseStudyTag[] = [
   "Leadership",
   "B2B",
+  "Brand",
   "AI",
   "Behavioral Design",
   "0→1",
