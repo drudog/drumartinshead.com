@@ -67,7 +67,7 @@ export const audiences: Audience[] = [
   {
     slug: "cvs-health",
     company: "CVS Health",
-    role: "Lead Experience Designer",
+    role: "Senior Manager, UX Design",
     intro: [
       "Your posting asks for someone who connects customer needs, business goals, and technical realities, then frames the right problem before solving it. My clearest example is a billing problem: three pricing models in a provider portal, where the two that failed had nothing to do with the interface.",
       "I put the most relevant work first. Each case study below maps to something in your posting.",
