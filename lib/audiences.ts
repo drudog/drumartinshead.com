@@ -119,6 +119,55 @@ export const audiences: Audience[] = [
     featured: ["pro-portal", "evolution", "leadership", "retention", "workflow-builder", "voices"],
     resume: "/resumes/dru-martin-resume-cvs-health.pdf",
   },
+  {
+    slug: "drivecentric",
+    company: "DriveCentric",
+    role: "Senior Director of Product Design",
+    intro: [
+      "I've been in your situation twice: seven years designing a CRM and marketing automation platform that small businesses ran on, and leading the rebuild of a 20-year-old product into an AI-powered one now used in nearly 1,500 clinics.",
+      "Your process asks for two deep case studies, one AI experience I shipped and one systems restructure. Both are below, along with the rest of what your posting asks for.",
+    ],
+    matches: [
+      {
+        need: "Shipped AI features in production, and what broke",
+        evidence:
+          "Lace Pro's adaptive engine changes a patient's difficulty on its own; I designed how it explains a change and where the override lives. Our AI avatar's encouragement sounded robotic and repetitive at launch, so we wrote a dozen versions so it stopped sounding scripted.",
+        slug: "evolution",
+      },
+      {
+        need: "Restructured a mature product under live customers, with a migration path",
+        evidence:
+          "SharpSpring's new visual workflow builder replaced a form-based builder customers ran their businesses on. Both ran side by side with opt-in, new accounts went straight to the new one, and a sunset date came only after months of overlap.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Trust, transparency, and consent in AI",
+        evidence:
+          "AI voice cloning lets a patient train with a loved one's voice. Most of the design work was consent: invite, disclosure, preview, and revocation.",
+        slug: "voices",
+      },
+      {
+        need: "Personally build working prototypes with AI tooling",
+        evidence:
+          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+      {
+        need: "Internal tooling that lets partners produce on-brand work",
+        evidence:
+          "A system that turns structured content files into on-brand sales case studies, so the sales team makes new ones without design in the loop.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Lead, coach, and grow a design team",
+        evidence:
+          "About five years managing designers, researchers, and content designers at SharpSpring and Constant Contact, through an acquisition and a reorg. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["evolution", "workflow-builder", "voices", "leadership", "pro-portal", "retention"],
+    resume: "/resumes/dru-martin-resume-drivecentric.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
