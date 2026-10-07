@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { AnalyticsEvents } from "@/components/analytics-events";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -63,6 +64,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <Analytics />
+        <AnalyticsEvents />
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

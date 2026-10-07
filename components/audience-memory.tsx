@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { send } from "./analytics-events";
 
 const KEY = "audience";
 
@@ -14,6 +15,7 @@ export function RememberAudience({ slug, company }: Remembered) {
     try {
       sessionStorage.setItem(KEY, JSON.stringify({ slug, company }));
     } catch {}
+    send("audience_view", { slug });
   }, [slug, company]);
   return null;
 }

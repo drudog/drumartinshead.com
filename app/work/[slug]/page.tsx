@@ -7,6 +7,7 @@ import { caseStudies, getCaseStudy, getAdjacentCaseStudies } from "@/lib/case-st
 import { CaseStudyToc } from "@/components/case-study-toc";
 import { AnimateFadeUp } from "@/components/animate-fade-up";
 import { AudienceBackLink } from "@/components/audience-memory";
+import { ReadDepth } from "@/components/analytics-events";
 
 export const dynamicParams = false;
 
@@ -47,6 +48,7 @@ export default async function CaseStudyPage({
 
   return (
     <div>
+      <ReadDepth slug={cs.slug} />
       {/* Constrained header */}
       <AnimateFadeUp>
         <div className="mx-auto max-w-6xl px-6 pt-12 sm:pt-16 pb-10">
