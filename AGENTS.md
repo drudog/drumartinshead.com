@@ -2,6 +2,10 @@
 
 - **Never use em dashes (—) in any authored content.** Use a colon for label/value pairs and captions, a comma or semicolon for prose clause connectors, and a period for sentence breaks.
 
+## Job applications
+
+For any job application work (cover letters, resumes, `/for/<slug>` pages), follow `scripts/APPLICATIONS.md`. It exists only on Dru's local machine; if it's missing, ask Dru before starting. Never commit anything in `scripts/`.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
