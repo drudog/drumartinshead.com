@@ -223,6 +223,61 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "evolution", "voices", "tinnitus-pro", "leadership", "retention"],
     resume: "/resumes/dru-martin-resume-birdeye.pdf",
   },
+  {
+    slug: "ccc",
+    company: "CCC",
+    role: "Senior / Lead Product Designer",
+    intro: [
+      "Your posting asks for measurable business impact in a regulated, data-heavy domain, not just polished screens. For the last two years I've designed an FDA Class II product used in nearly 1,500 clinics, serving patients, clinicians, and the clinics that pay for it.",
+      "Each case study below maps to something in your posting, with the outcomes stated where we measured them.",
+    ],
+    matches: [
+      {
+        need: "Measurable outcomes across multiple projects",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Complex workflows for diverse personas, with ecosystem-level impact",
+        evidence:
+          "Three billing models in the Lace Pro provider portal. Two failed for reasons outside the software: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Engage directly with users and iterate quickly",
+        evidence:
+          "Tinnitus Pro went from nothing to launch in under four months through audiologist interviews and working prototypes iterated with clinicians. In the first outcomes look, 40% of patients with bothersome tinnitus reached clinically meaningful improvement.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "End-to-end design of complex B2B workflows",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation rules buried in forms into a decision tree people could read, rolled out beside the old builder so customers could switch on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Regulated, data-heavy environments",
+        evidence:
+          "Lace Pro shipped under FDA Class II, HIPAA, and GDPR, rebuilt from a 20-year-old platform in under six months.",
+        slug: "evolution",
+      },
+      {
+        need: "Workshops, stakeholder alignment, and presenting to executives",
+        evidence:
+          "Head of UX at SharpSpring, then design manager at Constant Contact. I set up story mapping, structured user testing, and design reviews with product and engineering.",
+        slug: "leadership",
+      },
+      {
+        need: "Use AI to accelerate discovery and prototyping",
+        evidence:
+          "Claude Code is my primary environment; I built this partner certification platform with it, and the first working version of our ROI calculator in code.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["retention", "pro-portal", "tinnitus-pro", "workflow-builder", "evolution", "leadership"],
+    resume: "/resumes/dru-martin-resume-ccc.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
