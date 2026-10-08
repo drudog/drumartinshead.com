@@ -168,6 +168,61 @@ export const audiences: Audience[] = [
     featured: ["evolution", "workflow-builder", "voices", "leadership", "pro-portal", "retention"],
     resume: "/resumes/dru-martin-resume-drivecentric.pdf",
   },
+  {
+    slug: "birdeye",
+    company: "Birdeye",
+    role: "Principal AI-Native Product Designer",
+    intro: [
+      "I've designed the kind of marketing automation your agents are replacing: seven years on SharpSpring's marketing automation platform, including its visual workflow builder. For the last two years I've designed production AI for a product used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Make complex automation self-service for non-technical users",
+        evidence:
+          "SharpSpring's visual workflow builder turned rules buried in forms into a decision tree people could read. Customers told support they were setting up automations they had never tried before.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Transparency, explainability, control, and human oversight",
+        evidence:
+          "Lace Pro's adaptive engine changes a patient's difficulty on its own. I designed how it explains a change, how it behaves when uncertain, and where a person can override it.",
+        slug: "evolution",
+      },
+      {
+        need: "Generative AI's limits: hallucination and output that feels false",
+        evidence:
+          "AI-written lesson content came back fluent with the facts often wrong, so people write it and AI edits. Our avatar's encouragement sounded robotic at launch, so we wrote a dozen versions.",
+        slug: "evolution",
+      },
+      {
+        need: "Responsible AI and trust",
+        evidence:
+          "AI voice cloning lets a patient train with a loved one's voice. Most of the design work was consent: invite, disclosure, preview, and revocation.",
+        slug: "voices",
+      },
+      {
+        need: "Customer discovery and usability research",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Functional prototypes with code and AI tools",
+        evidence:
+          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+      {
+        need: "Critique, mentorship, and influencing leaders",
+        evidence:
+          "Head of UX at SharpSpring, then manager of designers, researchers, and content designers at Constant Contact across a distributed team.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["workflow-builder", "evolution", "voices", "tinnitus-pro", "leadership", "retention"],
+    resume: "/resumes/dru-martin-resume-birdeye.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
