@@ -278,6 +278,55 @@ export const audiences: Audience[] = [
     featured: ["retention", "pro-portal", "tinnitus-pro", "workflow-builder", "evolution", "leadership"],
     resume: "/resumes/dru-martin-resume-ccc.pdf",
   },
+  {
+    slug: "trm-labs",
+    company: "TRM Labs",
+    role: "Head of Product Design",
+    intro: [
+      "Your posting asks for a design leader who is still in the file. I managed design teams at SharpSpring and Constant Contact for about five years, hiring and developing designers while owning product areas of my own. For the last two years I've been Lead Product Designer at Neurotone AI, hands-on every day, with AI doing real production work in my process.",
+      "Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Built a team, not inherited one, and developed designers as individuals",
+        evidence:
+          "At SharpSpring I grew the team by hiring directly. I brought in an intern from graphic design with no product experience; she now leads growth design at Noom. I've also let a designer go after three months of clear expectations, and changed my hiring loop because of it.",
+        slug: "leadership",
+      },
+      {
+        need: "AI that does load-bearing work in your own process, and a workflow you can demo",
+        evidence:
+          "Writers deliver case study copy to a spec, an agent fits it into a coded template, and a Puppeteer pipeline renders print-ready PDFs. The agent was rough at first; I refined it until the output held the design, then proved it on six more studies. The instructions live in a reusable Claude project.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Automation that does real work on a user's behalf",
+        evidence:
+          "SharpSpring's visual workflow builder turned marketing automation rules buried in forms into a decision tree customers could read and check before it ran without them.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Defining how a human trusts an agent",
+        evidence:
+          "Familiar Voices clones a loved one's voice for training, so it needed invite, disclosure, preview, and revocation. Lace Pro's adaptive engine, by contrast, works silently. Knowing which an agent needs is the design call.",
+        slug: "voices",
+      },
+      {
+        need: "Player-coach: still shipping design work yourself",
+        evidence:
+          "Lace Pro went from a 20-year-old platform to a cross-platform AI product in under six months, and I'm still the hands-on design lead on it.",
+        slug: "evolution",
+      },
+      {
+        need: "Scrappy prototypes that settle decisions fast",
+        evidence:
+          "I built this partner certification platform in Next.js with Claude Code, and the first working version of our clinic ROI calculator in code before a developer polished it.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["leadership", "pdf-system", "workflow-builder", "voices", "evolution", "certification-app"],
+    resume: "/resumes/dru-martin-resume-trm-labs.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
