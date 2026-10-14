@@ -382,6 +382,61 @@ export const audiences: Audience[] = [
     featured: ["retention", "pro-portal", "evolution", "voices", "tinnitus-pro", "leadership"],
     resume: "/resumes/dru-martin-resume-panorama.pdf",
   },
+  {
+    slug: "deel",
+    company: "Deel",
+    role: "Principal Designer",
+    intro: [
+      "Your posting asks for personalized, adaptive experiences built on infrastructure the designer doesn't own, and for someone who can take an undefined brief to a shipped experience. Both describe the last two years of my work on an AI product now used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Personalized, adaptive experiences on infrastructure you don't own",
+        evidence:
+          "Lace Pro's adaptive engine picks each patient's next lesson and difficulty from how they're performing. I designed the experience around it, and the right answer was to make it invisible: easy openers and an ease-out at the end of each session.",
+        slug: "evolution",
+      },
+      {
+        need: "Designing with and for AI",
+        evidence:
+          "Voice cloning lets a patient train with a loved one's voice. Unlike the adaptive engine, it needed explicit disclosure, preview, consent, and revocation.",
+        slug: "voices",
+      },
+      {
+        need: "Undefined brief to shipped experience",
+        evidence:
+          "Tinnitus Pro had no existing product to reference. I went from competitive research and audiologist interviews to working prototypes and shipped it in under four months.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "AI in everyday design practice",
+        evidence:
+          "For a family of about twenty sales case studies, writers deliver copy to a spec and an agent fits it into a coded template I designed. Seven are done.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Systems thinking across surfaces and boundaries",
+        evidence:
+          "Three billing models in the provider portal. Two failed for reasons outside the interface: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Changing a live product without breaking it",
+        evidence:
+          "SharpSpring's visual workflow builder replaced automation logic buried in forms, rolled out beside the old builder so customers could switch on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Exceptional prototyping",
+        evidence:
+          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript, and it shipped as the real product.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["evolution", "voices", "tinnitus-pro", "pdf-system", "pro-portal", "workflow-builder"],
+    resume: "/resumes/dru-martin-resume-deel.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
