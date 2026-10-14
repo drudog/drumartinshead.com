@@ -404,9 +404,9 @@ export const audiences: Audience[] = [
         slug: "voices",
       },
       {
-        need: "Undefined brief to shipped experience",
+        need: "Undefined brief to shipped experience, and one experience across products",
         evidence:
-          "Tinnitus Pro had no existing product to reference. I went from competitive research and audiologist interviews to working prototypes and shipped it in under four months.",
+          "Tinnitus Pro had no existing product to reference and shipped in under four months. It shares one app download and one login with Lace Pro, and each patient sees only the products they've bought.",
         slug: "tinnitus-pro",
       },
       {
@@ -430,7 +430,7 @@ export const audiences: Audience[] = [
       {
         need: "Exceptional prototyping",
         evidence:
-          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript, and it shipped as the real product.",
+          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript.",
         slug: "certification-app",
       },
     ],
