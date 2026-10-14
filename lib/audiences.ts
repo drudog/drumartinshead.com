@@ -131,7 +131,7 @@ export const audiences: Audience[] = [
       {
         need: "Shipped AI features in production, and what broke",
         evidence:
-          "Lace Pro's adaptive engine changes a patient's difficulty on its own; I designed how it explains a change and where the override lives. Our AI avatar's encouragement sounded robotic and repetitive at launch, so we wrote a dozen versions so it stopped sounding scripted.",
+          "Lace Pro's adaptive engine picks each patient's next lesson and difficulty without asking, designed to be invisible. Our AI avatar's encouragement sounded robotic and repetitive at launch, so we wrote a dozen versions so it stopped sounding scripted.",
         slug: "evolution",
       },
       {
@@ -184,9 +184,9 @@ export const audiences: Audience[] = [
         slug: "workflow-builder",
       },
       {
-        need: "Transparency, explainability, control, and human oversight",
+        need: "Knowing when AI should be visible and when it shouldn't",
         evidence:
-          "Lace Pro's adaptive engine changes a patient's difficulty on its own. I designed how it explains a change, how it behaves when uncertain, and where a person can override it.",
+          "Lace Pro's adaptive engine picks each patient's next lesson and difficulty as they train. The design job was to make it invisible: easy openers and an ease-out at the end of each session.",
         slug: "evolution",
       },
       {
@@ -326,6 +326,61 @@ export const audiences: Audience[] = [
     ],
     featured: ["leadership", "pdf-system", "workflow-builder", "voices", "evolution", "certification-app"],
     resume: "/resumes/dru-martin-resume-trm-labs.pdf",
+  },
+  {
+    slug: "panorama",
+    company: "Panorama Education",
+    role: "Lead Product Designer",
+    intro: [
+      "Your posting asks for a designer who can turn complex data into clear next steps for people with very different levels of data literacy. For the last two years I've designed for audiologists and older patients who never chose to be technology users, in a product now used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Turn complex data into clear, actionable insight across varying data literacy",
+        evidence:
+          "Patients follow their progress on a visual training map. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Experiences that connect educators with data and insight",
+        evidence:
+          "In the Lace Pro provider portal, clinicians enroll patients during a normal visit and see who's active. An ROI calculator turns a clinic's own numbers into a value case.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Shipped AI-powered features and a point of view on AI",
+        evidence:
+          "Lace Pro's adaptive engine picks each patient's next lesson and difficulty as they train, designed to be invisible. Our AI avatar sounded robotic at launch, so we wrote a dozen versions until it stopped sounding scripted.",
+        slug: "evolution",
+      },
+      {
+        need: "Responsible AI and trust",
+        evidence:
+          "AI voice cloning lets a patient train with a loved one's voice. Most of the design work was consent: invite, disclosure, preview, and revocation.",
+        slug: "voices",
+      },
+      {
+        need: "Discovery and research with users",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Mentor designers and raise the craft bar",
+        evidence:
+          "About five years managing designers, researchers, and content designers at SharpSpring and Constant Contact. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Prototyping and building with engineering",
+        evidence:
+          "Claude Code is my primary environment. I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["retention", "pro-portal", "evolution", "voices", "tinnitus-pro", "leadership"],
+    resume: "/resumes/dru-martin-resume-panorama.pdf",
   },
 ];
 
