@@ -492,6 +492,55 @@ export const audiences: Audience[] = [
     featured: ["leadership", "pro-portal", "retention", "workflow-builder", "evolution", "tinnitus-pro"],
     resume: "/resumes/dru-martin-resume-weave.pdf",
   },
+  {
+    slug: "linktree",
+    company: "Linktree",
+    role: "Staff Product Designer, Mobile",
+    intro: [
+      "Your posting asks for an app that feels like one product, not five. For the last two years I've led design for Lace Pro, a native iOS and Android app, plus desktop, used in nearly 1,500 audiology clinics, with a second product living in the same app on one shared design system.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Notifications and in-the-moment coaching",
+        evidence:
+          "Streaks, a training map, a leaderboard, and push, text, and email nudges timed to the moments people quit. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "One coherent native product across surfaces",
+        evidence:
+          "Lace Pro runs on iOS, Android, and desktop, rebuilt from a 20-year-old platform in under six months on a design system of several hundred variable-driven components.",
+        slug: "evolution",
+      },
+      {
+        need: "Balance sophistication with everyday usability",
+        evidence:
+          "Most patients are older adults with hearing loss. Login is a phone number with no password, and daily training went from 20 minutes to 15 by removing interaction points and stops.",
+        slug: "pro-portal",
+      },
+      {
+        need: "A trusted, personal moment on mobile",
+        evidence:
+          "Familiar Voices lets a patient train with a loved one's cloned voice: invite, disclosure, preview, and revocation, compliant with HIPAA and GDPR.",
+        slug: "voices",
+      },
+      {
+        need: "Influence without authority",
+        evidence:
+          "At SharpSpring I ran design critique before I had the title, then became Head of UX. The only authority I had was whether my feedback made the work better.",
+        slug: "leadership",
+      },
+      {
+        need: "A second product, same app, same bar",
+        evidence:
+          "Tinnitus Pro went from nothing to launch in under four months and lives inside the Lace Pro app behind the same login.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["retention", "evolution", "voices", "pro-portal", "tinnitus-pro", "leadership"],
+    resume: "/resumes/dru-martin-resume-linktree.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
