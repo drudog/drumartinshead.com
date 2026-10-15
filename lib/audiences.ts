@@ -541,6 +541,61 @@ export const audiences: Audience[] = [
     featured: ["retention", "evolution", "voices", "pro-portal", "tinnitus-pro", "leadership"],
     resume: "/resumes/dru-martin-resume-linktree.pdf",
   },
+  {
+    slug: "roo",
+    company: "Roo",
+    role: "Design Lead",
+    intro: [
+      "Your posting describes a player-coach: lead a team of five, make design standards explicit, and still do real design work. I managed a team of designers, researchers, and content designers for about five years, and for the last two I've led design for a product used by nearly 1,500 small audiology clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead, mentor, and grow a five-person design team",
+        evidence:
+          "About five years managing designers, researchers, and content designers through an acquisition and a reorg. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Make design competencies explicit and consistently applied",
+        evidence:
+          "At SharpSpring I wrote the standard down: a critique format, a review rhythm, and a hiring loop. It held through the acquisition and the reorg.",
+        slug: "leadership",
+      },
+      {
+        need: "A design system that AI tools can build from",
+        evidence:
+          "I built Lace Pro's design system from scratch, with color, type, and sizing driven by tokens, so prototypes build from real components.",
+        slug: "evolution",
+      },
+      {
+        need: "AI fluency, including where its work shouldn't ship",
+        evidence:
+          "An agent fits writers' content into a coded template I designed for our sales case studies; seven of about twenty are done. When AI drafted therapy lessons, the facts were often wrong, so people write those.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Small practices as customers",
+        evidence:
+          "Lace Pro enrollment fits inside a normal clinic visit: the provider enters a name and phone number, the patient gets a text and installs the app in the room.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Two-sided products and marketplace thinking",
+        evidence:
+          "Clinicians prescribe and patients have to keep showing up. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics. At SharpSpring I made proof-of-concept designs for marketplace features.",
+        slug: "retention",
+      },
+      {
+        need: "Research with users",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["leadership", "pro-portal", "retention", "evolution", "pdf-system", "tinnitus-pro"],
+    resume: "/resumes/dru-martin-resume-roo.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
