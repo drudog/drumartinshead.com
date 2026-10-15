@@ -437,6 +437,61 @@ export const audiences: Audience[] = [
     featured: ["evolution", "voices", "tinnitus-pro", "pdf-system", "pro-portal", "workflow-builder"],
     resume: "/resumes/dru-martin-resume-deel.pdf",
   },
+  {
+    slug: "weave",
+    company: "Weave",
+    role: "Product Design Manager",
+    intro: [
+      "Weave builds for healthcare practices whose staff live in your software all day. I've designed communication tools for small businesses at SharpSpring and Constant Contact, and for the last two years I've led design for a product used in nearly 1,500 audiology practices. I managed distributed design teams for about five years.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Grow designers and build a team",
+        evidence:
+          "About five years managing designers, researchers, and content designers through an acquisition and a reorg. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Design around the real workflows of healthcare practices",
+        evidence:
+          "Lace Pro enrollment fits inside a normal visit: the provider enters a name and phone number, the patient gets a text and installs the app in the room, and login needs no password.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Equal strategic partner to Product and Engineering",
+        evidence:
+          "We tested three billing models in the provider portal. Two failed for reasons outside the interface: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Engagement that keeps people coming back",
+        evidence:
+          "Push, text, and email reminders timed to drop-off points, a progress map, and streaks. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Turn complex workflows into clear, scalable design",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation logic buried in forms into a map, rolled out beside the old builder so customers could switch on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Systemic vision across surfaces",
+        evidence:
+          "I built Lace Pro's design system from scratch. Lace Pro and Tinnitus Pro now share one app and one login, and each patient sees only what they've bought.",
+        slug: "evolution",
+      },
+      {
+        need: "Research that validates opportunities",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["leadership", "pro-portal", "retention", "workflow-builder", "evolution", "tinnitus-pro"],
+    resume: "/resumes/dru-martin-resume-weave.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
