@@ -596,6 +596,61 @@ export const audiences: Audience[] = [
     featured: ["leadership", "pro-portal", "retention", "evolution", "pdf-system", "tinnitus-pro"],
     resume: "/resumes/dru-martin-resume-roo.pdf",
   },
+  {
+    slug: "narmi",
+    company: "Narmi",
+    role: "Head of Design",
+    intro: [
+      "Your posting describes a player-coach: set one design vision across products, grow a team of three to five designers, and still do hands-on work. I built and managed a design team for about five years in B2B SaaS, and for the last two I've led design across connected products used by nearly 1,500 clinics.",
+      "I'm based in Gainesville, Florida, and would work remotely with regular travel to New York. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead, mentor, and develop a team of 3 to 5 designers",
+        evidence:
+          "About five years building and managing designers, researchers, and content designers through an acquisition and a reorg. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "A unified design vision across products",
+        evidence:
+          "Lace Pro and Tinnitus Pro share one app and one login, and each patient sees only the products they've bought. The patient app and the provider portal were designed as one system.",
+        slug: "evolution",
+      },
+      {
+        need: "Onboarding that works for real people",
+        evidence:
+          "Enrollment fits inside a normal clinic visit: the provider enters a name and phone number, the patient gets a text, installs the app in the room, and signs in with no password.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Metric-driven SaaS",
+        evidence:
+          "Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics. At Constant Contact, daily active use was a metric my team designed against.",
+        slug: "retention",
+      },
+      {
+        need: "Design aligned with Sales, Marketing, and Customer Success",
+        evidence:
+          "I designed and built the first version of an ROI calculator our reps preconfigure for each clinic, and a system that turns structured content into on-brand sales case studies.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Processes and design systems for scalable design",
+        evidence:
+          "I wrote down SharpSpring's design standard (critique, review rhythm, hiring loop) and built Lace Pro's token-driven design system from scratch.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "User research",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["leadership", "evolution", "pro-portal", "retention", "pdf-system", "workflow-builder"],
+    resume: "/resumes/dru-martin-resume-narmi.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
