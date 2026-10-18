@@ -651,6 +651,61 @@ export const audiences: Audience[] = [
     featured: ["leadership", "evolution", "pro-portal", "retention", "pdf-system", "workflow-builder"],
     resume: "/resumes/dru-martin-resume-narmi.pdf",
   },
+  {
+    slug: "samsara",
+    company: "Samsara",
+    role: "Staff Product Designer",
+    intro: [
+      "Fleet managers and dispatchers live in your dashboard all day, and drivers use your app in between real work. I've designed for both kinds of people: seven years on a CRM and automation platform small businesses ran their operations on, and two years leading design for a web portal and mobile app used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Quantified impact across multiple product areas",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Lead large, ambiguous initiatives from framing through launch",
+        evidence:
+          "I led the rebuild of a 20-year-old platform into Lace Pro in under six months, across a patient app on iOS, Android, and desktop and a provider portal.",
+        slug: "evolution",
+      },
+      {
+        need: "Define patterns other designers build on",
+        evidence:
+          "SharpSpring's visual workflow builder gave triggers, filters, and actions their own visual language, turning automation logic buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Product decisions informed by customers and data",
+        evidence:
+          "We tested three billing models in the provider portal. Two failed for reasons outside the interface, and clinic-wide licensing is what worked.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Shipped work you can attribute to AI tools",
+        evidence:
+          "For a family of about twenty sales case studies, writers deliver copy to a spec and an agent fits it into a coded template I designed. Seven are done.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Meet customers directly and iterate fast",
+        evidence:
+          "Tinnitus Pro went from nothing to launch in under four months through audiologist interviews and working prototypes iterated with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Mentor designers",
+        evidence:
+          "About five years managing designers, researchers, and content designers. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["evolution", "workflow-builder", "retention", "pro-portal", "pdf-system", "tinnitus-pro"],
+    resume: "/resumes/dru-martin-resume-samsara.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
