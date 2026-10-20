@@ -706,6 +706,61 @@ export const audiences: Audience[] = [
     featured: ["evolution", "workflow-builder", "retention", "pro-portal", "pdf-system", "tinnitus-pro"],
     resume: "/resumes/dru-martin-resume-samsara.pdf",
   },
+  {
+    slug: "kalepa",
+    company: "Kalepa",
+    role: "Lead Product Designer",
+    intro: [
+      "Underwriters need to find what matters in a lot of data and act on it with confidence. I've designed that kind of software for years: a CRM and automation platform small businesses ran on, and for the last two years an AI-powered product used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Generalize an existing platform to new and expanding workflows",
+        evidence:
+          "Lace Pro replaced a 20-year-old platform in under six months. When Tinnitus Pro launched, it joined the same app and login, and each patient sees only the products they've bought.",
+        slug: "evolution",
+      },
+      {
+        need: "Data-dense workflows that help people act with confidence",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation logic buried in forms into a map people could read, rolled out beside the old builder so customers moved on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "How AI shows up, and keeping people in control",
+        evidence:
+          "Voice cloning lets a patient train with a loved one's voice. Most of the design was consent: disclosure, preview, and revocation.",
+        slug: "voices",
+      },
+      {
+        need: "Turn ambiguous problems into product direction with sales and client success",
+        evidence:
+          "We tested three billing models in the provider portal. Two failed for reasons outside the interface, and I built the first version of the ROI calculator our reps use.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Move fast from idea to validated concept",
+        evidence:
+          "Tinnitus Pro went from nothing to launch in under four months through audiologist interviews and working prototypes iterated with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Rapid prototyping with AI and code",
+        evidence:
+          "I prototype in React, Next.js, and TypeScript. I built this partner certification platform end to end.",
+        slug: "certification-app",
+      },
+      {
+        need: "Raise the design bar through critique and mentorship",
+        evidence:
+          "About five years managing designers, researchers, and content designers. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["evolution", "workflow-builder", "voices", "pro-portal", "tinnitus-pro", "leadership"],
+    resume: "/resumes/dru-martin-resume-kalepa.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
