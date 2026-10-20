@@ -761,6 +761,55 @@ export const audiences: Audience[] = [
     featured: ["evolution", "workflow-builder", "voices", "pro-portal", "tinnitus-pro", "leadership"],
     resume: "/resumes/dru-martin-resume-kalepa.pdf",
   },
+  {
+    slug: "cleerly",
+    company: "Cleerly",
+    role: "Senior Product Designer",
+    intro: [
+      "Cleerly turns complex cardiac data into decisions clinicians can act on, under FDA rules. For the last two years I've led design for FDA Class II software used in nearly 1,500 audiology clinics, working as much as a researcher and problem framer as a screen designer.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Deep discovery research and problem framing",
+        evidence:
+          "Tinnitus Pro had no product to reference. I front-loaded competitive research, clinical literature, and audiologist interviews, then iterated working prototypes with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Quantifiable reduction in workflow friction",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Complex multi-user clinical workflows",
+        evidence:
+          "Enrollment fits inside a normal visit: the provider enters a name and phone number, the patient gets a text and installs the app in the room. Three billing models taught us where the real friction lived.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Regulated medical software, end to end",
+        evidence:
+          "I led the rebuild of a 20-year-old platform into Lace Pro, FDA Class II software, in under six months, and built its design system from scratch.",
+        slug: "evolution",
+      },
+      {
+        need: "Complex B2B and reporting",
+        evidence:
+          "Seven years at SharpSpring on the CRM pipelines, automation builders, and reporting agencies ran their businesses on.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Rapid prototyping with AI",
+        evidence:
+          "I prototype in React, Next.js, and TypeScript. I built this partner certification platform end to end.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["tinnitus-pro", "retention", "pro-portal", "evolution", "workflow-builder", "voices"],
+    resume: "/resumes/dru-martin-resume-cleerly.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
