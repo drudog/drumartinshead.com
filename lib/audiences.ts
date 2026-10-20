@@ -810,6 +810,55 @@ export const audiences: Audience[] = [
     featured: ["tinnitus-pro", "retention", "pro-portal", "evolution", "workflow-builder", "voices"],
     resume: "/resumes/dru-martin-resume-cleerly.pdf",
   },
+  {
+    slug: "radiant",
+    company: "Radiant",
+    role: "Head of Design",
+    intro: [
+      "Your posting asks one person to own how Radiant looks and works across the brand and the product. That's my job today at Neurotone AI, where I design both an AI-powered product used in nearly 1,500 clinics and the brand around it.",
+      "I'm based in Gainesville, Florida, in the US, and would work remotely. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead design across brand and product",
+        evidence:
+          "At Neurotone, brand and product are one job: identity, marketing site, print collateral, sales case studies, partner materials, and the product itself.",
+        slug: "evolution",
+      },
+      {
+        need: "Translate complex technical concepts into clear experiences",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation logic buried in forms into a map people could read, rolled out beside the old builder so customers moved on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "One design system spanning product and company design",
+        evidence:
+          "A code-based system turns structured content into on-brand sales case studies, so marketing and sales produce consistent assets without a designer in every loop.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Work with marketing and commercial teams",
+        evidence:
+          "I designed and built the first version of the ROI calculator our reps preconfigure for each clinic, alongside three billing-model experiments in the provider portal.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Build and grow a design function",
+        evidence:
+          "At SharpSpring I grew to Head of UX, hired directly to build the team, and carried it through the Constant Contact acquisition. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Research, prototyping, and testing",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["evolution", "pdf-system", "workflow-builder", "pro-portal", "leadership", "voices"],
+    resume: "/resumes/dru-martin-resume-radiant.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
