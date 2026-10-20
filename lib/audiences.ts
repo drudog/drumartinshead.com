@@ -112,7 +112,7 @@ export const audiences: Audience[] = [
       {
         need: "Use AI tools like Claude every day, and know what can be delegated",
         evidence:
-          "Claude Code is my primary working environment; I built this partner certification platform with it. When we tried AI for lesson content, the facts were often wrong, so we wrote it ourselves and used AI for structure and editing.",
+          "Claude Code is my primary working environment; I built this partner certification platform with it. When AI generated our lesson content, the facts were often wrong, so nothing ships until a person reviews and approves it.",
         slug: "certification-app",
       },
     ],
@@ -192,7 +192,7 @@ export const audiences: Audience[] = [
       {
         need: "Generative AI's limits: hallucination and output that feels false",
         evidence:
-          "AI-written lesson content came back fluent with the facts often wrong, so people write it and AI edits. Our avatar's encouragement sounded robotic at launch, so we wrote a dozen versions.",
+          "AI-generated lesson content came back fluent with the facts often wrong, so people review and approve it before it ships. Our avatar's encouragement sounded robotic at launch, so we wrote a dozen versions.",
         slug: "evolution",
       },
       {
@@ -571,7 +571,7 @@ export const audiences: Audience[] = [
       {
         need: "AI fluency, including where its work shouldn't ship",
         evidence:
-          "An agent fits writers' content into a coded template I designed for our sales case studies; seven of about twenty are done. When AI drafted therapy lessons, the facts were often wrong, so people write those.",
+          "An agent fits writers' content into a coded template I designed for our sales case studies; seven of about twenty are done. When AI drafted therapy lessons, the facts were often wrong, so people approve every lesson before it ships.",
         slug: "pdf-system",
       },
       {
