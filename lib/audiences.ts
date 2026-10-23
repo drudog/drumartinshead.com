@@ -859,6 +859,55 @@ export const audiences: Audience[] = [
     featured: ["evolution", "pdf-system", "workflow-builder", "pro-portal", "leadership", "voices"],
     resume: "/resumes/dru-martin-resume-radiant.pdf",
   },
+  {
+    slug: "helpscout",
+    company: "Help Scout",
+    role: "Director of Product Design",
+    intro: [
+      "Help Scout's customers pick it because it's easier to use and feels better to work in. I've spent most of my career on the tools small businesses use to talk to their customers, and I've led a distributed design team as a player-coach.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead a small team of experienced designers as a player-coach",
+        evidence:
+          "About five years managing designers, researchers, and content designers through an acquisition and a reorg. An intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "A point of view on trustworthy AI",
+        evidence:
+          "Voice cloning lets a patient train with a loved one's voice, so it needed disclosure, preview, consent, and revocation. Our adaptive engine, by contrast, works invisibly.",
+        slug: "voices",
+      },
+      {
+        need: "AI that handles its own mistakes",
+        evidence:
+          "Our AI avatar's encouragement sounded robotic at launch, so we wrote a dozen versions. When AI drafted therapy content, the facts were often wrong, so people write it.",
+        slug: "evolution",
+      },
+      {
+        need: "Evolve how design gets done as AI accelerates delivery",
+        evidence:
+          "For about twenty sales case studies, writers deliver copy to a spec and an agent fits it into a coded template I designed. Seven are done.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Make complex B2B software feel simple",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation logic buried in forms into a map people could read, rolled out beside the old builder so customers switched on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Prototyping in code",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["leadership", "voices", "workflow-builder", "pdf-system", "evolution", "pro-portal"],
+    resume: "/resumes/dru-martin-resume-helpscout.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
