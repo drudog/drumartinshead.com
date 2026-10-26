@@ -908,6 +908,55 @@ export const audiences: Audience[] = [
     featured: ["leadership", "voices", "workflow-builder", "pdf-system", "evolution", "pro-portal"],
     resume: "/resumes/dru-martin-resume-helpscout.pdf",
   },
+  {
+    slug: "beacon",
+    company: "Beacon Biosignals",
+    role: "Director of Product Design",
+    intro: [
+      "Beacon designs for patients using medical technology unsupervised at home, the clinicians who care for them, and the teams behind the scenes. For the last two years I've led design for FDA Class II software that older patients use at home and audiologists in nearly 1,500 clinics prescribe.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Patients using medical technology unsupervised at home",
+        evidence:
+          "Mostly older adults with hearing loss train at home. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Service and business-process design, not just interfaces",
+        evidence:
+          "Enrollment fits inside a standard clinic visit, and three billing models were tested in the provider portal until clinic-wide licensing took cost out of enrollment.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Design across mobile, web, and print",
+        evidence:
+          "A code-based system turns structured content into on-brand, print-ready case studies, alongside the patient app and provider portal.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Build and grow a design function",
+        evidence:
+          "At SharpSpring I grew to Head of UX, hired directly, and wrote down our standard. I managed a distributed team of designers, researchers, and content designers for about five years.",
+        slug: "leadership",
+      },
+      {
+        need: "Regulated medical products",
+        evidence:
+          "Lace Pro is FDA Class II software, rebuilt from a 20-year-old platform in under six months, with a design system built from scratch.",
+        slug: "evolution",
+      },
+      {
+        need: "Research with clinicians",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["retention", "pro-portal", "evolution", "pdf-system", "leadership", "tinnitus-pro"],
+    resume: "/resumes/dru-martin-resume-beacon.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
