@@ -957,6 +957,55 @@ export const audiences: Audience[] = [
     featured: ["retention", "pro-portal", "evolution", "pdf-system", "leadership", "tinnitus-pro"],
     resume: "/resumes/dru-martin-resume-beacon.pdf",
   },
+  {
+    slug: "lumi",
+    company: "Lumi",
+    role: "Lead Product Designer",
+    intro: [
+      "Lumi serves a student who needs something closer to a consumer app, a teacher with a 45-minute period, and a district leader who needs evidence. I've designed for that same shape: a patient app people come back to daily, a portal clinicians use mid-visit, and the value a clinic needs to see, in a product used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Consumer-grade design that earns a daily habit",
+        evidence:
+          "A training map, streaks, and reminders timed to drop-off points. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Workflow tools for busy professionals",
+        evidence:
+          "Enrollment fits inside a normal clinic visit: the provider enters a name and phone number, and the patient installs the app in the room.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Complex multi-role workflows made readable",
+        evidence:
+          "SharpSpring's visual workflow builder turned rules buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "A product taken from early to mature, with a design system",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old platform to a mature product as the only designer, and built its design system from scratch.",
+        slug: "evolution",
+      },
+      {
+        need: "Prototypes within days, from what you hear in the field",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with clinicians as they used them.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Build alongside founders and engineering",
+        evidence:
+          "I prototype in code. I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["retention", "pro-portal", "evolution", "workflow-builder", "tinnitus-pro", "voices"],
+    resume: "/resumes/dru-martin-resume-lumi.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
