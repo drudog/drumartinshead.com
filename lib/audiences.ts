@@ -1006,6 +1006,55 @@ export const audiences: Audience[] = [
     featured: ["retention", "pro-portal", "evolution", "workflow-builder", "tinnitus-pro", "voices"],
     resume: "/resumes/dru-martin-resume-lumi.pdf",
   },
+  {
+    slug: "validity",
+    company: "Validity",
+    role: "AI Design Lead",
+    intro: [
+      "Engage sits in the category I've spent most of my career in: seven years on SharpSpring's CRM and marketing automation platform, then Constant Contact, one of the largest email marketing platforms in the world. Today I lead design at Neurotone AI, where I prototype in code with Claude Code and I'm setting up our monthly partner emails so Claude builds them directly in HubSpot through its CLI and MCP server, from our design system.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Complex B2B workflows for marketers doing multi-step work",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation rules buried in forms into a map people could read, rolled out beside the legacy builder so customers could move on their own schedule.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Teach, mentor, and run a candid crit practice",
+        evidence:
+          "I ran critique at SharpSpring before I had formal authority, then managed designers there and designers, researchers, and content designers at Constant Contact.",
+        slug: "leadership",
+      },
+      {
+        need: "AI-native, code-centric, with judgment kept with people",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template. I designed the template and the rules, and I decide what ships.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Own the design direction for a whole product",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old platform to a mature product used in nearly 1,500 clinics, as the only designer until June 2025.",
+        slug: "evolution",
+      },
+      {
+        need: "Design from firsthand time with customers",
+        evidence:
+          "Tinnitus Pro was shaped in working sessions with audiologists, iterating prototypes as they used them.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "AI experiences people trust",
+        evidence:
+          "An AI voice-cloning system with invite, disclosure, preview, and revocation, so patients and families stay in control.",
+        slug: "voices",
+      },
+    ],
+    featured: ["workflow-builder", "leadership", "pdf-system", "evolution", "tinnitus-pro", "voices"],
+    resume: "/resumes/dru-martin-resume-validity.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
