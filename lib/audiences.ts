@@ -1055,6 +1055,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "leadership", "pdf-system", "evolution", "tinnitus-pro", "voices"],
     resume: "/resumes/dru-martin-resume-validity.pdf",
   },
+  {
+    slug: "docker",
+    company: "Docker",
+    role: "Director of Product Design",
+    intro: [
+      "You asked for a director who still makes things. I managed a team of designers, researchers, and content designers through an acquisition and a reorg, and for the last two and a half years I've been hands-on again: the only designer until June 2025 on a platform used in nearly 1,500 clinics, prototyping in React and TypeScript with Claude Code.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead and grow a design team through change",
+        evidence:
+          "I ran critique before I had formal authority, became the manager in 2019, carried the team through the Constant Contact acquisition, and took over a new team after the reorg. One intern I hired now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Still makes things: recent work you can show",
+        evidence:
+          "I designed Tinnitus Pro from zero in under four months, from the first prototype down to the states and copy.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Technically complex systems made clear",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation rules buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "AI tools in daily work, with human judgment leading",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template. The first attempts were rough, so I kept refining the design and rules until the output held up.",
+        slug: "pdf-system",
+      },
+      {
+        need: "AI-powered products",
+        evidence:
+          "An AI voice-cloning system with invite, disclosure, preview, and revocation, so patients and families stay in control.",
+        slug: "voices",
+      },
+      {
+        need: "Prototype in front-end code",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["leadership", "tinnitus-pro", "workflow-builder", "pdf-system", "voices", "evolution"],
+    resume: "/resumes/dru-martin-resume-docker.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
