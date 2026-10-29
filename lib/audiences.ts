@@ -69,14 +69,14 @@ export const audiences: Audience[] = [
     company: "CVS Health",
     role: "Senior Manager, UX Design",
     intro: [
-      "Your posting asks for someone who connects customer needs, business goals, and technical realities, then frames the right problem before solving it. My clearest example is a billing problem: three pricing models in a provider portal, where the two that failed had nothing to do with the interface.",
+      "Your posting asks for someone who connects customer needs, business goals, and technical realities, then frames the right problem before solving it. My clearest example is billing: we tested three models in a provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
       "I put the most relevant work first. Each case study below maps to something in your posting.",
     ],
     matches: [
       {
         need: "Frame problems in ambiguous spaces and connect business goals to technical constraints",
         evidence:
-          "Three billing models in the Lace Pro provider portal. The first failed on the patient's invoice, a constraint outside our software. The second, a free trial, made a clinical recommendation look optional. The third took cost out of enrollment.",
+          "We tested three billing models in the Lace Pro provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -241,7 +241,7 @@ export const audiences: Audience[] = [
       {
         need: "Complex workflows for diverse personas, with ecosystem-level impact",
         evidence:
-          "Three billing models in the Lace Pro provider portal. Two failed for reasons outside the software: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+          "We tested three billing models in the Lace Pro provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -418,7 +418,7 @@ export const audiences: Audience[] = [
       {
         need: "Systems thinking across surfaces and boundaries",
         evidence:
-          "Three billing models in the provider portal. Two failed for reasons outside the interface: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+          "We tested three billing models in the provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -461,7 +461,7 @@ export const audiences: Audience[] = [
       {
         need: "Equal strategic partner to Product and Engineering",
         evidence:
-          "We tested three billing models in the provider portal. Two failed for reasons outside the interface: the patient's invoice, and a free trial that made a clinical recommendation look optional.",
+          "We tested three billing models in the provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -681,7 +681,7 @@ export const audiences: Audience[] = [
       {
         need: "Product decisions informed by customers and data",
         evidence:
-          "We tested three billing models in the provider portal. Two failed for reasons outside the interface, and clinic-wide licensing is what worked.",
+          "We tested three billing models in the provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -736,7 +736,7 @@ export const audiences: Audience[] = [
       {
         need: "Turn ambiguous problems into product direction with sales and client success",
         evidence:
-          "We tested three billing models in the provider portal. Two failed for reasons outside the interface, and I built the first version of the ROI calculator our reps use.",
+          "We tested three billing models in the provider portal and landed on one that lets providers prescribe unlimited access to our software without patient billing concerns during the exam. I also built the first version of the ROI calculator our reps use.",
         slug: "pro-portal",
       },
       {
@@ -785,7 +785,7 @@ export const audiences: Audience[] = [
       {
         need: "Complex multi-user clinical workflows",
         evidence:
-          "Enrollment fits inside a normal visit: the provider enters a name and phone number, the patient gets a text and installs the app in the room. Three billing models taught us where the real friction lived.",
+          "Enrollment fits inside a normal visit: the provider enters a name and phone number, the patient gets a text and installs the app in the room. The billing model we landed on lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
@@ -926,7 +926,7 @@ export const audiences: Audience[] = [
       {
         need: "Service and business-process design, not just interfaces",
         evidence:
-          "Enrollment fits inside a standard clinic visit, and three billing models were tested in the provider portal until clinic-wide licensing took cost out of enrollment.",
+          "Enrollment fits inside a standard clinic visit, and the billing model we landed on lets providers prescribe unlimited access to our software without patient billing concerns during the exam.",
         slug: "pro-portal",
       },
       {
