@@ -1202,6 +1202,55 @@ export const audiences: Audience[] = [
     featured: ["pro-portal", "retention", "evolution", "tinnitus-pro", "voices", "pdf-system"],
     resume: "/resumes/dru-martin-resume-honor.pdf",
   },
+  {
+    slug: "foresight",
+    company: "Foresight",
+    role: "Product Designer",
+    intro: [
+      "Your posting asks when software should act on its own and when it should ask a person. I've worked on that question for most of my career: seven years on SharpSpring's marketing automation platform, then as the only designer until June 2025 on Lace Pro, used in nearly 1,500 clinics, owning research, interaction, visual design, and the design system, and prototyping in code with Claude Code.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Design the human-agent loop",
+        evidence:
+          "SharpSpring's visual workflow builder turned automation rules that ran unattended, buried in forms, into a map people could read before they let it run.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Make AI trustworthy enough to act on",
+        evidence:
+          "An AI voice-cloning system that acts only after an invite, disclosure, and preview, and can be revoked.",
+        slug: "voices",
+      },
+      {
+        need: "Design for many parties at once",
+        evidence:
+          "Patients at home, audiologists mid-visit, and the clinics that pay. We tested three billing models and landed on one that lets providers prescribe unlimited access without patient billing concerns during the exam.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Early or sole designer, building the foundation",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old platform to a mature product as the only designer, and built its design system from scratch.",
+        slug: "evolution",
+      },
+      {
+        need: "Discovery with deep domain experts",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with them as they used them.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Prototype in code, with AI coding tools daily",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["workflow-builder", "voices", "pro-portal", "evolution", "tinnitus-pro", "certification-app"],
+    resume: "/resumes/dru-martin-resume-foresight.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
