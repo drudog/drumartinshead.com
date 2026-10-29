@@ -1153,6 +1153,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "voices", "evolution", "retention", "tinnitus-pro", "certification-app"],
     resume: "/resumes/dru-martin-resume-apollo.pdf",
   },
+  {
+    slug: "honor",
+    company: "Honor",
+    role: "Sr Staff Product Designer",
+    intro: [
+      "Honor designs for the client and family choosing care, the Care Pro delivering it, and the operator keeping it running. I've spent the last two and a half years on that same shape: Lace Pro, used in nearly 1,500 clinics, serves mostly older patients training at home, audiologists using a portal mid-visit, and the clinics that pay for it.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Design the service, not just the screen",
+        evidence:
+          "Enrollment fits inside a normal clinic visit: the provider enters a name and phone number, and the patient installs the app in the room, with password-free login.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Own outcomes through launch and iteration",
+        evidence:
+          "A training map, streaks, and reminders by push, text, and email timed to drop-off points. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Balance user needs, feasibility, and business goals",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old platform to a mature product, through three billing models, as the only designer until June 2025.",
+        slug: "evolution",
+      },
+      {
+        need: "Ground strategy in evidence",
+        evidence:
+          "For Tinnitus Pro I interviewed audiologists and iterated working prototypes with them; 40% of patients with bothersome tinnitus reached clinically meaningful improvement in the first look.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Trust-sensitive AI for older adults and families",
+        evidence:
+          "An AI voice-cloning system with invite, disclosure, preview, and revocation, so patients train with the voice of someone they love and everyone stays in control.",
+        slug: "voices",
+      },
+      {
+        need: "Add to the team's patterns, prompts, and processes",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template; the rules live in a Claude project a teammate can run.",
+        slug: "pdf-system",
+      },
+    ],
+    featured: ["pro-portal", "retention", "evolution", "tinnitus-pro", "voices", "pdf-system"],
+    resume: "/resumes/dru-martin-resume-honor.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
