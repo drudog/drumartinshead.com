@@ -39,7 +39,7 @@ export const audiences: Audience[] = [
       {
         need: "Measurable improvement in key workflows",
         evidence:
-          "Daily training went from 20 minutes to 15 by removing interaction points and stops. Adherence runs 38% against about 30% for physical therapy.",
+          "Daily training went from 20 minutes to 15 by removing interaction points and stops. Adherence to our training runs 38% against about 30% for physical therapy.",
         slug: "evolution",
       },
       {
@@ -88,7 +88,7 @@ export const audiences: Audience[] = [
       {
         need: "Measure impact over time",
         evidence:
-          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -235,7 +235,7 @@ export const audiences: Audience[] = [
       {
         need: "Measurable outcomes across multiple projects",
         evidence:
-          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -339,7 +339,7 @@ export const audiences: Audience[] = [
       {
         need: "Turn complex data into clear, actionable insight across varying data literacy",
         evidence:
-          "Patients follow their progress on a visual training map. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Patients follow their progress on a visual training map. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -467,7 +467,7 @@ export const audiences: Audience[] = [
       {
         need: "Engagement that keeps people coming back",
         evidence:
-          "Push, text, and email reminders timed to drop-off points, a progress map, and streaks. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Push, text, and email reminders timed to drop-off points, a progress map, and streaks. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -504,7 +504,7 @@ export const audiences: Audience[] = [
       {
         need: "Notifications and in-the-moment coaching",
         evidence:
-          "Streaks, a training map, a leaderboard, and push, text, and email nudges timed to the moments people quit. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Streaks, a training map, a leaderboard, and push, text, and email nudges timed to the moments people quit. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -583,7 +583,7 @@ export const audiences: Audience[] = [
       {
         need: "Two-sided products and marketplace thinking",
         evidence:
-          "Clinicians prescribe and patients have to keep showing up. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics. At SharpSpring I made proof-of-concept designs for marketplace features.",
+          "Clinicians prescribe and patients have to keep showing up. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics. At SharpSpring I made proof-of-concept designs for marketplace features.",
         slug: "retention",
       },
       {
@@ -626,7 +626,7 @@ export const audiences: Audience[] = [
       {
         need: "Metric-driven SaaS",
         evidence:
-          "Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics. At Constant Contact, daily active use was a metric my team designed against.",
+          "Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics. At Constant Contact, daily active use was a metric my team designed against.",
         slug: "retention",
       },
       {
@@ -663,7 +663,7 @@ export const audiences: Audience[] = [
       {
         need: "Quantified impact across multiple product areas",
         evidence:
-          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -779,7 +779,7 @@ export const audiences: Audience[] = [
       {
         need: "Quantifiable reduction in workflow friction",
         evidence:
-          "Daily training went from 20 minutes to 15. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -920,7 +920,7 @@ export const audiences: Audience[] = [
       {
         need: "Patients using medical technology unsupervised at home",
         evidence:
-          "Mostly older adults with hearing loss train at home. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "Mostly older adults with hearing loss train at home. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -969,7 +969,7 @@ export const audiences: Audience[] = [
       {
         need: "Consumer-grade design that earns a daily habit",
         evidence:
-          "A training map, streaks, and reminders timed to drop-off points. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "A training map, streaks, and reminders timed to drop-off points. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
@@ -1134,7 +1134,7 @@ export const audiences: Audience[] = [
       {
         need: "Tie the work to outcomes",
         evidence:
-          "Daily training went from 20 minutes to 15, and adherence runs 38% against about 30% for physical therapy.",
+          "Daily training went from 20 minutes to 15, and adherence to our training runs 38% against about 30% for physical therapy.",
         slug: "retention",
       },
       {
@@ -1171,7 +1171,7 @@ export const audiences: Audience[] = [
       {
         need: "Own outcomes through launch and iteration",
         evidence:
-          "A training map, streaks, and reminders by push, text, and email timed to drop-off points. Adherence runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+          "A training map, streaks, and reminders by push, text, and email timed to drop-off points. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
         slug: "retention",
       },
       {
