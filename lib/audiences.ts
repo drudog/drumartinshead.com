@@ -1104,6 +1104,55 @@ export const audiences: Audience[] = [
     featured: ["leadership", "tinnitus-pro", "workflow-builder", "pdf-system", "voices", "evolution"],
     resume: "/resumes/dru-martin-resume-docker.pdf",
   },
+  {
+    slug: "apollo",
+    company: "Apollo GraphQL",
+    role: "Product Designer",
+    intro: [
+      "Your posting asks for the details that make technical products trustworthy: states, edge cases, errors, and permissions. I've spent most of my career on complex B2B software, from SharpSpring's CRM and automation builder to Lace Pro, used in nearly 1,500 clinics, where I built the design system from scratch and prototype in React and TypeScript with Claude Code.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Complex workflows, and migrating live surfaces without breaking them",
+        evidence:
+          "SharpSpring's visual workflow builder ran beside the legacy builder: new accounts started in it, existing customers opted in, then a sunset date with support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "States, edge cases, and permissions",
+        evidence:
+          "An AI voice-cloning system with invite, disclosure, preview, and revocation, so the people involved stay in control of their voice.",
+        slug: "voices",
+      },
+      {
+        need: "Scope a v1, ship it, iterate",
+        evidence:
+          "I led the rebuild of a 20-year-old platform to launch in under six months, as the only designer, and built its design system from scratch.",
+        slug: "evolution",
+      },
+      {
+        need: "Tie the work to outcomes",
+        evidence:
+          "Daily training went from 20 minutes to 15, and adherence runs 38% against about 30% for physical therapy.",
+        slug: "retention",
+      },
+      {
+        need: "Prototype fast and test when the cost of being wrong is high",
+        evidence:
+          "For Tinnitus Pro I iterated working prototypes with audiologists as they used them, 0-to-1 in under four months.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Comfort working in code",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["workflow-builder", "voices", "evolution", "retention", "tinnitus-pro", "certification-app"],
+    resume: "/resumes/dru-martin-resume-apollo.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
