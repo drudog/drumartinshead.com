@@ -1205,7 +1205,7 @@ export const audiences: Audience[] = [
   {
     slug: "foresight",
     company: "Foresight",
-    role: "Product Designer",
+    role: "Lead Product Designer",
     intro: [
       "Your posting asks when software should act on its own and when it should ask a person. I've worked on that question for most of my career: seven years on SharpSpring's marketing automation platform, then as the only designer until June 2025 on Lace Pro, used in nearly 1,500 clinics, owning research, interaction, visual design, and the design system, and prototyping in code with Claude Code.",
       "I put the most relevant work first. Each case study below maps to something in your posting.",
