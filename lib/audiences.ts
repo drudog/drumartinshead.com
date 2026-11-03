@@ -1251,6 +1251,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "voices", "pro-portal", "evolution", "tinnitus-pro", "certification-app"],
     resume: "/resumes/dru-martin-resume-foresight.pdf",
   },
+  {
+    slug: "primary-care",
+    company: "Primary Care",
+    role: "Senior Product Designer",
+    intro: [
+      "Your clinicians run a practice and see patients on the same day. Mine do too. I lead design for Lace Pro, an FDA Class II hearing therapy used in over 1,500 audiology clinics, most of them small practices where the audiologist is also the owner. I design for the patient at home, the clinician mid-visit, and the clinic that pays, and I was the only designer until June 2025.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Understand clinicians' workflows and jobs to be done",
+        evidence:
+          "Enrollment fits inside a normal hearing appointment: the provider enters a name and phone number, and the patient installs the app in the room with password-free login. We tested three billing models and landed on one that lets providers prescribe unlimited access without patient billing concerns during the exam.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Forecast and measure the impact on users",
+        evidence:
+          "I cut daily training from 20 to 15 minutes by removing interaction points and stops in the flow. Adherence to our training runs 38%, and 61% at our best clinics, against about 30% for physical therapy.",
+        slug: "retention",
+      },
+      {
+        need: "Balance AI with patient safety and accuracy",
+        evidence:
+          "A voice-cloning feature that uses a loved one's voice only after an invite, a disclosure, and a preview, and can be revoked. When AI generated our lesson content, I reviewed and corrected it for tone and accuracy before it reached patients.",
+        slug: "voices",
+      },
+      {
+        need: "Lead a range of research methods, from discovery to delivery",
+        evidence:
+          "For Tinnitus Pro I combined competitive research, clinical literature, and audiologist interviews, then iterated working prototypes with clinicians. Design took under four months; 40% of patients with bothersome tinnitus reached clinically meaningful improvement in the first look.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Shape interaction patterns and visual language",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old platform to a mature product, and built its design system from scratch with color, type, and sizing driven by variables.",
+        slug: "evolution",
+      },
+      {
+        need: "Mentor designers and lead critique",
+        evidence:
+          "At SharpSpring and Constant Contact I ran critique before I had the title, then managed designers, researchers, and content designers.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["pro-portal", "retention", "voices", "tinnitus-pro", "evolution", "leadership"],
+    resume: "/resumes/dru-martin-resume-primary-care.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
