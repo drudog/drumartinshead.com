@@ -1300,6 +1300,55 @@ export const audiences: Audience[] = [
     featured: ["pro-portal", "retention", "voices", "tinnitus-pro", "evolution", "leadership"],
     resume: "/resumes/dru-martin-resume-primary-care.pdf",
   },
+  {
+    slug: "home-design",
+    company: "Home Design",
+    role: "Lead Product Designer",
+    intro: [
+      "Your posting asks how to make an AI interior designer feel approachable to everyone. I've spent the last two years on a version of that problem: I lead design for Lace Pro, an AI-powered training app where most users are older and not confident with technology. I took it from a rebuild of a 20-year-old product to launch in under six months, and I was the only designer until June 2025, working directly with our CEO and engineers.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Make AI feel approachable to everyone",
+        evidence:
+          "Phone-number login with no password, one or two buttons per screen, and an adaptive engine that quietly picks each person's next lesson so they just keep training.",
+        slug: "evolution",
+      },
+      {
+        need: "Help people trust AI with something personal",
+        evidence:
+          "A voice-cloning feature that uses a loved one's voice only after an invite, a disclosure, and a preview, and can be revoked.",
+        slug: "voices",
+      },
+      {
+        need: "Design across consumer, retail, contractor, and in-store channels",
+        evidence:
+          "Users train at home, professionals sign them up in person, and the business pays. We tested three billing models and landed on one that lets providers prescribe unlimited access without patient billing concerns during the exam.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Real 0 to 1 without a defined problem",
+        evidence:
+          "Tinnitus Pro had no existing product to reference. I went from competitive research and interviews to working prototypes, and design took under four months.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Complex, multi-step flows",
+        evidence:
+          "SharpSpring's visual workflow builder turned multi-step automation rules buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "AI-native habits, prototyping with founders and engineers",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+    ],
+    featured: ["evolution", "voices", "pro-portal", "tinnitus-pro", "workflow-builder", "certification-app"],
+    resume: "/resumes/dru-martin-resume-home-design.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
