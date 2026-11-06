@@ -1349,6 +1349,55 @@ export const audiences: Audience[] = [
     featured: ["evolution", "voices", "pro-portal", "tinnitus-pro", "workflow-builder", "certification-app"],
     resume: "/resumes/dru-martin-resume-home-design.pdf",
   },
+  {
+    slug: "babylist",
+    company: "Babylist",
+    role: "Principal Product Designer",
+    intro: [
+      "Personalization has run through most of my career. At SharpSpring I designed the contact segment builder and the dynamic email builder, which shows different content to each segment. Today I lead design for Lace Pro, a consumer app on iOS, Android, and desktop whose adaptive engine quietly picks each person's next lesson and difficulty, and I own what happens after launch.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Own personalization and its outcomes",
+        evidence:
+          "A training map, streaks, reminders timed to drop-off points, and celebration moments built into the answer reveal. Adherence to our training runs 38%, and 61% at our best clinics, against about 30% for physical therapy.",
+        slug: "retention",
+      },
+      {
+        need: "Shipped consumer craft on web and native mobile",
+        evidence:
+          "I took Lace Pro from a rebuild of a 20-year-old product to launch in under six months on iOS, Android, and desktop, with a design system built on variables for accessibility.",
+        slug: "evolution",
+      },
+      {
+        need: "Scale design democratization with AI workflows",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template, with the rules packaged in a Claude project a teammate can run.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Build when building is fastest",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+      {
+        need: "Systems thinking across complex flows",
+        evidence:
+          "SharpSpring's visual workflow builder turned multi-step automation rules buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Mentor and multiply",
+        evidence:
+          "At SharpSpring and Constant Contact I ran critique, then managed designers, researchers, and content designers. One designer I brought in as an intern now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["retention", "evolution", "pdf-system", "certification-app", "workflow-builder", "leadership"],
+    resume: "/resumes/dru-martin-resume-babylist.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
