@@ -1398,6 +1398,55 @@ export const audiences: Audience[] = [
     featured: ["retention", "evolution", "pdf-system", "certification-app", "workflow-builder", "leadership"],
     resume: "/resumes/dru-martin-resume-babylist.pdf",
   },
+  {
+    slug: "via",
+    company: "VIA",
+    role: "Principal Product Designer",
+    intro: [
+      "I design complex, data-heavy products where who can see and change what is part of the design. At SharpSpring that meant agencies running client accounts with role-based permissions and teams editing the same email with version history. Today I lead design for Lace Pro, an FDA Class II AI platform under HIPAA and GDPR, where the most sensitive feature is built as a consent flow.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Permission-controlled data sharing, secure by default",
+        evidence:
+          "Familiar Voices clones a loved one's voice for training. I designed it as a permission flow: invite, plain disclosure, preview, and revocation at any time.",
+        slug: "voices",
+      },
+      {
+        need: "Cohesive workflows, not isolated screens",
+        evidence:
+          "SharpSpring's Visual Workflow Builder turned multi-step automation rules buried in forms into a map people could read, rolled out beside the legacy builder with opt-in and a sunset date.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Translate technical constraints into clear product concepts",
+        evidence:
+          "The provider portal had to fit enrollment inside a standard clinic visit: a name and a phone number, then a patient signing in with no password.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Responsible, AI-first design process",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template, with the rules packaged in a Claude project a teammate can run.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Technical fluency with engineering",
+        evidence:
+          "I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+      {
+        need: "Design leadership and mentorship",
+        evidence:
+          "At SharpSpring and Constant Contact I ran critique, then managed designers, researchers, and content designers. One designer I brought in as an intern now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["voices", "workflow-builder", "pro-portal", "pdf-system", "certification-app", "leadership"],
+    resume: "/resumes/dru-martin-resume-via.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
