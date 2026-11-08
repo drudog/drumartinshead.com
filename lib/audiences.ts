@@ -1447,6 +1447,61 @@ export const audiences: Audience[] = [
     featured: ["voices", "workflow-builder", "pro-portal", "pdf-system", "certification-app", "leadership"],
     resume: "/resumes/dru-martin-resume-via.pdf",
   },
+  {
+    slug: "samsara-lead",
+    company: "Samsara",
+    role: "Lead Product Designer",
+    intro: [
+      "Fleet managers and dispatchers live in your dashboard all day, and drivers use your app in between real work. I've designed software people work inside: seven years on a CRM and automation platform small businesses ran their operations on, where I also wrote production front-end code, and two years leading design for a web portal and mobile app used in nearly 1,500 clinics.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Lead large, ambiguous initiatives from framing through launch",
+        evidence:
+          "I led the rebuild of a 20-year-old platform into Lace Pro in under six months, across a patient app on iOS, Android, and desktop and a provider portal.",
+        slug: "evolution",
+      },
+      {
+        need: "Case studies that show what happened after you shipped",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Shipped work you can attribute to AI tools",
+        evidence:
+          "For a family of about twenty sales case studies, writers deliver copy to a spec and an agent fits it into a coded template I designed. Seven are done.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Ship code to production",
+        evidence:
+          "I wrote production front-end code for about two years at SharpSpring, and I built this partner certification platform end to end in Next.js and TypeScript.",
+        slug: "certification-app",
+      },
+      {
+        need: "Direct customer research that drives decisions",
+        evidence:
+          "Tinnitus Pro went from nothing to launch in under four months through audiologist interviews and working prototypes iterated with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Judgment on established versus new patterns",
+        evidence:
+          "SharpSpring's visual workflow builder gave triggers, filters, and actions their own visual language, turning automation logic buried in forms into a map people could read.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Mentor designers",
+        evidence:
+          "About five years managing designers, researchers, and content designers. An intern I brought in now leads growth design at Noom.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["evolution", "retention", "pdf-system", "certification-app", "tinnitus-pro", "workflow-builder"],
+    resume: "/resumes/dru-martin-resume-samsara-lead.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
