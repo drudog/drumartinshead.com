@@ -1502,6 +1502,55 @@ export const audiences: Audience[] = [
     featured: ["evolution", "retention", "pdf-system", "certification-app", "tinnitus-pro", "workflow-builder"],
     resume: "/resumes/dru-martin-resume-samsara-lead.pdf",
   },
+  {
+    slug: "kamiwaza",
+    company: "Kamiwaza",
+    role: "Senior UX Designer",
+    intro: [
+      "I make complex software clear enough to trust. At SharpSpring that meant permissioned, multi-step workflows agencies ran for their clients. At Neurotone AI it means an FDA Class II platform where AI-generated content gets human review and the most sensitive AI feature is built as a consent flow.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "A complex workflow you simplified",
+        evidence:
+          "SharpSpring's Visual Workflow Builder turned automation logic buried in forms into a map people could read, rolled out beside the legacy builder with opt-in, a sunset date, and support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "AI experiences with user control over consequential actions",
+        evidence:
+          "Familiar Voices clones a loved one's voice for training. I designed it around control: invite, plain disclosure, preview, and revocation at any time.",
+        slug: "voices",
+      },
+      {
+        need: "A time user evidence changed your direction",
+        evidence:
+          "Our provider portal lets providers prescribe unlimited access without patient billing concerns during the exam. We got there because providers told us they would skip enrollment rather than have a charge show up on a patient's invoice.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Brand standards balanced with accessibility",
+        evidence:
+          "I built Lace Pro's design system on variables so each clinic gets its own theme, and worked the variables until every theme met WCAG AAA contrast.",
+        slug: "evolution",
+      },
+      {
+        need: "How AI improved your process, and how you validated it",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template; I refined the process until the output matched the design.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Results after release",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+    ],
+    featured: ["workflow-builder", "voices", "pro-portal", "evolution", "pdf-system", "retention"],
+    resume: "/resumes/dru-martin-resume-kamiwaza.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
