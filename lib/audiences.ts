@@ -1551,6 +1551,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "voices", "pro-portal", "evolution", "pdf-system", "retention"],
     resume: "/resumes/dru-martin-resume-kamiwaza.pdf",
   },
+  {
+    slug: "digible",
+    company: "Digible",
+    role: "Senior Manager, Product Design",
+    intro: [
+      "I spent seven years designing marketing automation for agencies, including campaign reports, sales pipeline reports, and the lead record. I've built design functions from scratch, and today I'm the hands-on lead designer on an FDA Class II product, which is how I like to work.",
+      "I put the most relevant work first. Each case study below maps to something in your posting. My primary-designer examples are the Visual Workflow Builder and Lace Pro.",
+    ],
+    matches: [
+      {
+        need: "Make dense data engaging and easy to act on",
+        evidence:
+          "I built the first clinic ROI calculator in code with Claude, turning a clinic's own numbers into a story a sales rep could walk through.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Hands-on design across complex products",
+        evidence:
+          "SharpSpring's Visual Workflow Builder turned automation logic buried in forms into a map people could read. I was the primary designer.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Build design foundations from scratch",
+        evidence:
+          "I built Lace Pro's design system from scratch on variables, so each clinic gets its own theme, and worked it until every theme met WCAG AAA contrast.",
+        slug: "evolution",
+      },
+      {
+        need: "Define the practice: ladder, job descriptions, critique",
+        evidence:
+          "I ran critique before I had the title. After Constant Contact acquired SharpSpring, I helped design the new team structure and career ladder, wrote job descriptions, and created onboarding materials.",
+        slug: "leadership",
+      },
+      {
+        need: "AI-native design practice",
+        evidence:
+          "Writers deliver copy to a spec and an agent fits it into a coded template, with the rules packaged in a Claude project a teammate can run.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Outcomes customers feel",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+    ],
+    featured: ["workflow-builder", "pro-portal", "evolution", "leadership", "pdf-system", "retention"],
+    resume: "/resumes/dru-martin-resume-digible.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
