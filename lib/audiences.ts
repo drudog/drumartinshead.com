@@ -1649,6 +1649,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "pro-portal", "evolution", "retention", "pdf-system", "tinnitus-pro"],
     resume: "/resumes/dru-martin-resume-bask-health.pdf",
   },
+  {
+    slug: "mypattern",
+    company: "MyPattern",
+    role: "Senior Product Designer",
+    intro: [
+      "I'm the lead designer on Lace Pro, an AI-powered FDA Class II product for patients in nearly 1,500 audiology clinics, and I designed Tinnitus Pro from scratch in under four months. I design for patients the system hasn't served well, with AI they can trust and outcomes we measure.",
+      "I put the most relevant work first. Each case study below maps to something in your posting. My primary-designer examples are Lace Pro and Tinnitus Pro.",
+    ],
+    matches: [
+      {
+        need: "From early concept to launch",
+        evidence:
+          "I rebuilt a twenty-year-old product from the ground up in under six months, for older, often low-tech patients on iOS, Android, and desktop.",
+        slug: "evolution",
+      },
+      {
+        need: "AI people can trust with something personal",
+        evidence:
+          "For Familiar Voices, where a family member's voice is cloned for training, I designed the invite, disclosure, preview, and the ability to revoke it.",
+        slug: "voices",
+      },
+      {
+        need: "A new health product, with research first",
+        evidence:
+          "Tinnitus Pro had nothing to copy. I started with competitive research, clinical literature, and audiologist interviews, then tested working prototypes with clinicians. In the first look, 40% of patients with bothersome tinnitus reached clinically meaningful improvement.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Define and track success metrics",
+        evidence:
+          "Daily training went from 20 minutes to 15. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Build research into the process",
+        evidence:
+          "At SharpSpring I built a research practice with our product manager, starting with user testing of the email builder. At Constant Contact I led a team that included researchers.",
+        slug: "leadership",
+      },
+      {
+        need: "Pattern libraries and consistent visual language",
+        evidence:
+          "I built Lace Pro's design system from scratch on variables, several hundred components across mobile and desktop, with every theme meeting WCAG AAA contrast.",
+        slug: "pro-portal",
+      },
+    ],
+    featured: ["evolution", "voices", "tinnitus-pro", "retention", "leadership", "pro-portal"],
+    resume: "/resumes/dru-martin-resume-mypattern.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
