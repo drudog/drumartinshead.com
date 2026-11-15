@@ -1698,6 +1698,55 @@ export const audiences: Audience[] = [
     featured: ["evolution", "voices", "tinnitus-pro", "retention", "leadership", "pro-portal"],
     resume: "/resumes/dru-martin-resume-mypattern.pdf",
   },
+  {
+    slug: "alloy",
+    company: "Alloy Health",
+    role: "Senior Product Designer",
+    intro: [
+      "I'm the lead designer on Lace Pro, an FDA Class II product with patient apps on iOS, Android, and desktop in nearly 1,500 audiology clinics. Most of my effort has gone into keeping patients engaged, and adherence to our training runs 38%, against about 30% for physical therapy.",
+      "I put the most relevant work first. Each case study below maps to something in your posting. My primary-designer examples are Lace Pro and Tinnitus Pro.",
+    ],
+    matches: [
+      {
+        need: "Retention across the subscription lifecycle",
+        evidence:
+          "Research said training felt like a chore, frustrating, and boring. I cut daily training from 20 to 15 minutes and added streaks, a training map, and celebration moments. Adherence to our training runs 38%, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "Mobile-first design in regulated healthcare",
+        evidence:
+          "I rebuilt a twenty-year-old product from the ground up in under six months, for patients on iOS, Android, and desktop, under FDA Class II and HIPAA.",
+        slug: "evolution",
+      },
+      {
+        need: "Net-new concepts instead of copying competitors",
+        evidence:
+          "Tinnitus Pro had nothing to copy. I turned competitive research, clinical literature, and audiologist interviews into a model of our own, then tested working prototypes with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Personal, trustworthy health experiences",
+        evidence:
+          "For Familiar Voices, where a family member's voice is cloned for training, I designed the invite, disclosure, preview, and the ability to revoke it.",
+        slug: "voices",
+      },
+      {
+        need: "A multi-device design system and consistent brand",
+        evidence:
+          "I built Lace Pro's design system from scratch, several hundred components across mobile and desktop, and I own our marketing site, app store pages, and sales materials so the brand matches the product.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Workshops, critique, and research on a small team",
+        evidence:
+          "At SharpSpring I led story mapping and problem-framing sessions and ran critique before I had the title. At Constant Contact I led a team of designers, researchers, and content designers.",
+        slug: "leadership",
+      },
+    ],
+    featured: ["retention", "evolution", "tinnitus-pro", "voices", "pro-portal", "leadership"],
+    resume: "/resumes/dru-martin-resume-alloy.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
