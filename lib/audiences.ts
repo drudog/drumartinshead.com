@@ -1600,6 +1600,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "pro-portal", "evolution", "leadership", "pdf-system", "retention"],
     resume: "/resumes/dru-martin-resume-digible.pdf",
   },
+  {
+    slug: "bask-health",
+    company: "Bask Health",
+    role: "Senior Product Designer, Merchant Platform",
+    intro: [
+      "I spent seven years designing a multi-tenant platform that agencies and small businesses ran their operations on: contact tables with filtering and bulk actions, permissions, workflow automation, reports, and Shopify and WooCommerce connections. Today I'm the lead designer on an FDA Class II, HIPAA product with a clinic-facing portal.",
+      "I put the most relevant work first. Each case study below maps to something in your posting. My primary-designer examples are the Visual Workflow Builder and Lace Pro.",
+    ],
+    matches: [
+      {
+        need: "Multi-step configuration and workflow automation",
+        evidence:
+          "SharpSpring's Visual Workflow Builder turned automation logic buried in forms into a map people could read. We rolled it out beside the legacy builder with opt-in, a sunset date, and support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Merchant admin with business and clinical work kept apart",
+        evidence:
+          "In Lace Pro's Pro Portal, clinics manage staff, patients, branding, and billing settings, and enrollment fits inside a visit the patient is already at. We tested three billing models and landed on unlimited access.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Configurable, multi-tenant, and accessible",
+        evidence:
+          "I built Lace Pro's design system from scratch on variables, so each clinic gets its own theme, and worked it until every theme met WCAG AAA contrast.",
+        slug: "evolution",
+      },
+      {
+        need: "Improve live products from feedback and data",
+        evidence:
+          "Daily training went from 20 minutes to 15 by removing interaction points and stops. Adherence to our training runs 38% against about 30% for physical therapy, and 61% at our best clinics.",
+        slug: "retention",
+      },
+      {
+        need: "AI-first, builder-led practice",
+        evidence:
+          "I prototype in React and Next.js with Claude Code. Writers deliver copy to a spec and an agent fits it into a coded template, with the rules packaged in a Claude project a teammate can run.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Healthcare businesses launching something new",
+        evidence:
+          "I designed Tinnitus Pro from scratch in under four months, from audiologist interviews to working prototypes tested with clinicians.",
+        slug: "tinnitus-pro",
+      },
+    ],
+    featured: ["workflow-builder", "pro-portal", "evolution", "retention", "pdf-system", "tinnitus-pro"],
+    resume: "/resumes/dru-martin-resume-bask-health.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
