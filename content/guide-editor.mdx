@@ -1,0 +1,106 @@
+<MetaGrid>
+  <MetaItem label="Focus" value="Full-Stack Design & Engineering · Localization Workflow · 0→1" />
+  <MetaItem label="Status" value="Pilot: French versions of two provider guides" />
+  <MetaItem label="Stack" value="Node.js · Vanilla JS modules · Puppeteer · Figma MCP · Cloudflare Access" />
+</MetaGrid>
+
+## Executive Summary
+
+Neurotone's provider guides are designed in Figma and translated by outside reviewers. Every round of fixes meant someone on our team retyping a translator's notes into Figma, re-exporting, and checking whether the French still fit the layout. I designed and built a web editor that removes that loop: translators open the guide, see it exactly as the PDF looks, click any line to fix it, and download the finished PDF themselves.
+
+The editor checks every edit against the design as it's typed. If a line no longer fits its card, the box turns red and shows how many pixels it's over, so the problem gets fixed by the person who caused it, before anyone on our team sees it.
+
+<StatBlock>
+  <Stat value="17" label="Pages in the pilot: the French versions of two Rec Engine provider guides" />
+  <Stat value="0" label="Figma seats or passwords for translators: sign-in is just their email" />
+  <Stat value="1:1" label="PDF output at the Figma export size, from the same renderer as the editor" />
+</StatBlock>
+
+## The Problem
+
+The guides are a sales tool. Clinics read them before deciding to adopt Lace, so a translated guide has to look as finished as the English one. The old process didn't make that easy.
+
+- Translators couldn't edit in Figma, so fixes came back as notes and screenshots
+- Our team retyped every fix, then re-exported to see whether it fit
+- French runs longer than English, so text overflowed cards and nobody knew until the PDF
+- French typography needs narrow no-break spaces before `: ; ! ? %`, which are easy to miss and hard to spot
+- There was no record of who changed what, or which version was approved
+
+## The Strategy
+
+1. **Edit on the page, not in a form.** Translators work on the real layout, so they see the result of every word they change
+2. **Catch problems while typing.** Fit and French spacing are checked live, at the source, instead of in a review round later
+3. **Keep Figma as the design tool.** Guides are imported from Figma, and the English design stays there. The editor only owns the translated text
+4. **Make nothing destructive.** Every save is a version, restoring saves a new version, and only our team can approve what gets published
+
+## Key Design Decisions
+
+### The page is the interface
+
+Each page is the Figma design rendered as a text-free background, with every text box placed on top at its Figma position, size, and style. Click any text to edit it. The English source sits alongside in the sidebar, locked, so translators always know what they're translating without leaving the page.
+
+### A fit check that shows the problem
+
+A box that no longer fits turns red with a "+20px" badge: it would run into the next element, past its card, or off the page. The sidebar says what to do in plain words: shorten until the red outline goes away. Text that grew but still fits gets a softer dashed outline, so translators know the layout is close to its limit.
+
+<ImageGallery
+  columns={1}
+  items={[
+    { src: "/images/work/guide-editor/03-fit-check.jpg", alt: "A text box outlined in red with a +20px badge, overlapping the heading below it", caption: "Fit check: the added sentence runs 20px past its space, so the box turns red before the PDF is ever made" },
+  ]}
+/>
+
+### French spacing, fixed in one click
+
+French puts a narrow no-break space before `: ; ! ? %` and inside guillemets. The editor finds every missing one, lists them by page, and fixes them all at once. It's the kind of detail a native reviewer catches on paper and nobody catches on screen.
+
+### History you can't break
+
+Every save is a new version with the editor's name and a note of what changed. Any version can be viewed, restored, or downloaded as a PDF. Restoring saves a new version, so nothing is ever lost. "Show changes" highlights every box that differs from the Figma original, and comments can be left on a single text box or on the whole guide.
+
+<ImageGallery
+  columns={2}
+  items={[
+    { src: "/images/work/guide-editor/04-changes.jpg", alt: "Edited heading highlighted in blue with a comment badge and the comment in the sidebar", caption: "Show changes and comments: edits against the Figma original, with a reviewer's note on the box" },
+    { src: "/images/work/guide-editor/05-history.jpg", alt: "History drawer listing version 2, version 1, and the Figma original", caption: "History: every save is a version that can be viewed, restored, approved, or downloaded" },
+  ]}
+/>
+
+### Roles without accounts
+
+The site sits behind Cloudflare Access, which only admits the email addresses we assign. The app reads the signed-in email to name people on every version and comment and to look up their role. Admins can approve, editors can edit and restore, reviewers can read and comment. No passwords to manage, no links to send.
+
+### One renderer for the screen and the PDF
+
+The same rendering module draws the page in the editor and in the print view. Headless Chrome prints that view at 1024 × 1325 px per page, the same size as the Figma exports, so what translators approve on screen is exactly what clinics receive.
+
+## The Figma Pipeline
+
+Guides come in through the Figma MCP server. A script reads each translated page and its English counterpart, pulling every text layer's id, position, size, and style alongside the English source. Each page is then exported at 2× with every text layer set to zero opacity to make the background. The layers stay visible rather than hidden, so auto-layout spacing doesn't shift. Saved translations are keyed by Figma layer id, so a guide can be re-imported after a design change without losing anyone's work.
+
+## Key Screens
+
+<ImageGallery
+  columns={2}
+  items={[
+    { src: "/images/work/guide-editor/01-home.jpg", alt: "Home page listing the RE3 and RE4 French guides with approval status", caption: "Home: each guide with its language, page count, and approval status" },
+    { src: "/images/work/guide-editor/02-editor.jpg", alt: "Editor with the cover page and the review sidebar", caption: "Review sidebar: what doesn't fit, French spacing, changes from Figma, and open comments" },
+  ]}
+/>
+
+## Building It Small
+
+The server is a single dependency-free Node file. The front end is plain HTML, CSS, and JavaScript modules with no build step. Storage is four functions over local JSON files, so moving to a hosted store means swapping one module. Puppeteer is the only dependency. For a pilot with two guides and a handful of translators, that's the right size: easy to read, easy to hand off, and nothing to maintain between uses.
+
+## What's Next
+
+- Host it behind Cloudflare Access for the translators, with a hosted store and serverless PDF rendering
+- Edit timed video captions the same way, beside the video, with the same sign-in and approvals
+- Push approved text back into Figma, and publish the approved PDF to HubSpot in one step
+
+## Leadership
+
+- Saw a workflow problem between design, localization, and sales enablement, and solved it with a tool instead of more process
+- Designed for the people who weren't designers: translators and reviewers who should never need Figma
+- Kept Figma as the source of truth for design while moving text ownership to the people who own the language
+- Kept a human in the loop: a native speaker and legal still check medical claims before anything is published

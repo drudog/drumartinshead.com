@@ -87,7 +87,8 @@ export default function AiPage() {
             built the{" "}
             <Link href="/work/pro-portal">ROI calculator&apos;s</Link> first
             working version, a{" "}
-            <Link href="/work/certification-app">partner certification platform</Link>,
+            <Link href="/work/guide-editor">translation editor</Link> that
+            lets outside translators fix guides on the page,
             and a{" "}
             <Link href="/work/pdf-system">case study generator</Link> that
             turned hours of layout into a single command.

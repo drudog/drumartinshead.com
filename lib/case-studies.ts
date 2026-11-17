@@ -9,7 +9,7 @@ export type CaseStudyTag =
   | "Regulated/Healthcare";
 
 export type CaseStudy = {
-  slug: "leadership" | "pro-portal" | "workflow-builder" | "brand" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "beat-dagger" | "afternoon-orders";
+  slug: "leadership" | "pro-portal" | "workflow-builder" | "brand" | "voices" | "evolution" | "retention" | "tinnitus-pro" | "pdf-system" | "certification-app" | "guide-editor" | "beat-dagger" | "afternoon-orders";
   number: string;
   title: string;
   subtitle: string;
@@ -19,7 +19,7 @@ export type CaseStudy = {
   heroPage?: string;
   year: string;
   role: string;
-  section: "main" | "code";
+  section: "main" | "code" | "archived";
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -141,14 +141,14 @@ export const caseStudies: CaseStudy[] = [
     section: "code",
   },
   {
-    slug: "certification-app",
+    slug: "guide-editor",
     number: "10",
-    title: "Beacon Certification App",
-    subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
+    title: "Guide Editor",
+    subtitle: "Translation Review Tool: translators edit the guide on the page, not in Figma",
     summary:
-      "Lace Pro's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments, with all state in localStorage and zero backend infrastructure.",
-    tags: ["Platform", "0→1"],
-    hero: "/images/work/certification-app/01-home.png",
+      "Neurotone's provider guides are designed in Figma and translated by outside reviewers. I built a web editor that shows each translated guide exactly as the PDF looks, lets translators fix text on the page, flags any text that no longer fits, keeps every version, and exports the finished PDF.",
+    tags: ["Platform", "Regulated/Healthcare", "0→1"],
+    hero: "/images/work/guide-editor/hero.jpg",
     year: "2026",
     role: "Full-Stack Design & Engineering",
     section: "code",
@@ -179,6 +179,19 @@ export const caseStudies: CaseStudy[] = [
     role: "Full-Stack Design & Engineering",
     section: "code",
   },
+  {
+    slug: "certification-app",
+    number: "13",
+    title: "Beacon Certification App",
+    subtitle: "Partner Learning Platform: three-tier certification, zero infrastructure cost",
+    summary:
+      "Lace Pro's partner program needed a real certification experience, not another PDF. I designed and built a full-stack Next.js platform with progressive tier gating, sequential lesson locks, inline quizzes, and final assessments, with all state in localStorage and zero backend infrastructure.",
+    tags: ["Platform", "0→1"],
+    hero: "/images/work/certification-app/01-home.png",
+    year: "2026",
+    role: "Full-Stack Design & Engineering",
+    section: "archived",
+  },
 ];
 
 export const allTags: CaseStudyTag[] = [
@@ -200,10 +213,11 @@ export function getAdjacentCaseStudies(slug: string): {
   prev: CaseStudy | null;
   next: CaseStudy | null;
 } {
-  const index = caseStudies.findIndex((cs) => cs.slug === slug);
+  const listed = caseStudies.filter((cs) => cs.section !== "archived");
+  const index = listed.findIndex((cs) => cs.slug === slug);
   if (index === -1) return { prev: null, next: null };
   return {
-    prev: index > 0 ? caseStudies[index - 1] : null,
-    next: index < caseStudies.length - 1 ? caseStudies[index + 1] : null,
+    prev: index > 0 ? listed[index - 1] : null,
+    next: index < listed.length - 1 ? listed[index + 1] : null,
   };
 }
