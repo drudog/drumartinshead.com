@@ -1747,6 +1747,49 @@ export const audiences: Audience[] = [
     featured: ["retention", "evolution", "tinnitus-pro", "voices", "pro-portal", "leadership"],
     resume: "/resumes/dru-martin-resume-alloy.pdf",
   },
+  {
+    slug: "webstaurantstore",
+    company: "WebstaurantStore",
+    role: "UI/UX Design Manager",
+    intro: [
+      "I managed design teams for about five years at SharpSpring and Constant Contact, both marketing platforms. Today I'm the lead designer at Neurotone AI, where I also run brand and marketing creative for three brands that share one system.",
+      "I put the most relevant work first. Each case study below maps to something in your posting, starting with the brand and marketing work.",
+    ],
+    matches: [
+      {
+        need: "On-brand marketing sites and brand storytelling",
+        evidence:
+          "Since an agency handed off Neurotone's identity, I've run the brand: new color and typography rules, deck and email templates, and landing pages for Neurotone AI, Lace AI Pro, and Tinnitus Pro. I created the Tinnitus Pro brand and all of its launch creative.",
+        slug: "brand",
+      },
+      {
+        need: "Coaching and developing a small team",
+        evidence:
+          "I ran critique before I had the title, then hired, ran 1:1s and performance reviews, and set up group critique and design reviews. An intern I brought in from graphic design now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Shared systems: design libraries and brand guidelines",
+        evidence:
+          "I built Lace Pro's design system from scratch, several hundred components across mobile and desktop. Color, type, and sizing run on variables, so each clinic gets its own theme, and every theme meets WCAG AAA contrast.",
+        slug: "pro-portal",
+      },
+      {
+        need: "Front-end code to bridge design and development",
+        evidence:
+          "I built a Node.js and Puppeteer system that turns structured content into print-ready, six-page branded case studies. The whole library regenerates in under thirty seconds.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Partnering with marketing and development",
+        evidence:
+          "At SharpSpring I designed a marketing automation platform used by agencies, with marketers as both users and partners, and led story mapping with product and engineering. The Visual Workflow Builder launched beside the old builder with opt-in and a sunset date.",
+        slug: "workflow-builder",
+      },
+    ],
+    featured: ["brand", "leadership", "pro-portal", "pdf-system", "workflow-builder"],
+    resume: "/resumes/dru-martin-resume-webstaurantstore.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
