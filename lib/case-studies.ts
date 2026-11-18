@@ -146,8 +146,8 @@ export const caseStudies: CaseStudy[] = [
     title: "Guide Editor",
     subtitle: "Translation Review Tool: translators edit the guide on the page, not in Figma",
     summary:
-      "Neurotone's provider guides are designed in Figma and translated by outside reviewers. I built a web editor that shows each translated guide exactly as the PDF looks, lets translators fix text on the page, flags any text that no longer fits, keeps every version, and exports the finished PDF.",
-    tags: ["Platform", "Regulated/Healthcare", "0→1"],
+      "Neurotone's provider guides are translated first by AI, then fixed by native reviewers. I built a web editor where translators fix text on the page, see instantly when it no longer fits, and download the finished PDF. Every fix comes with a reason, and those reasons become lessons that improve the next AI translation.",
+    tags: ["AI", "Platform", "Regulated/Healthcare", "0→1"],
     hero: "/images/work/guide-editor/hero.jpg",
     year: "2026",
     role: "Full-Stack Design & Engineering",
