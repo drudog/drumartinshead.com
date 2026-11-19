@@ -1839,6 +1839,55 @@ export const audiences: Audience[] = [
     featured: ["guide-editor", "workflow-builder", "tinnitus-pro", "voices", "retention", "pro-portal"],
     resume: "/resumes/dru-martin-resume-jasper.pdf",
   },
+  {
+    slug: "billtrust",
+    company: "Billtrust",
+    role: "Lead UX Designer",
+    intro: [
+      "I spent seven years designing multistep B2B workflows at SharpSpring, and I'm now the lead designer at Neurotone AI, where I design the handoffs between people and AI. I managed designers for about five years.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Complex, multistep B2B SaaS",
+        evidence:
+          "At SharpSpring I designed the Visual Workflow Builder for multi-step marketing automation and launched it beside the legacy builder with opt-in, a sunset date, and support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Handoffs between people and AI",
+        evidence:
+          "I designed and built an editor where reviewers correct AI translations on the real layout. Every fix records a reason that becomes a lesson in the translation prompt: one reviewer's 26 comments became 6 lessons. Only our team approves what gets published.",
+        slug: "guide-editor",
+      },
+      {
+        need: "Design decisions with commercial consequences",
+        evidence:
+          "We tested three billing models for Lace Pro and landed on one that lets providers prescribe unlimited access without patient billing concerns during the exam.",
+        slug: "pro-portal",
+      },
+      {
+        need: "AI features designed with the same rigor as any surface",
+        evidence:
+          "For Familiar Voices, where a family member's voice is cloned for training, I designed the invite, disclosure, preview, and the ability to revoke it.",
+        slug: "voices",
+      },
+      {
+        need: "Mentoring designers and shaping critique culture",
+        evidence:
+          "I ran critique before I had the title, then hired, coached, and managed designers for about five years. An intern I brought in from graphic design now leads growth design at Noom.",
+        slug: "leadership",
+      },
+      {
+        need: "Design systems and AI in team workflows",
+        evidence:
+          "I built a Node.js and Puppeteer system that turns structured content into branded case studies; writers deliver copy to a spec and an agent fits it into the template.",
+        slug: "pdf-system",
+      },
+    ],
+    featured: ["workflow-builder", "guide-editor", "pro-portal", "voices", "leadership", "pdf-system"],
+    resume: "/resumes/dru-martin-resume-billtrust.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
