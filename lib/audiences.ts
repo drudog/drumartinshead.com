@@ -1888,6 +1888,55 @@ export const audiences: Audience[] = [
     featured: ["workflow-builder", "guide-editor", "pro-portal", "voices", "leadership", "pdf-system"],
     resume: "/resumes/dru-martin-resume-billtrust.pdf",
   },
+  {
+    slug: "wrapbook",
+    company: "Wrapbook",
+    role: "Senior Product Designer II",
+    intro: [
+      "I'm the lead designer at Neurotone AI, where I own product areas from an undefined problem through delivery and build AI workflows my teammates use. Before that, I spent seven years designing B2B marketing automation at SharpSpring.",
+      "I put the most relevant work first. Each case study below maps to something in your posting.",
+    ],
+    matches: [
+      {
+        need: "Agentic flows and reusable AI workflows",
+        evidence:
+          "I designed and built an editor where reviewers correct AI translations on the real layout. Every fix records a reason that becomes a lesson in the translation prompt: one reviewer's 26 comments became 6 lessons for every future guide.",
+        slug: "guide-editor",
+      },
+      {
+        need: "Workflows and skills others adopt",
+        evidence:
+          "I built a case study pipeline where writers deliver copy to a spec and an agent fits it into a coded template, packaged as a Claude project my teammates use. The whole library regenerates in under thirty seconds.",
+        slug: "pdf-system",
+      },
+      {
+        need: "Owning work where no clear solution existed upfront",
+        evidence:
+          "I designed Tinnitus Pro from scratch in under four months, from competitive research, clinical literature, and audiologist interviews to working prototypes tested with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Decisions that changed a project's direction",
+        evidence:
+          "I rebuilt a twenty-year-old product in under six months. We tested three billing models and landed on one that lets providers prescribe unlimited access without patient billing concerns during the exam.",
+        slug: "evolution",
+      },
+      {
+        need: "Cross-cutting work across systems and surfaces",
+        evidence:
+          "At SharpSpring I designed the Visual Workflow Builder for multi-step automation and launched it beside the legacy builder with opt-in, a sunset date, and support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Design system fluency and mentoring",
+        evidence:
+          "I built Lace Pro's design system from scratch, with per-clinic themes that each meet WCAG AAA contrast, and managed designers for about five years at SharpSpring and Constant Contact.",
+        slug: "pro-portal",
+      },
+    ],
+    featured: ["guide-editor", "pdf-system", "tinnitus-pro", "evolution", "workflow-builder", "pro-portal"],
+    resume: "/resumes/dru-martin-resume-wrapbook.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
