@@ -1790,6 +1790,55 @@ export const audiences: Audience[] = [
     featured: ["brand", "leadership", "pro-portal", "pdf-system", "workflow-builder"],
     resume: "/resumes/dru-martin-resume-webstaurantstore.pdf",
   },
+  {
+    slug: "jasper",
+    company: "Jasper",
+    role: "Senior Product Designer",
+    intro: [
+      "I spent seven years designing marketing automation at SharpSpring and Constant Contact. Today I'm the lead designer at Neurotone AI, where I take products from 0 to 1 and design around production AI.",
+      "I put the most relevant work first. Each case study below maps to something in your posting, starting with an AI localization editor I designed and built.",
+    ],
+    matches: [
+      {
+        need: "0 to 1 with AI, localization, and human control",
+        evidence:
+          "I designed and built an editor where translators correct AI translations on the real layout. A live fit check flags overflow, and every fix records a reason that becomes a lesson in the translation prompt: one reviewer's 26 comments became 6 lessons. Only our team approves what gets published.",
+        slug: "guide-editor",
+      },
+      {
+        need: "Marketing workflows and complex enterprise software",
+        evidence:
+          "At SharpSpring I designed the Visual Workflow Builder for multi-step marketing automation and launched it beside the legacy builder with opt-in, a sunset date, and support-assisted migration.",
+        slug: "workflow-builder",
+      },
+      {
+        need: "Validating the problem and scoping the first release",
+        evidence:
+          "I designed Tinnitus Pro from scratch in under four months, from competitive research, clinical literature, and audiologist interviews to working prototypes tested with clinicians.",
+        slug: "tinnitus-pro",
+      },
+      {
+        need: "Complete flows beyond the happy path for AI features",
+        evidence:
+          "For Familiar Voices, where a family member's voice is cloned for training, I designed the invite, disclosure, preview, and the ability to revoke it.",
+        slug: "voices",
+      },
+      {
+        need: "Closing the loop after launch",
+        evidence:
+          "Research said training felt like a chore. I cut daily training from 20 to 15 minutes and added streaks and a training map; adherence to our training runs 38%, and 61% at our best clinics. When patients asked to turn off our AI avatar guide, I reworked it.",
+        slug: "retention",
+      },
+      {
+        need: "Design systems used across teams",
+        evidence:
+          "I built Lace Pro's design system from scratch, several hundred components that marketing and product both use, with per-clinic themes that each meet WCAG AAA contrast.",
+        slug: "pro-portal",
+      },
+    ],
+    featured: ["guide-editor", "workflow-builder", "tinnitus-pro", "voices", "retention", "pro-portal"],
+    resume: "/resumes/dru-martin-resume-jasper.pdf",
+  },
 ];
 
 export function getAudience(slug: string): Audience | undefined {
